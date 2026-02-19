@@ -1,0 +1,13 @@
+node_modules/
+.next/
+out/
+.turbo/
+*.tsbuildinfo
+.env*
+
+# Non-deploy artifacts
+scripts/
+UI_STRUCTURE_ANALYSIS.md
+
+# Lighthouse reports
+.lighthouse-*.json
