@@ -111,6 +111,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${inter.variable} ${plusJakarta.variable}`}>
       <head>
+        <meta name="google-adsense-account" content="ca-pub-9812795931738479" />
         <meta name="theme-color" content="#0a0a0f" />
         <link rel="preload" as="image" type="image/avif" href="/assets/hero-bg.avif" />
         <link rel="manifest" href="/manifest.json" />
