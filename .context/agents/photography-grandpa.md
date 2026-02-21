@@ -85,6 +85,6 @@ Yes / No — 이유: [reason]
 - The sentence: "수천 장의 비슷한 사진 중에서 가장 좋은 사진을 자동으로 골라줍니다" (Automatically picks the best photo from thousands of similar ones)
 - A visible "무료 체험" (Free Trial) button — big, obvious, no sign-up
 - Platform stated plainly: "Mac 컴퓨터에서만 사용 가능합니다" (Only available on Mac computers)
-- A face: "야생 조류 사진가 윤지용이 직접 만들었습니다" (Made by wildlife photographer Jiyong Yun himself)
+- A face: "야생 조류 사진가 윤지용이 직접 만들었습니다" (Made by wildlife photographer Jiyong Youn himself)
 - Zero jargon: no "XMP", no "CoreML", no "clustering", no "non-destructive workflow"
 

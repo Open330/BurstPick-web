@@ -5,7 +5,7 @@
 
 ## Team Identity
 
-- **Founder**: Jiyong Yun (hletrd) — working photographer + macOS engineer
+- **Founder**: Jiyong Youn (hletrd) — working photographer + macOS engineer
 - **Background**: Shoots wildlife and indoor sports professionally; built BurstPick from direct pain in burst-heavy culling workflows
 - **Philosophy**: "Workflow-first roadmap" — features prioritized around real culling bottlenecks, not marketing demos
 - **Team composition**: Professional developers + professional photographers who live the problem daily
