@@ -1,3 +1,12 @@
+<div><img src="https://quickstart-for-agents.vercel.app/api/header.svg?theme=opencode&logo=BurstPick-web&title=Build+the+BurstPick+marketing+site+with+Next.js+16+and+React+19&font=inter" width="100%" /></div>
+
+```
+You are an AI agent working on the BurstPick website, built with Next.js 16,
+React 19, Tailwind CSS v4, and Framer Motion with i18n support.
+Clone https://github.com/Open330/BurstPick-web and help add landing page
+sections, improve animations, extend localization, or optimize the build.
+```
+
 # BurstPick Website
 
 Marketing and documentation website for [BurstPick](https://burstpick.app) — an AI-powered burst photo picker for macOS.
