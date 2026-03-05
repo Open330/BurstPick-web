@@ -86,9 +86,27 @@ function DownloadContent() {
               {t("windows_badge")}
             </span>
           </div>
-          <p className="text-sm text-text-secondary">
+          <p className="text-sm text-text-secondary mb-4">
             {t("windows_description")}
           </p>
+
+          <div className="space-y-3 border-t border-white/[0.06] pt-4">
+            <Requirement
+              icon={<Monitor size={18} />}
+              label={t("windows_req_os")}
+              value={t("windows_req_os_value")}
+            />
+            <Requirement
+              icon={<Cpu size={18} />}
+              label={t("windows_req_chip")}
+              value={t("windows_req_chip_value")}
+            />
+            <Requirement
+              icon={<HardDrive size={18} />}
+              label={t("windows_req_disk")}
+              value={t("windows_req_disk_value")}
+            />
+          </div>
         </div>
       </Container>
     </main>

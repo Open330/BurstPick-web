@@ -70,7 +70,7 @@ export function HeroSection() {
 
         {/* App mockup — accurate representation of actual BurstPick UI */}
         <FadeInView delay={0.5} className="mt-12 w-full max-w-5xl sm:mt-16">
-          <div role="img" aria-label="BurstPick macOS app interface preview" className="overflow-hidden rounded-xl border border-white/10 bg-[#0c0c0e] shadow-[0_20px_80px_-20px_rgba(79,125,242,0.15),0_0_40px_-10px_rgba(255,180,50,0.08)] sm:rounded-2xl">
+          <div role="img" aria-label="BurstPick app interface preview" className="overflow-hidden rounded-xl border border-white/10 bg-[#0c0c0e] shadow-[0_20px_80px_-20px_rgba(79,125,242,0.15),0_0_40px_-10px_rgba(255,180,50,0.08)] sm:rounded-2xl">
             <div aria-hidden="true">
             {/* WindowToolbarView — 48px, matches real app */}
             <div className="flex h-10 items-center border-b border-white/[0.06] bg-[#161618] px-3 sm:px-4">

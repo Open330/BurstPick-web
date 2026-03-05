@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "BurstPick — 사진가가 만든 AI 연사 선별 도구",
-    "description": "한 번 촬영에 수천 장을 찍는 사진가들이 직접 만들었습니다. BurstPick은 Mac에서 AI를 활용해 연사를 그룹화하고 선명도·노출·구도를 분석해 베스트 컷을 추천합니다. 선별 시간을 획기적으로 줄여보세요."
+    "description": "한 번 촬영에 수천 장을 찍는 사진가들이 직접 만들었습니다. BurstPick은 Mac과 Windows에서 AI를 활용해 연사를 그룹화하고 선명도·노출·구도를 분석해 베스트 컷을 추천합니다. 선별 시간을 획기적으로 줄여보세요."
   },
   "nav": {
     "features": "주요 기능",
@@ -39,7 +39,7 @@
   },
   "features": {
     "heading": "왜 BurstPick인가요?",
-    "subheading": "Mac 하나로 끝내는 완벽한 연사 관리 솔루션. 수천 장의 사진도 문제없습니다.",
+    "subheading": "Mac과 Windows에서 사용할 수 있는 완벽한 연사 관리 솔루션. 수천 장의 사진도 문제없습니다.",
     "clustering_title": "스마트 연사 그룹화",
     "clustering_desc": "비슷한 사진 수백 장을 일일이 넘겨보지 마세요. BurstPick이 연사 촬영분을 자동으로 인식해 그룹으로 묶어줍니다. 정리된 세트 단위로 쾌적하게 리뷰하세요.",
     "scoring_title": "AI 베스트 컷 추천",
@@ -77,10 +77,10 @@
     "a1": "ARW, CR2, CR3, NEF, DNG, ORF, RW2, RAF 등 주요 카메라 제조사의 RAW 포맷 26종을 비롯해 HEIC, JPG, PNG, TIFF, AVIF, WebP, JPEG XL을 폭넓게 지원합니다.",
     "q2": "가격 정책은 어떻게 되나요?",
     "a2": "현재 베타 기간에는 무료로 제공됩니다. 정식 출시 후에는 구독 없이 $89의 일회성 구매로 평생 소장하실 수 있습니다.",
-    "q3": "사용 가능한 macOS 버전은 무엇인가요?",
-    "a3": "macOS 14 (Sonoma) 이상에서 구동됩니다. Apple Silicon(M1/M2/M3 등)과 Intel Mac 모두 지원합니다.",
+    "q3": "시스템 요구 사항은 무엇인가요?",
+    "a3": "Mac: macOS 14 (Sonoma) 이상, Apple Silicon 또는 Intel. Windows: Windows 10/11 (64비트). Mac 버전이 먼저 출시되며, Windows 버전은 곧 출시됩니다.",
     "q4": "인터넷 연결이 꼭 필요한가요?",
-    "a4": "아니요, 완전한 오프라인 환경에서도 작동합니다. 모든 AI 분석은 사용자의 Mac 내부에서만 처리되므로 안심하셔도 됩니다.",
+    "a4": "아니요, 완전한 오프라인 환경에서도 작동합니다. 모든 AI 분석은 사용자의 기기 내부에서만 처리되므로 안심하셔도 됩니다.",
     "q5": "어떤 AI 모델이 사용되나요?",
     "a5": "화질 분석, 심미성 평가, 이미지 유사도, 얼굴 인식, VLM 등 20여 개의 정교한 모델이 복합적으로 작동합니다. 설정에서 필요에 따라 모델 가중치를 조정할 수도 있습니다.",
     "q6": "원본 사진이 삭제될 위험은 없나요?",
@@ -96,10 +96,10 @@
   },
   "cta": {
     "heading": "이제 정리는 AI에게, 당신은 촬영에 집중하세요",
-    "description": "사진 고르는데 쓰는 시간이 촬영 시간보다 길다면 BurstPick이 답입니다. 100% 네이티브 macOS 앱으로 빠르고 안전하게, 구독료 걱정 없이 평생 사용하세요.",
+    "description": "사진 고르는데 쓰는 시간이 촬영 시간보다 길다면 BurstPick이 답입니다. Mac과 Windows를 모두 지원하는 100% 네이티브 앱으로 빠르고 안전하게, 구독료 걱정 없이 평생 사용하세요.",
     "button": "출시 알림 받기",
-    "requirements": "macOS 14+ · Apple Silicon 및 Intel 지원 · 독립 실행형 앱",
-    "privacy": "100% 온디바이스 처리. 당신의 사진은 오직 당신의 Mac에만 머뭅니다.",
+    "requirements": "macOS 14+ · Windows 10/11 · Apple Silicon 및 Intel 지원 · 독립 실행형 앱",
+    "privacy": "100% 온디바이스 처리. 당신의 사진은 기기 밖으로 나가지 않습니다.",
     "emailPlaceholder": "이메일 주소를 입력하세요",
     "subscribe": "출시 알림 받기",
     "subscribing": "등록 중...",
@@ -109,7 +109,7 @@
   },
   "footer": {
     "tagline": "사진가가 직접 만든, 가장 빠른 연사 선별 도구.",
-    "built_with": "Swift, SwiftUI, Vision, CoreML로 제작된 macOS 네이티브 앱.",
+    "built_with": "Mac과 Windows를 모두 지원하는 네이티브 앱. Swift, SwiftUI, Vision, CoreML로 제작.",
     "product": "제품",
     "features": "주요 기능",
     "changelog": "업데이트 내역",
@@ -156,7 +156,7 @@
     "item2_title": "Lightroom을 대체하지 않습니다",
     "item2_desc": "기존 도구와 함께 사용하세요. BurstPick으로 선별하고, Lightroom에서 보정하면 됩니다.",
     "item3_title": "사진을 업로드하지 않습니다",
-    "item3_desc": "모든 처리는 Mac 내부에서 이루어집니다. 클라우드 없음, 서버 없음, 데이터 수집 없음. 사진은 절대 기기 밖으로 나가지 않습니다."
+    "item3_desc": "모든 처리는 사용자의 기기 내부에서 이루어집니다. 클라우드 없음, 서버 없음, 데이터 수집 없음. 사진은 절대 기기 밖으로 나가지 않습니다."
   },
   "discord": {
     "title": "커뮤니티에 참여하세요",
@@ -164,23 +164,23 @@
     "button": "Discord 참여하기"
   },
   "about": {
-    "heading": "Mac을 위해 태어난 네이티브 앱",
-    "description": "BurstPick은 Swift와 SwiftUI로 처음부터 견고하게 설계된 100% macOS 전용 앱입니다. Apple Silicon의 성능을 극한까지 끌어쓰며, 인터넷 연결 없이도 모든 기능을 완벽하게 수행합니다.",
-    "native_title": "진정한 macOS 네이티브",
-    "native_desc": "웹 기술을 감싼 껍데기가 아닙니다. Swift와 SwiftUI로 한 땀 한 땀 코딩하여 Mac 사용자에게 가장 익숙하고 부드러운 사용성을 제공합니다.",
+    "heading": "네이티브로 만들었습니다. 온디바이스로 작동합니다.",
+    "description": "BurstPick은 Mac과 Windows를 모두 지원하는 100% 네이티브 앱입니다. Mac 버전은 Swift와 SwiftUI로 작성되어 Apple Silicon에 최적화되어 있으며, Windows 버전도 곧 출시됩니다. 모든 처리는 사용자의 기기에서 이루어집니다 — 클라우드 없음, 서버 없음.",
+    "native_title": "100% 네이티브 앱",
+    "native_desc": "웹 래퍼도 아니고 Electron 앱도 아닙니다. Mac과 Windows 각 플랫폼에 맞는 네이티브 성능과 사용성을 제공합니다.",
     "ondevice_title": "강력한 온디바이스 AI",
-    "ondevice_desc": "20종 이상의 ML 모델이 CoreML과 Vision 프레임워크를 통해 Mac 내부에서 돌아갑니다. 외부 서버 통신 없이 빠르고 안전하게 분석합니다.",
+    "ondevice_desc": "20종 이상의 ML 모델이 사용자의 기기 내부에서 돌아갑니다. 외부 서버 통신 없이 빠르고 안전하게 분석합니다.",
     "silicon_title": "Apple Silicon 초적화",
     "silicon_desc": "M1, M2, M3 칩의 Metal GPU 가속과 Neural Engine을 적극 활용합니다. 1만 장의 사진도 약 90초면 분석이 끝납니다.",
     "privacy_title": "타협 없는 프라이버시",
-    "privacy_desc": "회원 가입도, 클라우드 업로드도, 데이터 수집도 없습니다. 오직 당신의 Mac 안에서만 작동하는 완벽한 오프라인 도구입니다."
+    "privacy_desc": "회원 가입도, 클라우드 업로드도, 데이터 수집도 없습니다. 오직 당신의 기기 안에서만 작동하는 완벽한 오프라인 도구입니다."
   },
   "privacyPage": {
     "title": "개인정보처리방침",
     "updated": "최종 업데이트: 2026년 2월 16일",
     "intro": "BurstPick은 철저한 로컬 중심(Local-first) 철학으로 만들어졌습니다. 사용자의 사진과 분석 데이터는 결코 기기 밖으로 나가지 않습니다.",
     "localProcessingTitle": "1. 로컬 처리 원칙",
-    "localProcessingBody": "사진의 분석, 분류, 품질 평가 등 모든 과정은 사용자의 Mac 내에서만 실행됩니다. 어떠한 경우에도 사진 파일이 외부 서버로 전송되지 않습니다.",
+    "localProcessingBody": "사진의 분석, 분류, 품질 평가 등 모든 과정은 사용자의 기기 내에서만 실행됩니다. 어떠한 경우에도 사진 파일이 외부 서버로 전송되지 않습니다.",
     "dataCollectionTitle": "2. 수집 데이터 없음",
     "dataCollectionBody": "BurstPick은 개인정보, 사용 통계, 크래시 로그, 추적 ID, 광고 식별자 등을 일절 수집하지 않습니다.",
     "permissionsTitle": "3. 시스템 권한 요청",
@@ -200,7 +200,7 @@
     "licenseTitle": "1. 라이선스",
     "licenseBody": "BurstPick은 1인 1라이선스 정책을 따르는 유료 소프트웨어입니다. 구매한 라이선스는 구매자 본인이 소유한 여러 대의 기기에서 사용 가능합니다. 사전 서면 동의 없이 타인이나 다른 조직에 라이선스를 공유, 양도, 재판매하는 행위는 금지됩니다.",
     "acceptableUseTitle": "2. 허용되는 사용 범위",
-    "acceptableUseBody": "하나의 라이선스로 본인 소유의 모든 Mac에서 소프트웨어를 사용할 수 있습니다. 단, 라이선스는 개인에게 귀속되므로 계정 정보를 타인과 공유해서는 안 됩니다. 데이터 백업 및 워크플로 관리에 대한 책임은 사용자 본인에게 있습니다.",
+    "acceptableUseBody": "하나의 라이선스로 본인 소유의 모든 기기(Mac 또는 Windows)에서 소프트웨어를 사용할 수 있습니다. 단, 라이선스는 개인에게 귀속되므로 계정 정보를 타인과 공유해서는 안 됩니다. 데이터 백업 및 워크플로 관리에 대한 책임은 사용자 본인에게 있습니다.",
     "noWarrantyTitle": "3. 보증의 부인",
     "noWarrantyBody": "BurstPick은 \"있는 그대로(As Is)\" 제공되며, 특정 목적에의 적합성이나 무결성에 대해 어떠한 명시적, 묵시적 보증도 하지 않습니다.",
     "liabilityTitle": "4. 책임의 제한",
@@ -221,16 +221,22 @@
     "description": "사진가를 위한 AI 기반 연사 관리 솔루션. macOS와 Windows 모두 지원. 100% 네이티브, 100% 프라이버시 보호.",
     "button": "출시 알림 받기",
     "version": "곧 정식 출시됩니다",
-    "requirements": "시스템 요구 사항",
+    "requirements": "Mac 시스템 요구 사항",
     "req_os": "운영체제",
     "req_os_value": "macOS 14 (Sonoma) 이상",
     "req_chip": "프로세서",
     "req_chip_value": "Apple Silicon 또는 Intel (Apple Silicon 권장)",
     "req_disk": "필요 공간",
     "req_disk_value": "약 500MB (ML 모델 포함)",
-    "privacy_note": "안심하세요. 모든 사진 처리는 Mac 내부에서만 이루어집니다.",
+    "privacy_note": "안심하세요. 모든 사진 처리는 사용자의 기기 내부에서만 이루어집니다.",
     "windows_title": "Windows 버전",
     "windows_description": "BurstPick for Windows가 곧 출시됩니다. 동일한 AI 선별 기능을 Windows에서 네이티브로 사용하세요.",
+    "windows_req_os": "운영체제",
+    "windows_req_os_value": "Windows 10 이상 (64비트)",
+    "windows_req_chip": "프로세서",
+    "windows_req_chip_value": "x86_64 또는 ARM64",
+    "windows_req_disk": "필요 공간",
+    "windows_req_disk_value": "약 500MB (ML 모델 포함)",
     "windows_badge": "출시 예정"
   },
   "auth": {
@@ -291,7 +297,7 @@
     "governingLawTitle": "9. 준거법",
     "governingLawBody": "이 계약은 대한민국 법률에 따라 해석됩니다. 법 충돌 규정은 적용하지 않습니다. 분쟁 발생 시 서울 소재 법원에서 해결합니다.",
     "contactTitle": "10. 문의",
-    "contactBody": "이 계약에 대한 문의는 주식회사 자일로랩스(서울특별시 송파구 충민로 52)로 연락하시거나, open330.dev@gmail.com으로 이메일을 보내 주세요.",
+    "contactBody": "이 계약에 대한 문의는 주식회사 자일로랩스(서울특별시 송파구 충민로 52)로 연락하시거나, support@burstpick.app으로 이메일을 보내 주세요.",
     "contactLink": "지원팀에 문의하기"
   }
 }
