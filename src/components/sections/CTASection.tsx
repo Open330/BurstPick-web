@@ -8,7 +8,7 @@ import { FadeInView } from "@/components/motion/FadeInView";
 import { BASE_PATH, BRAND } from "@/lib/constants";
 import { ShieldCheck, Mail, CheckCircle, Loader2, MessageCircle } from "lucide-react";
 
-const DISCORD_URL = "https://discord.gg/burstpick";
+const DISCORD_URL = "https://discord.gg/8dMD56Mv";
 
 type FormState = "idle" | "loading" | "success" | "error";
 

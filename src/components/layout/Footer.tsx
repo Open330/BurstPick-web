@@ -3,7 +3,7 @@ import { MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { BASE_PATH, BRAND } from "@/lib/constants";
 
-const DISCORD_URL = "https://discord.gg/burstpick";
+const DISCORD_URL = "https://discord.gg/8dMD56Mv";
 
 export function Footer() {
   const t = useTranslations("footer");

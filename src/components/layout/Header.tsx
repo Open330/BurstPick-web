@@ -7,7 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { BASE_PATH, BRAND } from "@/lib/constants";
 
 const NAV_ITEMS = ["features", "screenshots", "about", "faq"] as const;
-const DISCORD_URL = "https://discord.gg/burstpick";
+const DISCORD_URL = "https://discord.gg/8dMD56Mv";
 
 export function Header() {
   const t = useTranslations("nav");
