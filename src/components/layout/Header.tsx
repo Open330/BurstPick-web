@@ -2,11 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { Menu, X } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { BASE_PATH, BRAND } from "@/lib/constants";
 
 const NAV_ITEMS = ["features", "screenshots", "about", "faq"] as const;
+const DISCORD_URL = "https://discord.gg/burstpick";
 
 export function Header() {
   const t = useTranslations("nav");
@@ -40,12 +41,21 @@ export function Header() {
           {NAV_ITEMS.map((item) => (
             <a
               key={item}
-              href={`#${item}`}
+              href={`/${locale}#${item}`}
               className="text-sm text-text-secondary transition-colors hover:text-text-primary"
             >
               {t(item)}
             </a>
           ))}
+          <a
+            href={DISCORD_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm text-text-secondary transition-colors hover:text-text-primary"
+          >
+            <MessageCircle size={16} />
+            {t("discord")}
+          </a>
         </nav>
 
         {/* Mobile Toggle */}
@@ -65,13 +75,23 @@ export function Header() {
             {NAV_ITEMS.map((item) => (
               <a
                 key={item}
-                href={`#${item}`}
+                href={`/${locale}#${item}`}
                 className="flex min-h-[44px] items-center text-sm text-text-secondary transition-colors hover:text-text-primary"
                 onClick={() => setMobileOpen(false)}
               >
                 {t(item)}
               </a>
             ))}
+            <a
+              href={DISCORD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex min-h-[44px] items-center gap-1.5 text-sm text-text-secondary transition-colors hover:text-text-primary"
+              onClick={() => setMobileOpen(false)}
+            >
+              <MessageCircle size={16} />
+              {t("discord")}
+            </a>
           </Container>
         </div>
       )}

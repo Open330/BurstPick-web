@@ -8,11 +8,12 @@
     "screenshots": "Screenshots",
     "about": "About",
     "faq": "FAQ",
+    "discord": "Community",
     "signIn": "Sign In"
   },
   "hero": {
-    "tagline": "AI-powered burst photo culling, built by photographers",
-    "description": "We shoot 10,000+ frames per session and got tired of culling by hand. So we built BurstPick — on-device AI that clusters your burst sequences, ranks them by sharpness, exposure, and composition, and surfaces your best candidates. You make the final call.",
+    "tagline": "Stop spending 8+ hours culling. Start shooting.",
+    "description": "Every burst shoot means thousands of near-identical frames and hours of manual sorting. BurstPick scores every shot for sharpness, exposure, noise, face quality, and aesthetic appeal — then surfaces your best candidates in seconds. It learns your taste and gets better every session. You make the final call.",
     "cta_download": "Coming Soon"
   },
   "showcase": {
@@ -116,6 +117,7 @@
     "docs": "Documentation",
     "license": "License",
     "support": "Support",
+    "discord": "Discord Community",
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
@@ -161,6 +163,46 @@
     "contactBody": "For legal or licensing questions, please contact our support team.",
     "licenseLink": "View License",
     "projectLink": "Contact Support"
+  },
+  "pricing": {
+    "heading": "Simple, Honest Pricing",
+    "subheading": "No subscription. Yours forever.",
+    "free_name": "Free",
+    "free_price": "$0",
+    "free_period": "forever",
+    "free_desc": "Everything you need to get started with burst culling.",
+    "free_f1": "Up to 2,000 photos per session",
+    "free_f2": "2 scoring models",
+    "free_f3": "Up to 100 XMP exports",
+    "free_f4": "Burst clustering & grouping",
+    "free_f5": "Non-destructive workflow",
+    "pro_name": "Pro",
+    "pro_price": "$89",
+    "pro_period": "one-time",
+    "pro_desc": "For professionals who shoot thousands of frames per session.",
+    "pro_f1": "Unlimited photos",
+    "pro_f2": "22+ ML scoring models",
+    "pro_f3": "Unlimited XMP & catalog exports",
+    "pro_f4": "Preference learning — adapts to your taste",
+    "pro_f5": "Priority support",
+    "pro_cta": "Buy Now",
+    "pro_highlight": "Most Popular",
+    "guarantee": "No subscription fees, ever. One purchase, lifetime access."
+  },
+  "notDo": {
+    "heading": "What BurstPick Does NOT Do",
+    "subheading": "BurstPick is laser-focused on one thing: helping you find your best shots faster.",
+    "item1_title": "Does NOT edit your photos",
+    "item1_desc": "BurstPick helps you decide which photos to keep — it's not a photo editor. Your RAW files stay untouched.",
+    "item2_title": "Does NOT replace Lightroom",
+    "item2_desc": "It works alongside your existing tools. Cull with BurstPick, edit in Lightroom — they fit together seamlessly.",
+    "item3_title": "Does NOT upload your photos",
+    "item3_desc": "Everything runs locally on your Mac. Zero cloud, zero servers, zero data collection. Your photos never leave your device."
+  },
+  "discord": {
+    "title": "Join Our Community",
+    "description": "Connect with photographers, share workflows, get tips, and help shape the future of BurstPick.",
+    "button": "Join Discord"
   },
   "about": {
     "heading": "Built Native. Runs On-Device.",

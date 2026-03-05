@@ -1,6 +1,9 @@
 import { useTranslations, useLocale } from "next-intl";
+import { MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { BASE_PATH, BRAND } from "@/lib/constants";
+
+const DISCORD_URL = "https://discord.gg/burstpick";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -27,14 +30,19 @@ export function Footer() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#features" className="text-text-secondary hover:text-text-primary transition-colors">
+                <a href={`/${locale}#features`} className="text-text-secondary hover:text-text-primary transition-colors">
                   {t("features")}
                 </a>
+              </li>
+              <li>
+                <span className="text-text-muted cursor-default">
+                  {t("changelog")}
+                </span>
               </li>
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Resources */}
           <div>
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-text-muted">
               {t("resources")}
@@ -50,10 +58,13 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href={`/${locale}/license`}
-                  className="text-text-secondary hover:text-text-primary transition-colors"
+                  href={DISCORD_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-text-secondary hover:text-text-primary transition-colors"
                 >
-                  {t("license")}
+                  <MessageCircle size={14} />
+                  {t("discord")}
                 </a>
               </li>
             </ul>
@@ -73,6 +84,14 @@ export function Footer() {
               <li>
                 <a href={`/${locale}/terms`} className="text-text-secondary hover:text-text-primary transition-colors">
                   {t("terms")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`/${locale}/license`}
+                  className="text-text-secondary hover:text-text-primary transition-colors"
+                >
+                  {t("license")}
                 </a>
               </li>
             </ul>

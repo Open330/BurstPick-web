@@ -6,12 +6,15 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { FadeInView } from "@/components/motion/FadeInView";
 import { BASE_PATH, BRAND } from "@/lib/constants";
-import { ShieldCheck, Mail, CheckCircle, Loader2 } from "lucide-react";
+import { ShieldCheck, Mail, CheckCircle, Loader2, MessageCircle } from "lucide-react";
+
+const DISCORD_URL = "https://discord.gg/burstpick";
 
 type FormState = "idle" | "loading" | "success" | "error";
 
 export function CTASection() {
   const t = useTranslations("cta");
+  const td = useTranslations("discord");
   const [email, setEmail] = useState("");
   const [formState, setFormState] = useState<FormState>("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -164,6 +167,26 @@ export function CTASection() {
           <div className="mt-4 inline-flex items-center gap-2 text-xs text-text-muted">
             <ShieldCheck size={14} className="text-green-400" />
             {t("privacy")}
+          </div>
+        </FadeInView>
+
+        {/* Discord Community */}
+        <FadeInView delay={0.6}>
+          <div className="mx-auto mt-16 max-w-md rounded-xl border border-white/[0.08] bg-surface-secondary/50 p-6 text-center backdrop-blur-sm">
+            <div className="mx-auto mb-3 inline-flex rounded-lg bg-[#5865F2]/10 p-3 text-[#5865F2]">
+              <MessageCircle size={24} />
+            </div>
+            <h3 className="mb-2 text-lg font-semibold">{td("title")}</h3>
+            <p className="mb-4 text-sm text-text-secondary">{td("description")}</p>
+            <a
+              href={DISCORD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-[#5865F2] px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            >
+              <MessageCircle size={16} />
+              {td("button")}
+            </a>
           </div>
         </FadeInView>
       </Container>

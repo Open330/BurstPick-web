@@ -6,4 +6,6 @@
   <url><loc>https://burstpick.app/ko/privacy</loc><priority>0.5</priority></url>
   <url><loc>https://burstpick.app/en/terms</loc><priority>0.5</priority></url>
   <url><loc>https://burstpick.app/ko/terms</loc><priority>0.5</priority></url>
+  <url><loc>https://burstpick.app/en/license</loc><priority>0.5</priority></url>
+  <url><loc>https://burstpick.app/ko/license</loc><priority>0.5</priority></url>
 </urlset>

@@ -8,11 +8,12 @@
     "screenshots": "스크린샷",
     "about": "소개",
     "faq": "자주 묻는 질문",
+    "discord": "커뮤니티",
     "signIn": "로그인"
   },
   "hero": {
-    "tagline": "사진가가 직접 만든 AI 연사 선별",
-    "description": "촬영 한 번에 수천 장의 사진, 정리하느라 밤새지 마세요. BurstPick은 사진가가 직접 만든 도구입니다. Mac의 로컬 AI가 연사를 자동으로 묶고 선명도·노출·구도를 분석해 베스트 컷을 추천합니다. 최종 선택에만 집중하세요.",
+    "tagline": "8시간 넘는 선별 작업, 이제 그만하세요.",
+    "description": "연사 촬영마다 수천 장의 비슷한 사진, 그리고 끝없는 수작업. BurstPick은 모든 사진의 선명도, 노출, 노이즈, 인물 표정, 심미성을 분석해 베스트 컷을 몇 초 만에 찾아냅니다. 세션을 거듭할수록 사용자의 취향을 학습해 더 정확해집니다. 최종 결정은 당신의 몫입니다.",
     "cta_download": "출시 알림 받기"
   },
   "showcase": {
@@ -116,10 +117,51 @@
     "docs": "문서",
     "license": "라이선스",
     "support": "고객 지원",
+    "discord": "Discord 커뮤니티",
     "legal": "법적 고지",
     "privacy": "개인정보처리방침",
     "terms": "이용약관",
     "copyright": "© 2026 BurstPick Team. All rights reserved."
+  },
+  "pricing": {
+    "heading": "명확하고 정직한 가격",
+    "subheading": "구독 없이, 평생 소장하세요.",
+    "free_name": "Free",
+    "free_price": "$0",
+    "free_period": "영구 무료",
+    "free_desc": "연사 선별의 기본기를 체험하기에 충분합니다.",
+    "free_f1": "세션당 최대 2,000장",
+    "free_f2": "2종 스코어링 모델",
+    "free_f3": "최대 100건 XMP 내보내기",
+    "free_f4": "연사 클러스터링 및 그룹화",
+    "free_f5": "비파괴 워크플로",
+    "pro_name": "Pro",
+    "pro_price": "$89",
+    "pro_period": "일회성 구매",
+    "pro_desc": "촬영마다 수천 장을 처리하는 프로 사진가를 위한 플랜.",
+    "pro_f1": "무제한 사진",
+    "pro_f2": "22종 이상의 ML 스코어링 모델",
+    "pro_f3": "무제한 XMP 및 카탈로그 내보내기",
+    "pro_f4": "취향 학습 — 세션마다 더 정확해지는 AI",
+    "pro_f5": "우선 고객 지원",
+    "pro_cta": "구매하기",
+    "pro_highlight": "가장 인기",
+    "guarantee": "구독료는 없습니다. 한 번 구매하면 평생 사용하세요."
+  },
+  "notDo": {
+    "heading": "BurstPick이 하지 않는 것",
+    "subheading": "BurstPick은 오직 하나, 베스트 컷을 빠르게 찾는 데 집중합니다.",
+    "item1_title": "사진을 편집하지 않습니다",
+    "item1_desc": "어떤 사진을 남길지 결정하는 데 도움을 줄 뿐, 보정 도구가 아닙니다. RAW 파일은 그대로 유지됩니다.",
+    "item2_title": "Lightroom을 대체하지 않습니다",
+    "item2_desc": "기존 도구와 함께 사용하세요. BurstPick으로 선별하고, Lightroom에서 보정하면 됩니다.",
+    "item3_title": "사진을 업로드하지 않습니다",
+    "item3_desc": "모든 처리는 Mac 내부에서 이루어집니다. 클라우드 없음, 서버 없음, 데이터 수집 없음. 사진은 절대 기기 밖으로 나가지 않습니다."
+  },
+  "discord": {
+    "title": "커뮤니티에 참여하세요",
+    "description": "사진가들과 교류하고, 워크플로를 공유하고, BurstPick의 미래를 함께 만들어가세요.",
+    "button": "Discord 참여하기"
   },
   "about": {
     "heading": "Mac을 위해 태어난 네이티브 앱",
