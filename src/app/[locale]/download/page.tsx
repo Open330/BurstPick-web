@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
 import { BASE_PATH } from "@/lib/constants";
-import { Clock, ShieldCheck, Cpu, HardDrive, Monitor } from "lucide-react";
+import { Clock, ShieldCheck, Cpu, HardDrive, Monitor, AppWindow } from "lucide-react";
 
 export default async function DownloadPage({
   params,
@@ -75,6 +75,20 @@ function DownloadContent() {
             <ShieldCheck size={16} />
             {t("privacy_note")}
           </div>
+        </div>
+
+        {/* Windows Coming Soon */}
+        <div className="mx-auto mt-10 max-w-lg rounded-xl border border-white/[0.08] bg-surface-secondary p-6 text-left sm:p-8">
+          <div className="flex items-center gap-3 mb-4">
+            <AppWindow size={22} className="text-[#0078D4]" />
+            <h2 className="text-lg font-semibold">{t("windows_title")}</h2>
+            <span className="rounded-full bg-[#0078D4]/15 px-3 py-0.5 text-xs font-medium text-[#0078D4]">
+              {t("windows_badge")}
+            </span>
+          </div>
+          <p className="text-sm text-text-secondary">
+            {t("windows_description")}
+          </p>
         </div>
       </Container>
     </main>

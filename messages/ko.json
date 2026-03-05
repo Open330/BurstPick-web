@@ -218,7 +218,7 @@
   },
   "downloadPage": {
     "title": "BurstPick을 만나보세요",
-    "description": "사진가를 위한 AI 기반 연사 관리 솔루션. 100% 네이티브, 100% 프라이버시 보호.",
+    "description": "사진가를 위한 AI 기반 연사 관리 솔루션. macOS와 Windows 모두 지원. 100% 네이티브, 100% 프라이버시 보호.",
     "button": "출시 알림 받기",
     "version": "곧 정식 출시됩니다",
     "requirements": "시스템 요구 사항",
@@ -228,7 +228,10 @@
     "req_chip_value": "Apple Silicon 또는 Intel (Apple Silicon 권장)",
     "req_disk": "필요 공간",
     "req_disk_value": "약 500MB (ML 모델 포함)",
-    "privacy_note": "안심하세요. 모든 사진 처리는 Mac 내부에서만 이루어집니다."
+    "privacy_note": "안심하세요. 모든 사진 처리는 Mac 내부에서만 이루어집니다.",
+    "windows_title": "Windows 버전",
+    "windows_description": "BurstPick for Windows가 곧 출시됩니다. 동일한 AI 선별 기능을 Windows에서 네이티브로 사용하세요.",
+    "windows_badge": "출시 예정"
   },
   "auth": {
     "signIn": "로그인",

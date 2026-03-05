@@ -85,7 +85,7 @@ export default async function LocaleLayout({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "BurstPick",
-    operatingSystem: "macOS",
+    operatingSystem: "macOS, Windows",
     applicationCategory: "PhotographyApplication",
     description: metaT("description"),
     offers: {

@@ -218,7 +218,7 @@
   },
   "downloadPage": {
     "title": "BurstPick is Coming Soon",
-    "description": "AI-powered burst photo culling built by photographers, for macOS. A 100% native app — all processing happens locally on your Mac.",
+    "description": "AI-powered burst photo culling built by photographers, for macOS and Windows. A 100% native app — all processing happens locally on your machine.",
     "button": "Coming Soon",
     "version": "Stay tuned for the launch",
     "requirements": "System Requirements",
@@ -228,7 +228,10 @@
     "req_chip_value": "Apple Silicon or Intel (Apple Silicon recommended)",
     "req_disk": "Disk Space",
     "req_disk_value": "~500 MB (with bundled ML models)",
-    "privacy_note": "No photos leave your Mac. All processing happens on-device."
+    "privacy_note": "No photos leave your Mac. All processing happens on-device.",
+    "windows_title": "Windows Version",
+    "windows_description": "BurstPick for Windows is coming soon. Same ML-powered culling, native on Windows.",
+    "windows_badge": "Coming Soon"
   },
   "auth": {
     "signIn": "Sign In",
