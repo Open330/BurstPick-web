@@ -125,7 +125,8 @@
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "copyright": "© 2026 BurstPick Team. All rights reserved."
+    "copyright": "© 2026 BurstPick Team. All rights reserved.",
+    "models": "ML Models"
   },
   "privacyPage": {
     "title": "Privacy Policy",
@@ -303,5 +304,44 @@
     "contactTitle": "10. Contact",
     "contactBody": "For questions about this Agreement, please contact Xylolabs Inc. at 52, Chungmin-ro, Songpa-gu, Seoul, South Korea, or email support@burstpick.app.",
     "contactLink": "Contact Support"
+  },
+  "modelsPage": {
+    "title": "ML Models",
+    "intro": "BurstPick ships with 22 machine learning models across 6 categories. Every model runs 100% on-device using Apple CoreML and Neural Engine. No photos leave your Mac, ever. Models are either bundled with the app or downloaded on demand when you select them.",
+    "badgeLocal": "100% On-Device",
+    "badgeOpen": "Open-Source Models",
+    "badgeNeural": "Neural Engine Accelerated",
+    "bundled": "Bundled",
+    "labelParams": "Parameters",
+    "labelInput": "Input",
+    "labelDownload": "Download",
+    "labelMemory": "Memory",
+    "categories": {
+      "imageQuality": {
+        "title": "Image Quality Assessment",
+        "description": "Scores each photo on technical quality: sharpness, noise, exposure, and perceptual clarity. Used to rank photos within burst clusters."
+      },
+      "aestheticScore": {
+        "title": "Aesthetic Scoring",
+        "description": "Evaluates artistic and aesthetic appeal based on composition, color harmony, and visual balance. Trained on large-scale human preference datasets."
+      },
+      "imageEmbedding": {
+        "title": "Image Embedding",
+        "description": "Generates vector representations of photos for visual similarity clustering. Groups burst sequences and identifies duplicate or near-duplicate shots."
+      },
+      "faceEmbedding": {
+        "title": "Face Embedding",
+        "description": "Creates face identity vectors for person grouping and recognition. Automatically clusters photos by who appears in them."
+      },
+      "vlmAssessment": {
+        "title": "Vision Language Model (VLM)",
+        "description": "Understands photo content using natural language. Provides scene descriptions, quality reasoning, and contextual assessment beyond what numerical scores capture."
+      },
+      "imageClassification": {
+        "title": "Image Classification",
+        "description": "Tags photos with scene and object labels for filtering and organization. Uses Apple's built-in Vision framework."
+      }
+    },
+    "footer": "All models are converted to CoreML format and run entirely on your Mac using CPU, GPU, and Neural Engine. Download sizes are for the compressed CoreML model package. Memory figures represent approximate GPU/ANE memory usage during inference."
   }
 }

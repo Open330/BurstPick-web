@@ -35,6 +35,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <a href={`/${locale}/models`} className="text-text-secondary hover:text-text-primary transition-colors">
+                  {t("models")}
+                </a>
+              </li>
+              <li>
                 <span className="text-text-muted cursor-default">
                   {t("changelog")}
                 </span>
