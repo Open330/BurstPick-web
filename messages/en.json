@@ -69,7 +69,11 @@
     "compare": "Compare Finalists",
     "compare_desc": "Put your top picks side by side with synced zoom — spot the winner instantly",
     "persons": "Find Every Face",
-    "persons_desc": "Every person in your shoot, grouped automatically — jump straight to the subject you need"
+    "persons_desc": "Every person in your shoot, grouped automatically — jump straight to the subject you need",
+    "scoring_food": "Scoring Detail — Food",
+    "scoring_food_desc": "Drill into AI scores for any photo — sharpness, exposure, composition, all broken down at a glance",
+    "scoring_whiskey": "Scoring Detail — Low Light",
+    "scoring_whiskey_desc": "See how BurstPick evaluates challenging low-light shots and surfaces the best candidate"
   },
   "faq": {
     "heading": "Frequently Asked Questions",

@@ -51,6 +51,8 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   { titleKey: "scoring", descKey: "scoring_desc", screenshot: "/screenshots/photos-grid.avif" },
   { titleKey: "compare", descKey: "compare_desc", screenshot: "/screenshots/compare-mode.avif" },
   { titleKey: "persons", descKey: "persons_desc", screenshot: "/screenshots/tags-view.avif" },
+  { titleKey: "scoring_food", descKey: "scoring_food_desc", screenshot: "/screenshots/scoring-food.avif" },
+  { titleKey: "scoring_whiskey", descKey: "scoring_whiskey_desc", screenshot: "/screenshots/scoring-whiskey.avif" },
 ];
 
 export const FAQ_KEYS = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"] as const;
