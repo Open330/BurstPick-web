@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { SALES } from "@/lib/constants";
+import { localizedPath, SALES } from "@/lib/constants";
 
 export default async function PurchasePage({
   params,
@@ -18,16 +18,23 @@ export default async function PurchasePage({
 function PurchaseContent({ locale }: { locale: string }) {
   const t = useTranslations("purchasePage");
   const checkoutUrl = SALES.checkoutUrl;
-  const primaryHref = checkoutUrl ?? `/${locale}#download`;
+  const primaryHref = checkoutUrl ?? localizedPath(locale, "#download");
   const primaryLabel = checkoutUrl ? t("buyNow") : t("joinWaitlist");
   const opensExternalCheckout = Boolean(checkoutUrl);
 
-  const purchaseSteps = [
-    t("stepCheckout"),
-    t("stepLicense"),
-    t("stepActivate"),
-    t("stepCreate"),
-  ];
+  const purchaseSteps = checkoutUrl
+    ? [
+        t("stepCheckout"),
+        t("stepLicense"),
+        t("stepActivate"),
+        t("stepCreate"),
+      ]
+    : [
+        t("pendingStepJoin"),
+        t("pendingStepNotify"),
+        t("pendingStepLaunch"),
+        t("pendingStepActivate"),
+      ];
 
   const proIncludes = [
     t("featureUnlimited"),
@@ -64,7 +71,7 @@ function PurchaseContent({ locale }: { locale: string }) {
               >
                 {primaryLabel}
               </Button>
-              <Button href={`/${locale}/license`} variant="ghost" size="lg">
+              <Button href={localizedPath(locale, "/license")} variant="ghost" size="lg">
                 {t("viewLicense")}
               </Button>
             </div>
@@ -106,7 +113,7 @@ function PurchaseContent({ locale }: { locale: string }) {
               </div>
 
               <div className="mt-6 flex flex-wrap gap-3">
-                <Button href={`/${locale}#download`} variant="secondary" size="md">
+                <Button href={localizedPath(locale, "#download")} variant="secondary" size="md">
                   {t("notifyMe")}
                 </Button>
                 <Button href={SALES.discordUrl} variant="ghost" size="md" target="_blank" rel="noopener noreferrer">
@@ -118,7 +125,7 @@ function PurchaseContent({ locale }: { locale: string }) {
                 href={`mailto:${SALES.supportEmail}`}
                 className="mt-5 inline-flex text-sm font-medium text-brand-start transition-colors hover:text-brand-end"
               >
-                {t("contactSales")}
+                {t("contactSupport")}
               </a>
             </section>
           </aside>

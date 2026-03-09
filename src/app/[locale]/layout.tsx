@@ -72,6 +72,8 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const faqT = await getTranslations({ locale, namespace: "faq" });
   const metaT = await getTranslations({ locale, namespace: "metadata" });
+  const offerPrice = locale === "ko" ? "119000" : "89";
+  const offerCurrency = locale === "ko" ? "KRW" : "USD";
 
   const orgJsonLd = {
     "@context": "https://schema.org",
@@ -90,8 +92,8 @@ export default async function LocaleLayout({
     description: metaT("description"),
     offers: {
       "@type": "Offer",
-      price: "89",
-      priceCurrency: "USD",
+      price: offerPrice,
+      priceCurrency: offerCurrency,
     },
   };
 

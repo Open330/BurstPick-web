@@ -215,13 +215,17 @@
     "stepLicense": "Receive a BurstPick license key by email.",
     "stepActivate": "Activate BurstPick on your Mac with that key.",
     "stepCreate": "Cull, compare, and export without subscription limits.",
+    "pendingStepJoin": "Join the launch list so we know you want BurstPick Pro.",
+    "pendingStepNotify": "Get the purchase link and signed build details first when checkout opens.",
+    "pendingStepLaunch": "Open the hosted checkout as soon as the storefront goes live.",
+    "pendingStepActivate": "Activate BurstPick with your license key and start culling.",
     "trustTitle": "Why photographers buy this instead of subscribing",
     "trustLine1": "No recurring fee. Buy BurstPick once and keep using it.",
     "trustLine2": "Your photos stay on your device. No upload-first workflow and no cloud lock-in.",
     "trustLine3": "Need to evaluate first? Join the launch list and we will send release and purchase details as soon as checkout opens.",
     "notifyMe": "Get launch updates",
     "joinDiscord": "Join Discord",
-    "contactSales": "Questions? Contact sales"
+    "contactSupport": "Questions? Contact support"
   },
   "notDo": {
     "heading": "What BurstPick Does NOT Do",

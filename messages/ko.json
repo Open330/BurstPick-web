@@ -174,13 +174,17 @@
     "stepLicense": "이메일로 BurstPick 라이선스 키를 받습니다.",
     "stepActivate": "그 키로 Mac의 BurstPick 앱을 활성화합니다.",
     "stepCreate": "구독 제한 없이 선별, 비교, 내보내기를 진행합니다.",
+    "pendingStepJoin": "출시 알림을 신청해 BurstPick Pro 오픈 소식을 가장 먼저 받습니다.",
+    "pendingStepNotify": "체크아웃이 열리면 구매 링크와 서명된 빌드 안내를 먼저 받습니다.",
+    "pendingStepLaunch": "스토어가 열리는 즉시 호스팅된 결제 페이지로 이동합니다.",
+    "pendingStepActivate": "라이선스 키로 BurstPick을 활성화하고 바로 선별을 시작합니다.",
     "trustTitle": "왜 사진가들은 구독 대신 BurstPick을 선택하나요?",
     "trustLine1": "반복 결제가 없습니다. 한 번 구매하면 계속 사용할 수 있습니다.",
     "trustLine2": "사진은 기기 안에만 머뭅니다. 업로드 중심 워크플로도, 클라우드 종속도 없습니다.",
     "trustLine3": "먼저 출시 소식을 받고 싶다면 알림을 신청하세요. 체크아웃이 열리는 즉시 구매 안내도 함께 보내드립니다.",
     "notifyMe": "출시 알림 받기",
     "joinDiscord": "Discord 참여하기",
-    "contactSales": "문의가 있으신가요? 영업팀에 연락하기"
+    "contactSupport": "문의가 있으신가요? 지원팀에 연락하기"
   },
   "notDo": {
     "heading": "BurstPick이 하지 않는 것",

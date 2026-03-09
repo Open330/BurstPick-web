@@ -31,6 +31,7 @@ pnpm dev
 Open [http://localhost:3000](http://localhost:3000).
 
 `NEXT_PUBLIC_CHECKOUT_URL` is optional. When set, the localized `/purchase` page routes visitors to your hosted checkout. When absent, the purchase page falls back to the launch-list CTA.
+`NEXT_PUBLIC_BASE_PATH` is optional and should only be set when the site is served from a subpath rather than the root domain.
 
 ## Build
 
@@ -50,11 +51,13 @@ src/
 │       ├── layout.tsx         # Root layout with metadata
 │       ├── page.tsx           # Landing page
 │       ├── download/          # Download page
+│       ├── purchase/          # Purchase / checkout handoff page
+│       ├── license/           # EULA / license terms
 │       ├── privacy/           # Privacy policy
 │       └── terms/             # Terms of service
 ├── components/
 │   ├── layout/                # Header, Footer
-│   ├── sections/              # Hero, Features, Gallery, Showcase, Story, FAQ, CTA
+│   ├── sections/              # Hero, Pricing, Features, Gallery, Showcase, Story, FAQ, CTA
 │   ├── ui/                    # Button, Container, GradientText
 │   └── motion/                # FadeInView (scroll animations)
 ├── i18n/                      # Locale config

@@ -10,12 +10,26 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
-export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
+export const BASE_PATH = (process.env.NEXT_PUBLIC_BASE_PATH || "").replace(/\/$/, "");
+
+export function sitePath(path: string): string {
+  if (!path) {
+    return BASE_PATH || "/";
+  }
+  if (path.startsWith("http://") || path.startsWith("https://") || path.startsWith("mailto:")) {
+    return path;
+  }
+  return `${BASE_PATH}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
+export function localizedPath(locale: string, path = ""): string {
+  return sitePath(`/${locale}${path}`);
+}
 
 export const BRAND = {
   name: "BurstPick",
   website: "https://burstpick.app",
-  downloadUrl: "/en/download",
+  downloadUrl: sitePath("/en/download"),
 } as const;
 
 export const SALES = {

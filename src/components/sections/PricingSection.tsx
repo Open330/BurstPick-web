@@ -2,6 +2,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { FadeInView } from "@/components/motion/FadeInView";
 import { Check } from "lucide-react";
+import { localizedPath } from "@/lib/constants";
 
 const FREE_FEATURES = ["free_f1", "free_f2", "free_f3", "free_f4", "free_f5"] as const;
 const PRO_FEATURES = ["pro_f1", "pro_f2", "pro_f3", "pro_f4", "pro_f5"] as const;
@@ -77,7 +78,7 @@ export function PricingSection() {
                 ))}
               </ul>
               <a
-                href={`/${locale}/purchase`}
+                href={localizedPath(locale, "/purchase")}
                 data-analytics="purchase-entry"
                 className="mt-8 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-brand-start to-brand-end px-6 py-3 text-base font-semibold text-white transition-opacity hover:opacity-90"
               >
