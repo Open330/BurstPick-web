@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function NotFound() {
   return (
     <html lang="en">
@@ -37,7 +39,7 @@ export default function NotFound() {
           >
             Page not found
           </p>
-          <a
+          <Link
             href="/en"
             style={{
               display: "inline-block",
@@ -51,10 +53,9 @@ export default function NotFound() {
             }}
           >
             Back to Home
-          </a>
+          </Link>
         </div>
       </body>
     </html>
   );
 }
-
