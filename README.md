@@ -23,11 +23,14 @@ sections, improve animations, extend localization, or optimize the build.
 ## Getting Started
 
 ```bash
+cp .env.example .env.local
 pnpm install
 pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+`NEXT_PUBLIC_CHECKOUT_URL` is optional. When set, the localized `/purchase` page routes visitors to your hosted checkout. When absent, the purchase page falls back to the launch-list CTA.
 
 ## Build
 
