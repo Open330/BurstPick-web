@@ -146,6 +146,13 @@ export default async function LocaleLayout({
                   event_label: s ? s.id || 'hero' : 'hero'
                 });
               }
+              var p = e.target.closest('a[href*="/purchase"], [data-analytics="checkout-cta"], [data-analytics="purchase-entry"], [data-analytics="purchase-waitlist-cta"]');
+              if (p) {
+                gtag('event', 'purchase_click', {
+                  event_category: 'conversion',
+                  event_label: p.getAttribute('data-analytics') || p.getAttribute('href') || 'purchase'
+                });
+              }
               var f = e.target.closest('#faq button');
               if (f) {
                 var l = f.querySelector('span');

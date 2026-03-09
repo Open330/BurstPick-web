@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { FadeInView } from "@/components/motion/FadeInView";
 import { Check } from "lucide-react";
@@ -8,6 +8,7 @@ const PRO_FEATURES = ["pro_f1", "pro_f2", "pro_f3", "pro_f4", "pro_f5"] as const
 
 export function PricingSection() {
   const t = useTranslations("pricing");
+  const locale = useLocale();
 
   return (
     <section id="pricing" className="relative py-24 sm:py-32">
@@ -76,7 +77,8 @@ export function PricingSection() {
                 ))}
               </ul>
               <a
-                href="https://burstpick.app/purchase"
+                href={`/${locale}/purchase`}
+                data-analytics="purchase-entry"
                 className="mt-8 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-brand-start to-brand-end px-6 py-3 text-base font-semibold text-white transition-opacity hover:opacity-90"
               >
                 {t("pro_cta")}
