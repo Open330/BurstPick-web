@@ -26,10 +26,12 @@ export function localizedPath(locale: string, path = ""): string {
   return sitePath(`/${locale}${path}`);
 }
 
+export const APP_STORE_URL = "https://apps.apple.com/app/burstpick/id0000000000";
+
 export const BRAND = {
   name: "BurstPick",
   website: "https://burstpick.app",
-  downloadUrl: sitePath("/en/download"),
+  downloadUrl: APP_STORE_URL,
 } as const;
 
 export const SALES = {

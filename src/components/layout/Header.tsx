@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { BASE_PATH, BRAND } from "@/lib/constants";
+import { BASE_PATH, BRAND, APP_STORE_URL } from "@/lib/constants";
 
 const NAV_ITEMS = ["features", "screenshots", "about", "faq"] as const;
 const DISCORD_URL = "https://discord.gg/8dMD56Mv";
@@ -56,6 +56,14 @@ export function Header() {
             <MessageCircle size={16} />
             {t("discord")}
           </a>
+          <a
+            href={APP_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-brand-start to-brand-end px-4 py-1.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+          >
+            {t("download")}
+          </a>
         </nav>
 
         {/* Mobile Toggle */}
@@ -91,6 +99,15 @@ export function Header() {
             >
               <MessageCircle size={16} />
               {t("discord")}
+            </a>
+            <a
+              href={APP_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-[44px] items-center gap-1.5 rounded-full bg-gradient-to-r from-brand-start to-brand-end px-4 py-1.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              onClick={() => setMobileOpen(false)}
+            >
+              {t("download")}
             </a>
           </Container>
         </div>

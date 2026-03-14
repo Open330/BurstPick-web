@@ -1,7 +1,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import { MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { BASE_PATH, BRAND } from "@/lib/constants";
+import { BASE_PATH, BRAND, APP_STORE_URL } from "@/lib/constants";
 
 const DISCORD_URL = "https://discord.gg/8dMD56Mv";
 
@@ -37,6 +37,16 @@ export function Footer() {
               <li>
                 <a href={`/${locale}/models`} className="text-text-secondary hover:text-text-primary transition-colors">
                   {t("models")}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={APP_STORE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-secondary hover:text-text-primary transition-colors"
+                >
+                  {t("app_store")}
                 </a>
               </li>
               <li>

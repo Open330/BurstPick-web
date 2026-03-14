@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { GradientText } from "@/components/ui/GradientText";
 import { FadeInView } from "@/components/motion/FadeInView";
-import { BASE_PATH, BRAND } from "@/lib/constants";
+import { BASE_PATH, BRAND, APP_STORE_URL } from "@/lib/constants";
 
 
 export function HeroSection() {
@@ -61,7 +61,9 @@ export function HeroSection() {
 
         <FadeInView delay={0.4}>
           <a
-            href="#download"
+            href={APP_STORE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-start to-brand-end px-6 py-3 text-lg font-semibold text-white transition-opacity hover:opacity-90"
           >
             {t("cta_download")}

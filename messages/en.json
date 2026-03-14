@@ -9,12 +9,13 @@
     "about": "About",
     "faq": "FAQ",
     "discord": "Community",
-    "signIn": "Sign In"
+    "signIn": "Sign In",
+    "download": "Download"
   },
   "hero": {
     "tagline": "Stop spending 8+ hours culling. Start shooting.",
     "description": "Every burst shoot means thousands of near-identical frames and hours of manual sorting. BurstPick scores every shot for sharpness, exposure, noise, face quality, and aesthetic appeal — then surfaces your best candidates in seconds. It learns your taste and gets better every session. You make the final call.",
-    "cta_download": "Coming Soon"
+    "cta_download": "Download on the Mac App Store"
   },
   "showcase": {
     "heading": "Built by Photographers, for Photographers",
@@ -99,9 +100,10 @@
     "a10": "BurstPick is coming soon. Sign up for updates and be the first to know when it launches."
   },
   "cta": {
-    "heading": "Get back to shooting, not sorting",
+    "heading": "Ready to find your best shots?",
     "description": "We built BurstPick because we were spending more time culling than shooting. 100% native app for Mac and Windows — no subscription, no cloud. Your photos never leave your device.",
     "button": "Coming Soon",
+    "download_prefix": "Download on the",
     "requirements": "macOS 14+ · Windows 10/11 · Apple Silicon & Intel · Zero dependencies",
     "privacy": "100% local processing. No photos leave your device — ever.",
     "emailPlaceholder": "Enter your email address",
@@ -126,7 +128,8 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "copyright": "© 2026 BurstPick Team. All rights reserved.",
-    "models": "ML Models"
+    "models": "ML Models",
+    "app_store": "Mac App Store"
   },
   "privacyPage": {
     "title": "Privacy Policy",
@@ -183,14 +186,14 @@
     "free_f5": "Non-destructive workflow",
     "pro_name": "Pro",
     "pro_price": "$89",
-    "pro_period": "one-time",
+    "pro_period": "one-time purchase",
     "pro_desc": "For professionals who shoot thousands of frames per session.",
     "pro_f1": "Unlimited photos",
     "pro_f2": "22+ ML scoring models",
     "pro_f3": "Unlimited XMP & catalog exports",
     "pro_f4": "Preference learning — adapts to your taste",
     "pro_f5": "Priority support",
-    "pro_cta": "Buy Now",
+    "pro_cta": "Get on the App Store",
     "pro_highlight": "Most Popular",
     "guarantee": "No subscription fees, ever. One purchase, lifetime access."
   },
@@ -257,7 +260,7 @@
   "downloadPage": {
     "title": "BurstPick is Coming Soon",
     "description": "AI-powered burst photo culling built by photographers, for macOS and Windows. A 100% native app — all processing happens on your device.",
-    "button": "Coming Soon",
+    "button": "Mac App Store",
     "version": "Stay tuned for the launch",
     "requirements": "Mac System Requirements",
     "req_os": "Operating System",
