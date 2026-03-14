@@ -148,11 +148,11 @@ export default async function LocaleLayout({
                   event_label: s ? s.id || 'hero' : 'hero'
                 });
               }
-              var p = e.target.closest('a[href*="/purchase"], [data-analytics="checkout-cta"], [data-analytics="purchase-entry"], [data-analytics="purchase-waitlist-cta"]');
+              var p = e.target.closest('a[href*="apps.apple.com"], a[href*="#download"]');
               if (p) {
-                gtag('event', 'purchase_click', {
+                gtag('event', 'app_store_click', {
                   event_category: 'conversion',
-                  event_label: p.getAttribute('data-analytics') || p.getAttribute('href') || 'purchase'
+                  event_label: p.getAttribute('data-analytics') || p.getAttribute('href') || 'app_store'
                 });
               }
               var f = e.target.closest('#faq button');

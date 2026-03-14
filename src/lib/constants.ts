@@ -35,7 +35,6 @@ export const BRAND = {
 } as const;
 
 export const SALES = {
-  checkoutUrl: process.env.NEXT_PUBLIC_CHECKOUT_URL?.trim() || null,
   supportEmail: "support@burstpick.app",
   discordUrl: "https://discord.gg/8dMD56Mv",
 } as const;
