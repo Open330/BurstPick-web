@@ -15,7 +15,8 @@
   "hero": {
     "tagline": "Stop spending 8+ hours culling. Start shooting.",
     "description": "Every burst shoot means thousands of near-identical frames and hours of manual sorting. BurstPick scores every shot for sharpness, exposure, noise, face quality, and aesthetic appeal — then surfaces your best candidates in seconds. It learns your taste and gets better every session. You make the final call.",
-    "cta_download": "Download on the Mac App Store"
+    "cta_download": "Coming Soon to",
+    "cta_coming_soon_badge": "Coming Soon"
   },
   "showcase": {
     "heading": "Built by Photographers, for Photographers",
@@ -103,7 +104,9 @@
     "heading": "Ready to find your best shots?",
     "description": "We built BurstPick because we were spending more time culling than shooting. 100% native app for Mac and Windows — no subscription, no cloud. Your photos never leave your device.",
     "button": "Coming Soon",
-    "download_prefix": "Download on the",
+    "download_prefix": "Coming Soon on the",
+    "notify_heading": "Get Notified",
+    "notify_description": "Be the first to know when BurstPick launches on the Mac App Store.",
     "requirements": "macOS 14+ · Windows 10/11 · Apple Silicon & Intel · Zero dependencies",
     "privacy": "100% local processing. No photos leave your device — ever.",
     "emailPlaceholder": "Enter your email address",
@@ -193,7 +196,7 @@
     "pro_f3": "Unlimited XMP & catalog exports",
     "pro_f4": "Preference learning — adapts to your taste",
     "pro_f5": "Priority support",
-    "pro_cta": "Get on the App Store",
+    "pro_cta": "Coming Soon on the App Store",
     "pro_highlight": "Most Popular",
     "guarantee": "No subscription fees, ever. One purchase, lifetime access."
   },
@@ -260,8 +263,10 @@
   "downloadPage": {
     "title": "BurstPick is Coming Soon",
     "description": "AI-powered burst photo culling built by photographers, for macOS and Windows. A 100% native app — all processing happens on your device.",
-    "button": "Mac App Store",
+    "button": "Coming Soon to Mac App Store",
     "version": "Stay tuned for the launch",
+    "notify_prompt": "Sign up to be notified when BurstPick is available on the Mac App Store.",
+    "notify_cta": "Get Notified",
     "requirements": "Mac System Requirements",
     "req_os": "Operating System",
     "req_os_value": "macOS 14 (Sonoma) or later",

@@ -15,7 +15,8 @@
   "hero": {
     "tagline": "8시간 넘는 선별 작업, 이제 그만하세요.",
     "description": "연사 촬영마다 수천 장의 비슷한 사진, 그리고 끝없는 수작업. BurstPick은 모든 사진의 선명도, 노출, 노이즈, 인물 표정, 심미성을 분석해 베스트 컷을 몇 초 만에 찾아냅니다. 세션을 거듭할수록 사용자의 취향을 학습해 더 정확해집니다. 최종 결정은 당신의 몫입니다.",
-    "cta_download": "Mac App Store에서 다운로드"
+    "cta_download": "출시 예정",
+    "cta_coming_soon_badge": "출시 예정"
   },
   "showcase": {
     "heading": "사진가에 의한, 사진가를 위한 앱",
@@ -103,7 +104,9 @@
     "heading": "이제 정리는 AI에게, 당신은 촬영에 집중하세요",
     "description": "사진 고르는데 쓰는 시간이 촬영 시간보다 길다면 BurstPick이 답입니다. Mac과 Windows를 모두 지원하는 100% 네이티브 앱으로 빠르고 안전하게, 구독료 걱정 없이 평생 사용하세요.",
     "button": "출시 알림 받기",
-    "download_prefix": "다운로드",
+    "download_prefix": "출시 예정",
+    "notify_heading": "알림 받기",
+    "notify_description": "BurstPick이 Mac App Store에 출시되면 가장 먼저 알려드립니다.",
     "requirements": "macOS 14+ · Windows 10/11 · Apple Silicon 및 Intel 지원 · 독립 실행형 앱",
     "privacy": "100% 온디바이스 처리. 당신의 사진은 기기 밖으로 나가지 않습니다.",
     "emailPlaceholder": "이메일 주소를 입력하세요",
@@ -152,7 +155,7 @@
     "pro_f3": "무제한 XMP 및 카탈로그 내보내기",
     "pro_f4": "취향 학습 — 세션마다 더 정확해지는 AI",
     "pro_f5": "우선 고객 지원",
-    "pro_cta": "App Store에서 구매",
+    "pro_cta": "App Store 출시 예정",
     "pro_highlight": "가장 인기",
     "guarantee": "구독료는 없습니다. 한 번 구매하면 평생 사용하세요."
   },
@@ -260,8 +263,10 @@
   "downloadPage": {
     "title": "BurstPick을 만나보세요",
     "description": "사진가를 위한 AI 기반 연사 관리 솔루션. macOS와 Windows 모두 지원. 100% 네이티브, 100% 프라이버시 보호.",
-    "button": "Mac App Store",
+    "button": "Mac App Store 출시 예정",
     "version": "곧 정식 출시됩니다",
+    "notify_prompt": "BurstPick이 Mac App Store에 출시될 때 알림을 받으려면 지금 등록하세요.",
+    "notify_cta": "알림 받기",
     "requirements": "Mac 시스템 요구 사항",
     "req_os": "운영체제",
     "req_os_value": "macOS 14 (Sonoma) 이상",
