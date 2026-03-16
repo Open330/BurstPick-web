@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "BurstPick — AI-Powered Burst Photo Culling, Built by Photographers",
-    "description": "Built by photographers who shoot 10,000+ frames per session. BurstPick uses on-device AI to cluster your burst sequences, rank them by sharpness, exposure, and composition — so you spend less time culling and more time behind the lens."
+    "title": "BurstPick — AI Burst Photo Culling, Built by Photographers",
+    "description": "We shoot 10,000+ frames per session and got tired of the cull. BurstPick uses on-device AI to group burst sequences, score them for sharpness and composition, and pull up the keepers in seconds."
   },
   "nav": {
     "features": "Features",
@@ -15,13 +15,13 @@
   },
   "hero": {
     "tagline": "Stop spending 8+ hours culling. Start shooting.",
-    "description": "Every burst shoot means thousands of near-identical frames and hours of manual sorting. BurstPick scores every shot for sharpness, exposure, noise, face quality, and aesthetic appeal — then surfaces your best candidates in seconds. It learns your taste and gets better every session. You make the final call.",
+    "description": "Every burst shoot means thousands of near-identical frames and hours of sorting. BurstPick scores each shot on sharpness, exposure, noise, face quality, and aesthetics, then puts the best ones at the top. It picks up on your preferences over time. You make the final call.",
     "cta_download": "Coming Soon to",
     "cta_coming_soon_badge": "Coming Soon"
   },
   "showcase": {
     "heading": "Built by Photographers, for Photographers",
-    "description": "We know the burst workflow because we live it — wildlife action sequences, indoor sports at 30fps, event coverage with thousands of frames. BurstPick was born from that daily grind.",
+    "description": "We know the burst workflow because we live it. Wildlife action sequences, indoor sports at 30fps, event coverage with thousands of frames. We built BurstPick because we were tired of the grind.",
     "founder": "Built by the BurstPick Team",
     "stat_speed": "~90 sec / 10K photos",
     "stat_speed_desc": "On Apple Silicon",
@@ -33,83 +33,83 @@
     "stat_privacy_desc": "On-device processing"
   },
   "story": {
-    "heading": "From Thousands to Your Top Candidates",
-    "description": "Every shoot produces hundreds of near-identical frames. BurstPick clusters, scores, and ranks them — surfacing your strongest candidates in seconds, not hours. You make the final call.",
+    "heading": "From Thousands to Your Top Picks",
+    "description": "Every shoot produces hundreds of near-identical frames. BurstPick groups them, scores them, and puts the best ones first. Seconds instead of hours. You pick the winners.",
     "before_label": "Before",
-    "before_desc": "Hundreds of near-identical burst shots filling your screen — where do you even start?",
+    "before_desc": "Hundreds of near-identical burst shots filling your screen. Where do you even start?",
     "after_label": "After",
-    "after_desc": "Your top candidates ranked by sharpness, exposure, and composition — ready for your review"
+    "after_desc": "Your top picks ranked by sharpness, exposure, and composition, ready for review"
   },
   "features": {
     "heading": "Why BurstPick?",
-    "subheading": "Everything you need to go from thousands of burst shots to your best candidates — AI-powered, entirely on your device.",
+    "subheading": "Go from thousands of burst shots to your best picks. All AI, all on your device.",
     "clustering_title": "Burst Sequences, Grouped Automatically",
-    "clustering_desc": "No more scrolling through 200 near-identical frames. BurstPick recognizes each burst sequence and groups it for you — so you start with organized sets, not a wall of thumbnails.",
+    "clustering_desc": "No more scrolling through 200 near-identical frames. BurstPick recognizes each burst sequence and groups it for you, so you start with organized sets instead of a wall of thumbnails.",
     "scoring_title": "Your Best Shots, Ranked",
-    "scoring_desc": "Every photo is scored on sharpness, exposure, noise, composition, and face quality. The strongest candidates rise to the top — you just confirm or override.",
+    "scoring_desc": "Every photo is scored on sharpness, exposure, noise, composition, and face quality. The strongest candidates rise to the top. You just confirm or override.",
     "raw_title": "Every RAW Format You Shoot",
-    "raw_desc": "ARW, CR2, CR3, NEF, DNG, and 21 more RAW formats — plus HEIC, HEIF, AVIF, WebP, and JPEG XL. Bring your files straight from the card.",
+    "raw_desc": "ARW, CR2, CR3, NEF, DNG, and 21 more RAW formats, plus HEIC, HEIF, AVIF, WebP, and JPEG XL. Bring your files straight from the card.",
     "face_title": "Find Every Face in the Shoot",
-    "face_desc": "Automatically detects faces and groups them by person across your entire session. Perfect for events — find every shot of a specific subject in seconds.",
+    "face_desc": "Detects faces and groups them by person across your entire session. Great for events: find every shot of a specific subject in seconds.",
     "compare_title": "Compare Candidates Side by Side",
-    "compare_desc": "Put up to 4 finalists next to each other with synced zoom and color-accurate previews. See the difference that matters — down to the pixel.",
+    "compare_desc": "Put up to 4 finalists next to each other with synced zoom and color-accurate previews. See the difference down to the pixel.",
     "workflow_title": "Non-Destructive, Always",
-    "workflow_desc": "Keep, reject, star-rate, color-label — every decision autosaves. Your originals are never touched, never moved, never deleted.",
+    "workflow_desc": "Keep, reject, star-rate, color-label. Every decision autosaves. Your originals are never touched.",
     "lightroom_title": "Fits Right Into Your Pipeline",
-    "lightroom_desc": "Export your picks as XMP sidecars or straight into a Lightroom Classic catalog. Photo Mechanic → BurstPick → Lightroom — no extra steps.",
+    "lightroom_desc": "Export your picks as XMP sidecars or straight into a Lightroom Classic catalog. Photo Mechanic, BurstPick, Lightroom. No extra steps.",
     "c2pa_title": "C2PA, GDPR & ICC Compliant",
-    "c2pa_desc": "Full C2PA content credentials support — provenance and authenticity metadata are preserved throughout your workflow. GDPR compliant by design: zero data collection, zero tracking. ICC color management ensures accurate color across your pipeline."
+    "c2pa_desc": "C2PA content credentials are preserved throughout your workflow, so provenance and authenticity stay intact. No data collection, no tracking (GDPR compliant by design). ICC color management keeps colors accurate across your pipeline."
   },
   "gallery": {
     "heading": "See BurstPick in Action",
-    "subheading": "A streamlined interface designed for speed and accuracy.",
+    "subheading": "Built for speed and accuracy. Here's what the interface looks like.",
     "main_ui": "Your Workspace",
-    "main_ui_desc": "Clusters on the left, your selected photo front and center, filmstrip at the bottom — everything one glance away",
+    "main_ui_desc": "Clusters on the left, your selected photo front and center, filmstrip at the bottom. Everything one glance away.",
     "clustering": "Burst Groups",
-    "clustering_desc": "Each burst sequence grouped automatically — scroll through sets, not hundreds of loose frames",
+    "clustering_desc": "Each burst sequence grouped automatically. Scroll through sets, not hundreds of loose frames.",
     "scoring": "Quality Rankings",
-    "scoring_desc": "Every photo ranked by sharpness, exposure, and composition — adjust the weights to match how you shoot",
+    "scoring_desc": "Every photo ranked by sharpness, exposure, and composition. Adjust the weights to match how you shoot.",
     "compare": "Compare Finalists",
-    "compare_desc": "Put your top picks side by side with synced zoom — spot the winner instantly",
+    "compare_desc": "Put your top picks side by side with synced zoom. Spot the winner instantly.",
     "persons": "Find Every Face",
-    "persons_desc": "Every person in your shoot, grouped automatically — jump straight to the subject you need",
+    "persons_desc": "Every person in your shoot, grouped automatically. Jump straight to the subject you need.",
     "scoring_food": "Scoring Detail — Food",
-    "scoring_food_desc": "Drill into AI scores for any photo — sharpness, exposure, composition, all broken down at a glance",
+    "scoring_food_desc": "Drill into AI scores for any photo: sharpness, exposure, composition, all broken down at a glance.",
     "scoring_whiskey": "Scoring Detail — Low Light",
-    "scoring_whiskey_desc": "See how BurstPick evaluates challenging low-light shots and surfaces the best candidate"
+    "scoring_whiskey_desc": "See how BurstPick handles challenging low-light shots and finds the best candidate."
   },
   "faq": {
     "heading": "Frequently Asked Questions",
     "q1": "What photo formats are supported?",
-    "a1": "BurstPick supports 26 RAW formats (ARW, CR2, CR3, NEF, DNG, ORF, RW2, RAF, and more), plus HEIC, HEIF, JPG, PNG, TIFF, AVIF, WebP, and JPEG XL.",
+    "a1": "26 RAW formats (ARW, CR2, CR3, NEF, DNG, ORF, RW2, RAF, and more), plus HEIC, HEIF, JPG, PNG, TIFF, AVIF, WebP, and JPEG XL.",
     "q2": "How much does BurstPick cost?",
-    "a2": "BurstPick is free during the beta. After launch, Pro will be available as a one-time in-app purchase on the Mac App Store — no subscription, no recurring fees.",
+    "a2": "Free during the beta. After launch, Pro will be available as a one-time in-app purchase on the Mac App Store. No subscription, no recurring fees.",
     "q3": "What are the system requirements?",
-    "a3": "Mac: macOS 14 (Sonoma) or later, Apple Silicon or Intel. Windows: Windows 10/11 (64-bit). Mac version launches first — Windows is coming soon.",
+    "a3": "Mac: macOS 14 (Sonoma) or later, Apple Silicon or Intel. Windows: Windows 10/11 (64-bit). Mac version launches first; Windows is coming soon.",
     "q4": "Does it require an internet connection?",
-    "a4": "No. All ML inference runs on your device. No photos are sent anywhere — ever.",
+    "a4": "No. All ML inference runs on your device. No photos are sent anywhere.",
     "q5": "How many ML models does it use?",
-    "a5": "20+ models covering image quality, aesthetics, similarity embeddings, face recognition, VLM assessment, and image classification. All hot-swappable via the settings panel.",
+    "a5": "20+ models covering image quality, aesthetics, similarity embeddings, face recognition, VLM assessment, and image classification. All swappable in settings.",
     "q6": "Will it delete my photos?",
-    "a6": "Never. BurstPick uses a non-destructive workflow. Export creates hard links to save disk space — your originals stay untouched.",
+    "a6": "No. BurstPick is non-destructive. Export creates hard links to save disk space; your originals stay untouched.",
     "q7": "Does it work with Lightroom?",
-    "a7": "Yes. Export Keep/Reject decisions and star ratings as XMP sidecar files, or export directly to a Lightroom Classic catalog.",
+    "a7": "Yes. Export your Keep/Reject decisions and star ratings as XMP sidecar files, or export directly to a Lightroom Classic catalog.",
     "q8": "Who built BurstPick?",
-    "a8": "BurstPick is built by a team of photographers and macOS engineers who shoot 10,000+ frames per session. We built it because we needed it — existing tools didn't understand burst-specific workflows.",
+    "a8": "A team of photographers and macOS engineers who shoot 10,000+ frames per session. We built it because we needed it. Existing tools didn't get burst workflows.",
     "q9": "How does BurstPick fit into my workflow?",
-    "a9": "BurstPick is a companion, not a replacement. Ingest with Photo Mechanic, pre-cull with BurstPick, edit in Lightroom. It slots right into the PM → LR pipeline with full XMP compatibility.",
+    "a9": "It's a companion, not a replacement. Ingest with Photo Mechanic, cull with BurstPick, edit in Lightroom. Full XMP compatibility, no extra steps.",
     "q10": "Is BurstPick available yet?",
-    "a10": "BurstPick is coming soon. Sign up for updates and be the first to know when it launches."
+    "a10": "Not yet. Sign up for updates and we'll let you know when it launches."
   },
   "cta": {
     "heading": "Ready to find your best shots?",
-    "description": "We built BurstPick because we were spending more time culling than shooting. 100% native app for Mac and Windows — no subscription, no cloud. Your photos never leave your device.",
+    "description": "We built BurstPick because we spent more time culling than shooting. Native app for Mac and Windows, no subscription, no cloud. Your photos stay on your device.",
     "button": "Coming Soon",
     "download_prefix": "Coming Soon on the",
     "notify_heading": "Get Notified",
-    "notify_description": "Be the first to know when BurstPick launches on the Mac App Store.",
+    "notify_description": "We'll let you know when BurstPick hits the Mac App Store.",
     "requirements": "macOS 14+ · Windows 10/11 · Apple Silicon & Intel · Zero dependencies",
-    "privacy": "100% local processing. No photos leave your device — ever.",
+    "privacy": "On-device processing. Your photos never leave your machine.",
     "emailPlaceholder": "Enter your email address",
     "subscribe": "Notify Me",
     "subscribing": "Subscribing...",
@@ -183,7 +183,7 @@
     "free_name": "Free",
     "free_price": "$0",
     "free_period": "forever",
-    "free_desc": "Everything you need to get started with burst culling.",
+    "free_desc": "Get started with burst culling. No cost, no catch.",
     "free_f1": "Up to 2,000 photos per session",
     "free_f2": "2 scoring models",
     "free_f3": "Up to 100 XMP exports",
@@ -192,49 +192,49 @@
     "pro_name": "Pro",
     "pro_price": "$89",
     "pro_period": "one-time in-app purchase",
-    "pro_desc": "For professionals who shoot thousands of frames per session.",
+    "pro_desc": "For photographers who shoot thousands of frames per session.",
     "pro_f1": "Unlimited photos",
     "pro_f2": "22+ ML scoring models",
     "pro_f3": "Unlimited XMP & catalog exports",
-    "pro_f4": "Preference learning — adapts to your taste",
+    "pro_f4": "Preference learning: adapts to your taste",
     "pro_f5": "Priority support",
     "pro_cta": "Coming Soon on the App Store",
     "pro_highlight": "Most Popular",
-    "guarantee": "No subscription fees, ever. One-time in-app purchase, lifetime access."
+    "guarantee": "No subscription. One-time in-app purchase, yours forever."
   },
   "notDo": {
     "heading": "What BurstPick Does NOT Do",
-    "subheading": "BurstPick is laser-focused on one thing: helping you find your best shots faster.",
+    "subheading": "BurstPick does one thing: helps you find your best shots faster.",
     "item1_title": "Does NOT edit your photos",
-    "item1_desc": "BurstPick helps you decide which photos to keep — it's not a photo editor. Your RAW files stay untouched.",
+    "item1_desc": "BurstPick helps you decide which photos to keep. It's not a photo editor. Your RAW files stay untouched.",
     "item2_title": "Does NOT replace Lightroom",
-    "item2_desc": "It works alongside your existing tools. Cull with BurstPick, edit in Lightroom — they fit together seamlessly.",
+    "item2_desc": "It works alongside your existing tools. Cull with BurstPick, edit in Lightroom. They fit together.",
     "item3_title": "Does NOT upload your photos",
-    "item3_desc": "Everything runs on your device. Zero cloud, zero servers, zero data collection. Your photos never leave it."
+    "item3_desc": "Everything runs on your device. No cloud, no servers, no data collection."
   },
   "discord": {
     "title": "Join Our Community",
-    "description": "Connect with photographers, share workflows, get tips, and help shape the future of BurstPick.",
+    "description": "Talk shop with other photographers, share your workflow, and help shape what BurstPick builds next.",
     "button": "Join Discord"
   },
   "about": {
     "heading": "Built Native. Runs On-Device.",
-    "description": "BurstPick is a 100% native app for Mac and Windows. The Mac version is written in Swift and SwiftUI, optimized for Apple Silicon. Windows version coming soon. All processing stays on your device — no cloud, no servers.",
-    "native_title": "100% Native App",
-    "native_desc": "Not a web wrapper, not an Electron app. Native performance on both Mac and Windows, with a UI that belongs on each platform.",
-    "ondevice_title": "On-Device AI Processing",
-    "ondevice_desc": "All 20+ ML models run on your device. Your photos are scored and ranked without ever being sent anywhere.",
+    "description": "BurstPick is a native app for Mac and Windows. The Mac version is Swift and SwiftUI, tuned for Apple Silicon. Windows version coming soon. All processing stays on your machine.",
+    "native_title": "Native App",
+    "native_desc": "No web wrapper, no Electron. Native performance on Mac and Windows, with a UI that belongs on each platform.",
+    "ondevice_title": "On-Device AI",
+    "ondevice_desc": "All 20+ ML models run locally. Your photos are scored and ranked without leaving your machine.",
     "silicon_title": "Apple Silicon Optimized",
-    "silicon_desc": "Leverages Metal GPU acceleration and the Neural Engine on Apple Silicon. Process 10,000+ photos in about 90 seconds on M-series chips.",
-    "privacy_title": "Zero Cloud Dependency",
-    "privacy_desc": "No account required, no internet connection needed, no data collection. BurstPick works completely offline — your photos stay yours."
+    "silicon_desc": "Uses Metal GPU acceleration and the Neural Engine on Apple Silicon. About 90 seconds for 10,000+ photos on M-series chips.",
+    "privacy_title": "No Cloud Required",
+    "privacy_desc": "No account, no internet, no data collection. BurstPick works offline. Your photos stay on your machine."
   },
   "downloadPage": {
     "title": "BurstPick is Coming Soon",
-    "description": "AI-powered burst photo culling built by photographers, for macOS and Windows. A 100% native app — all processing happens on your device.",
+    "description": "Burst photo culling with on-device AI, built by photographers. Native app for macOS and Windows. All processing happens on your machine.",
     "button": "Coming Soon to Mac App Store",
     "version": "Stay tuned for the launch",
-    "notify_prompt": "Sign up to be notified when BurstPick is available on the Mac App Store.",
+    "notify_prompt": "Leave your email and we'll let you know when BurstPick is on the Mac App Store.",
     "notify_cta": "Get Notified",
     "requirements": "Mac System Requirements",
     "req_os": "Operating System",
@@ -245,7 +245,7 @@
     "req_disk_value": "~500 MB (with bundled ML models)",
     "privacy_note": "All processing happens on your device. No photos are sent anywhere.",
     "windows_title": "Windows Version",
-    "windows_description": "BurstPick for Windows is coming soon. Same ML-powered culling, native on Windows.",
+    "windows_description": "BurstPick for Windows is coming. Same culling engine, native on Windows.",
     "windows_req_os": "Operating System",
     "windows_req_os_value": "Windows 10 or later (64-bit)",
     "windows_req_chip": "Processor",
@@ -317,7 +317,7 @@
   },
   "modelsPage": {
     "title": "ML Models",
-    "intro": "BurstPick ships with 22 machine learning models across 6 categories. Every model runs 100% on-device using Apple CoreML and Neural Engine. No photos leave your Mac, ever. Models are either bundled with the app or downloaded on demand when you select them.",
+    "intro": "BurstPick ships with 22 ML models across 6 categories. Every model runs on-device using Apple CoreML and Neural Engine. No photos leave your Mac. Models are either bundled with the app or downloaded when you first select them.",
     "badgeLocal": "100% On-Device",
     "badgeOpen": "Open-Source Models",
     "badgeNeural": "Neural Engine Accelerated",
@@ -329,29 +329,29 @@
     "categories": {
       "imageQuality": {
         "title": "Image Quality Assessment",
-        "description": "Scores each photo on technical quality: sharpness, noise, exposure, and perceptual clarity. Used to rank photos within burst clusters."
+        "description": "Scores each photo on sharpness, noise, exposure, and perceptual clarity. Used to rank photos within burst clusters."
       },
       "aestheticScore": {
         "title": "Aesthetic Scoring",
-        "description": "Evaluates artistic and aesthetic appeal based on composition, color harmony, and visual balance. Trained on large-scale human preference datasets."
+        "description": "Rates artistic appeal based on composition, color harmony, and visual balance. Trained on large-scale human preference data."
       },
       "imageEmbedding": {
         "title": "Image Embedding",
-        "description": "Generates vector representations of photos for visual similarity clustering. Groups burst sequences and identifies duplicate or near-duplicate shots."
+        "description": "Turns photos into vectors for similarity clustering. Groups burst sequences and flags duplicates or near-duplicates."
       },
       "faceEmbedding": {
         "title": "Face Embedding",
-        "description": "Creates face identity vectors for person grouping and recognition. Automatically clusters photos by who appears in them."
+        "description": "Builds face identity vectors for person grouping. Clusters photos by who appears in them."
       },
       "vlmAssessment": {
         "title": "Vision Language Model (VLM)",
-        "description": "Understands photo content using natural language. Provides scene descriptions, quality reasoning, and contextual assessment beyond what numerical scores capture."
+        "description": "Reads photo content using natural language. Gives scene descriptions and quality reasoning that go beyond numerical scores."
       },
       "imageClassification": {
         "title": "Image Classification",
-        "description": "Tags photos with scene and object labels for filtering and organization. Uses Apple's built-in Vision framework."
+        "description": "Tags photos with scene and object labels for filtering and organization. Uses Apple's Vision framework."
       }
     },
-    "footer": "All models are converted to CoreML format and run entirely on your Mac using CPU, GPU, and Neural Engine. Download sizes are for the compressed CoreML model package. Memory figures represent approximate GPU/ANE memory usage during inference."
+    "footer": "All models run as CoreML on your Mac using CPU, GPU, and Neural Engine. Download sizes are for the compressed CoreML package. Memory figures are approximate GPU/ANE usage during inference."
   }
 }
