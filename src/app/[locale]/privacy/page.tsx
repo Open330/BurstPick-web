@@ -20,9 +20,11 @@ function PrivacyPolicyContent() {
   const sections = [
     { title: t("localProcessingTitle"), body: t("localProcessingBody") },
     { title: t("dataCollectionTitle"), body: t("dataCollectionBody") },
+    { title: t("networkTitle"), body: t("networkBody") },
     { title: t("permissionsTitle"), body: t("permissionsBody") },
     { title: t("retentionTitle"), body: t("retentionBody") },
     { title: t("thirdPartyTitle"), body: t("thirdPartyBody") },
+    { title: t("childrenTitle"), body: t("childrenBody") },
   ];
 
   return (
