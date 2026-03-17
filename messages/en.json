@@ -16,8 +16,8 @@
   "hero": {
     "tagline": "Stop spending 8+ hours culling. Start shooting.",
     "description": "Every burst shoot means thousands of near-identical frames and hours of sorting. BurstPick scores each shot on sharpness, exposure, noise, face quality, and aesthetics, then puts the best ones at the top. It picks up on your preferences over time. You make the final call.",
-    "cta_download": "Coming Soon to",
-    "cta_coming_soon_badge": "Coming Soon"
+    "cta_download_mac": "Download on the",
+    "cta_windows_coming_soon": "Coming Soon"
   },
   "showcase": {
     "heading": "Built by Photographers, for Photographers",
@@ -105,7 +105,8 @@
     "heading": "Ready to find your best shots?",
     "description": "We built BurstPick because we spent more time culling than shooting. Native app for Mac and Windows, no subscription, no cloud. Your photos stay on your device.",
     "button": "Coming Soon",
-    "download_prefix": "Coming Soon on the",
+    "download_mac": "Download on the",
+    "download_windows": "Coming Soon",
     "notify_heading": "Get Notified",
     "notify_description": "We'll let you know when BurstPick hits the Mac App Store.",
     "requirements": "macOS 14+ · Windows 10/11 · Apple Silicon & Intel · Zero dependencies",
@@ -236,7 +237,7 @@
   "downloadPage": {
     "title": "BurstPick is Coming Soon",
     "description": "Burst photo culling with on-device AI, built by photographers. Native app for macOS and Windows. All processing happens on your machine.",
-    "button": "Coming Soon to Mac App Store",
+    "button_mac": "Download on the",
     "version": "Stay tuned for the launch",
     "notify_prompt": "Leave your email and we'll let you know when BurstPick is on the Mac App Store.",
     "notify_cta": "Get Notified",

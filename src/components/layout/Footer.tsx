@@ -40,9 +40,14 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <span className="text-text-muted cursor-default">
-                  {t("app_store_coming_soon")}
-                </span>
+                <a
+                  href="https://apps.apple.com/us/app/burstpick/id6760616886"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-secondary hover:text-text-primary transition-colors"
+                >
+                  {t("app_store")}
+                </a>
               </li>
               <li>
                 <span className="text-text-muted cursor-default">

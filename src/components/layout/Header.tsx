@@ -56,11 +56,14 @@ export function Header() {
             <MessageCircle size={16} />
             {t("discord")}
           </a>
-          <span
-            className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-4 py-1.5 text-sm font-semibold text-text-secondary cursor-default"
+          <a
+            href="https://apps.apple.com/us/app/burstpick/id6760616886"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-brand-start to-brand-end px-4 py-1.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
           >
-            {t("coming_soon")}
-          </span>
+            {t("download")}
+          </a>
         </nav>
 
         {/* Mobile Toggle */}
@@ -97,11 +100,15 @@ export function Header() {
               <MessageCircle size={16} />
               {t("discord")}
             </a>
-            <span
-              className="inline-flex min-h-[44px] items-center gap-1.5 rounded-full bg-white/10 px-4 py-1.5 text-sm font-semibold text-text-secondary cursor-default"
+            <a
+              href="https://apps.apple.com/us/app/burstpick/id6760616886"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-[44px] items-center gap-1.5 rounded-full bg-gradient-to-r from-brand-start to-brand-end px-4 py-1.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              onClick={() => setMobileOpen(false)}
             >
-              {t("coming_soon")}
-            </span>
+              {t("download")}
+            </a>
           </Container>
         </div>
       )}
