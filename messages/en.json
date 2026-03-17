@@ -190,7 +190,7 @@
     "free_f4": "Burst clustering & grouping",
     "free_f5": "Non-destructive workflow",
     "pro_name": "Pro",
-    "pro_price": "$89",
+    "pro_price": "$89.99",
     "pro_period": "one-time in-app purchase",
     "pro_desc": "For photographers who shoot thousands of frames per session.",
     "pro_f1": "Unlimited photos",
@@ -353,5 +353,22 @@
       }
     },
     "footer": "All models run as CoreML on your Mac using CPU, GPU, and Neural Engine. Download sizes are for the compressed CoreML package. Memory figures are approximate GPU/ANE usage during inference."
+  },
+  "supportPage": {
+    "title": "Support",
+    "intro": "Need help with BurstPick? We're here to assist. Reach out through any of the channels below.",
+    "emailTitle": "Email Support",
+    "emailBody": "For technical issues, license questions, or feature requests, email us directly. We typically respond within 24 hours on business days.",
+    "discordTitle": "Discord Community",
+    "discordBody": "Join our Discord server to chat with other photographers, share your workflow, get quick tips, and stay updated on new releases.",
+    "discordLink": "Join BurstPick Discord",
+    "faqTitle": "Frequently Asked Questions",
+    "faqBody": "Check our FAQ section on the homepage for answers to common questions about supported formats, system requirements, pricing, Lightroom integration, and more.",
+    "requirementsTitle": "System Requirements",
+    "req1": "macOS 14 (Sonoma) or later",
+    "req2": "Apple Silicon or Intel processor (Apple Silicon recommended)",
+    "req3": "~500 MB disk space (with bundled ML models)",
+    "responseTitle": "Response Times",
+    "responseBody": "Email support requests are typically answered within 24 hours on business days. Discord community questions often get faster responses from both the team and fellow photographers."
   }
 }

@@ -149,7 +149,7 @@
     "free_f4": "연사 클러스터링 및 그룹화",
     "free_f5": "비파괴 워크플로",
     "pro_name": "Pro",
-    "pro_price": "₩119,000",
+    "pro_price": "₩129,000",
     "pro_period": "인앱 구매 (일회성)",
     "pro_desc": "촬영마다 수천 장을 처리하는 사진가를 위한 플랜.",
     "pro_f1": "무제한 사진",
@@ -353,5 +353,22 @@
       }
     },
     "footer": "모든 모델은 CoreML로 변환, CPU/GPU/Neural Engine에서 실행됩니다. 다운로드 크기는 압축 CoreML 패키지 기준. 메모리 수치는 추론 중 GPU/ANE 사용량 근사치입니다."
+  },
+  "supportPage": {
+    "title": "고객 지원",
+    "intro": "BurstPick 사용에 도움이 필요하신가요? 아래 채널을 통해 문의해 주세요.",
+    "emailTitle": "이메일 지원",
+    "emailBody": "기술 문제, 라이선스 관련 문의, 기능 요청 등은 이메일로 보내주세요. 영업일 기준 24시간 이내에 답변드립니다.",
+    "discordTitle": "Discord 커뮤니티",
+    "discordBody": "Discord 서버에서 다른 사진가들과 교류하고, 워크플로를 공유하고, 빠른 팁을 얻고, 새 업데이트 소식을 받아보세요.",
+    "discordLink": "BurstPick Discord 참여하기",
+    "faqTitle": "자주 묻는 질문",
+    "faqBody": "지원 포맷, 시스템 요구 사항, 가격, Lightroom 연동 등 자주 묻는 질문은 홈페이지 FAQ 섹션을 확인해 주세요.",
+    "requirementsTitle": "시스템 요구 사항",
+    "req1": "macOS 14 (Sonoma) 이상",
+    "req2": "Apple Silicon 또는 Intel 프로세서 (Apple Silicon 권장)",
+    "req3": "약 500MB 디스크 공간 (ML 모델 포함)",
+    "responseTitle": "응답 시간",
+    "responseBody": "이메일 문의는 영업일 기준 24시간 이내에 답변드립니다. Discord 커뮤니티에서는 팀원과 다른 사진가들이 더 빠르게 도움을 드리기도 합니다."
   }
 }
