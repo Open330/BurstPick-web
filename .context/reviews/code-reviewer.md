@@ -1,32 +1,33 @@
-# Code Reviewer — Cycle 2 (2026-04-26)
+# Code Review — Cycle 3 (2026-04-26)
 
-Cycle 1 already shipped fixes for AGG-1..AGG-8 (plans 001..008 archived). Re-reviewed the post-cycle-1 HEAD against current source.
+## Scope
+Full TypeScript/React tree under `src/`, `public/_headers`, build & lint configs.
 
-## NEW findings (cycle 2)
+## Methodology
+- Re-read every file changed since cycle 2.
+- Re-checked all cycle 1 + cycle 2 finding sites for regressions.
+- Searched for `console`, `TODO`, `FIXME`, `: any`, `as any`, `dangerouslySetInnerHTML`, raw `<a href` patterns.
 
-### CR2-1 — Redundant `BRAND.downloadUrl` duplicates `APP_STORE_URL`
-- **File:** `src/lib/constants.ts:35-39`
-- **Severity:** Low · **Confidence:** High
-- `BRAND.downloadUrl: APP_STORE_URL` is exported but no caller imports it. Components import `APP_STORE_URL` directly. Slight cognitive cost from having two names for one URL.
-- **Fix:** Drop `downloadUrl` from `BRAND` literal.
+## Confirmations (no regressions)
+- `BRAND.downloadUrl` removed in cycle 2. No callers reference it.
+- Locale union cast removed in `src/i18n/request.ts:6` — now uses `(routing.locales as readonly string[]).includes(locale)`.
+- All `<img>` warnings cleared; only `next/image` in tree.
+- JSON-LD escapes `<`, `>`, `&`, U+2028/2029 in `src/app/[locale]/layout.tsx:16-23`.
+- `gtag` inline listener null-guards `textContent`.
 
-### CR2-2 — Locale type assertion in `i18n/request.ts`
-- **File:** `src/i18n/request.ts:6`
-- **Severity:** Low · **Confidence:** High
-- `routing.locales.includes(locale as "en" | "ko")` casts the unknown `locale` to the locale union before `includes` — defeats the purpose of `includes` as a guard. Use `(routing.locales as readonly string[]).includes(locale)`.
+## New findings
+None of High or Medium severity.
 
-### CR2-3 — Footer "changelog" non-interactive `<span>` with `cursor-default`
-- **File:** `src/components/layout/Footer.tsx:53-57`
-- **Severity:** Low · **Confidence:** High
-- Same a11y class of bug as cycle 1 AGG-1: span styled as a footer link but is not interactive. Already tracked in deferred bundle (AGG-29).
+| ID | Severity | File | Issue | Confidence |
+|----|----------|------|-------|-----------|
+| CR3-1 | Low | `src/components/sections/HeroSection.tsx:36-39`, `src/components/sections/CTASection.tsx:106-110`, `src/app/[locale]/download/page.tsx:26-29` | Logo (intrinsic 645x618) declared `width=height` square — minor (~4%) aspect squish. Already tracked as Plan 014. Plan 014's prerequisite (Plan 006) is now archived → plan is actionable. | M |
 
-### CR2-4 — `sitePath` / `localizedPath` exported but never imported
-- **File:** `src/lib/constants.ts:15-27`
-- **Severity:** Low · **Confidence:** High
-- Same dead-code class as cycle 1 CR-3 cleanup. Either delete or use them in place of the inline `${BASE_PATH}/...` template literals.
+CR3-1 is a status-change of an already-tracked plan, not a wholly new defect.
 
-## Already-tracked findings (no change)
-- All cycle-1 plans 009..018 still apply. No new evidence to escalate or close them.
+## Final sweep
+- `pnpm lint` — 0 errors, 0 warnings.
+- `tsc --noEmit` — 0 errors.
+- All recent commits GPG signed; conventional commits + gitmoji honored.
+- No `Co-Authored-By` lines.
 
-## Confirmed clean (cycle-2 verification)
-- JSON-LD escaping, gtag null-guard, disabled-button a11y, env-driven mailing list, README/.env cleanup, all `<img>`→`<Image>` all present in HEAD.
+No new actionable defects.

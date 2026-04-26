@@ -1,35 +1,34 @@
-# Aggregate Code Review — Cycle 2 (2026-04-26)
+# Aggregate Code Review — Cycle 3 (2026-04-26)
 
-Per-agent files (cycle 2): `code-reviewer.md`, `perf-reviewer.md`, `security-reviewer.md`, `architect.md`, `designer.md`, `test-engineer.md`, `critic.md`, `document-specialist.md`, `debugger.md`, `verifier.md`, `tracer.md`.
+Per-agent files (cycle 3): `code-reviewer.md`, `perf-reviewer.md`, `security-reviewer.md`, `architect.md`, `designer.md`, `test-engineer.md`, `critic.md`, `document-specialist.md`, `debugger.md`, `verifier.md`, `tracer.md`.
 
-UI/UX agent ran in static-only mode. All findings cite file/line; severity preserved from highest source.
+UI/UX agent ran in static-only mode.
 
 ## AGENT FAILURES
 None.
 
 ---
 
-## Cycle 1 status
-- AGG-1..AGG-8 — FIXED in cycle 1 (plans 001..008 archived to `plan/_archive/`).
-- AGG-9..AGG-23 (10 items) — DEFERRED with exit criteria in plans 009..017 + 018 bundle.
-- AGG-24..AGG-35 — DEFERRED in plan 018 (low-priority bundle).
+## Cycle 1 + Cycle 2 status
+- Cycle 1: AGG-1..AGG-8 fixed (plans 001..008 archived); AGG-9..AGG-23 deferred (plans 009..017); AGG-24..AGG-35 deferred in plan 018 bundle.
+- Cycle 2: AGG2-1, AGG2-2 fixed (plans 019, 020 archived); AGG2-3..AGG2-5 deferred in plan 021 bundle.
 
-## NEW (cycle 2) cross-agent findings
+## NEW (cycle 3) cross-agent findings
 
-| ID | Severity | Finding | Files | Flagged by |
-|----|----------|---------|-------|------------|
-| AGG2-1 | Low | `BRAND.downloadUrl: APP_STORE_URL` redundant — never imported, duplicates `APP_STORE_URL` | `src/lib/constants.ts:35-39` | code-reviewer (CR2-1) |
-| AGG2-2 | Low | `routing.locales.includes(locale as "en"\|"ko")` cast defeats type guard | `src/i18n/request.ts:6` | code-reviewer (CR2-2), debugger (DB2-2), tracer (TR2-1) |
-| AGG2-3 | Low | Inline `${BASE_PATH}/...` duplicated 14× across components — `sitePath()` exists but unused | Header/Footer/Hero/CTA | architect (A2-1), code-reviewer (CR2-4) |
-| AGG2-4 | Low | Internal nav uses raw `<a>` instead of `next/link`/next-intl `Link` | `Header.tsx`, `Footer.tsx` | architect (A2-2) |
-| AGG2-5 | Low | Hero mockup ships ~22 `next/image` instances inside `aria-hidden`; consider sprite | `HeroSection.tsx` | perf-reviewer (P2-1) |
+| ID | Severity | Finding | Files | Flagged by | Resolution |
+|----|----------|---------|-------|------------|------------|
+| AGG3-1 | Low | Plan 014's prerequisite (Plan 006) is now archived, making Plan 014 actionable; the remaining concern (logo non-square aspect 645:618 rendered as square) is ~4% squish — implementable as a 1-line per-call fix or formally closed as cosmetic. | `HeroSection.tsx:36-39`, `CTASection.tsx:106-110`, `download/page.tsx:26-29` | code-reviewer (CR3-1), designer | Implement this cycle (trivial). |
 
 ## Stats
-- New findings (cycle 2, after dedupe): 5
-- High: 0 · Medium: 0 · Low: 5
+- New findings (cycle 3, after dedupe): 1
+- High: 0 · Medium: 0 · Low: 1
+- Note: AGG3-1 is technically a status-change of an already-tracked plan (014), not a wholly new defect. Net new defects: 0.
+
+## Quality gates
+- `pnpm lint` — PASS.
+- `npx tsc --noEmit` — PASS.
 
 ## Notes for planning
-- AGG2-1 and AGG2-2 are 1-line fixes; safe to land this cycle.
-- AGG2-3 is a refactor; defer with exit criterion.
-- AGG2-4 / AGG2-5 are pre-launch optimizations; defer.
-- All deferrals respect repo policy (CLAUDE.md). No security/correctness/data-loss findings deferred.
+- Implement Plan 014 this cycle (prerequisite met, trivial change, archives the plan).
+- All other deferrals remain valid; no severity upgrades needed.
+- All deferred items respect repo policy (CLAUDE.md): no security/correctness/data-loss findings deferred.
