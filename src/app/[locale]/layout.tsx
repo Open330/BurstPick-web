@@ -9,6 +9,19 @@ import { Footer } from "@/components/layout/Footer";
 import { routing } from "@/i18n/routing";
 import { FAQ_KEYS } from "@/lib/constants";
 
+// JSON-LD payloads are inlined into <script> tags. JSON.stringify
+// can produce raw `<` / `>` / `&` characters that, if a translator
+// ever inserts e.g. `</script>`, would break out of the surrounding
+// element. Escape them per the OWASP "JSON in HTML" guidance.
+function safeJsonLd(obj: unknown): string {
+  return JSON.stringify(obj)
+    .replace(/</g, "\\u003c")
+    .replace(/>/g, "\\u003e")
+    .replace(/&/g, "\\u0026")
+    .replace(/\u2028/g, "\\u2028")
+    .replace(/\u2029/g, "\\u2029");
+}
+
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -119,15 +132,15 @@ export default async function LocaleLayout({
         <link rel="manifest" href="/manifest.json" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(orgJsonLd) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(productJsonLd) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }}
         />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-LDHFL2CQSZ"
@@ -158,9 +171,10 @@ export default async function LocaleLayout({
               var f = e.target.closest('#faq button');
               if (f) {
                 var l = f.querySelector('span');
+                var label = l && l.textContent ? l.textContent.substring(0, 50) : '';
                 gtag('event', 'faq_toggle', {
                   event_category: 'engagement',
-                  event_label: l ? l.textContent.substring(0, 50) : ''
+                  event_label: label
                 });
               }
             });

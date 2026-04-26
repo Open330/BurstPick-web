@@ -1,6 +1,9 @@
 # Plan 008 — Escape `</script>` in JSON-LD blobs
 
-**Severity:** Medium · **Status:** not-started · **Source:** AGG-10 (security-reviewer S-5)
+**Severity:** Medium · **Status:** done · **Source:** AGG-10 (security-reviewer S-5)
+
+## Progress
+- 2026-04-26: added `safeJsonLd()` helper that escapes `<`, `>`, `&`, U+2028, U+2029 in the stringified payload. All three JSON-LD blocks now go through it.
 
 ## Files
 - `src/app/[locale]/layout.tsx:122-130`
