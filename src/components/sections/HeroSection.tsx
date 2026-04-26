@@ -35,8 +35,8 @@ export function HeroSection() {
           <Image
             src={`${BASE_PATH}/logo.avif`}
             alt={BRAND.name}
-            width={112}
-            height={112}
+            width={645}
+            height={618}
             className="mb-8 h-24 w-24 object-contain drop-shadow-2xl sm:h-28 sm:w-28"
             priority
           />

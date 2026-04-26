@@ -105,8 +105,8 @@ export function CTASection() {
           <Image
             src={`${BASE_PATH}/logo.avif`}
             alt={BRAND.name}
-            width={80}
-            height={80}
+            width={645}
+            height={618}
             className="mx-auto mb-8 h-20 w-20 object-contain drop-shadow-2xl"
           />
         </FadeInView>

@@ -33,7 +33,7 @@ export function Header() {
       <Container className="flex h-16 items-center justify-between">
         {/* Logo */}
         <a href={`/${locale}`} className="flex items-center gap-2.5">
-          <Image src={`${BASE_PATH}/logo.avif`} alt="" width={32} height={32} className="h-8 w-8 object-contain" priority />
+          <Image src={`${BASE_PATH}/logo.avif`} alt="" width={645} height={618} className="h-8 w-8 object-contain" priority />
           <span className="text-lg font-bold tracking-tight">{BRAND.name}</span>
         </a>
 
