@@ -77,15 +77,21 @@ export function HeroSection() {
               </div>
             </a>
             {/* Windows — Coming Soon */}
-            <div className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-3 text-text-muted cursor-default">
-              <svg viewBox="0 0 24 24" className="h-8 w-8 shrink-0" fill="currentColor">
+            <button
+              type="button"
+              disabled
+              aria-disabled="true"
+              aria-label={`Windows: ${t("cta_windows_coming_soon")}`}
+              className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-3 text-left text-text-muted opacity-70 cursor-not-allowed"
+            >
+              <svg viewBox="0 0 24 24" className="h-8 w-8 shrink-0" fill="currentColor" aria-hidden="true">
                 <path d="M3 5.548l7.066-.966v6.822H3V5.548zm7.066 6.655v6.868L3 18.129v-5.926h7.066zm.87-7.753L21 3v8.404h-10.064V4.45zm10.064 7.1V21L10.936 19.48v-7.93H21z"/>
               </svg>
               <div className="text-left">
                 <div className="text-[10px] font-medium leading-none">{t("cta_windows_coming_soon")}</div>
                 <div className="text-xl font-semibold leading-tight">Windows</div>
               </div>
-            </div>
+            </button>
           </div>
         </FadeInView>
 

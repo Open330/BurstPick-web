@@ -1,6 +1,9 @@
 # Plan 003 — Coming Soon / disabled CTAs as real buttons
 
-**Severity:** High · **Status:** not-started · **Source:** AGG-1 (code-reviewer CR-14, designer D-1, D-14)
+**Severity:** High · **Status:** done · **Source:** AGG-1 (code-reviewer CR-14, designer D-1, D-14)
+
+## Progress
+- 2026-04-26: Hero, CTA, Pricing now render disabled `<button>` with aria-disabled, aria-label, opacity-70, cursor-not-allowed; SVG marked aria-hidden. Lint+tsc green.
 
 ## Files
 - `src/components/sections/HeroSection.tsx:80` (Windows coming-soon)
