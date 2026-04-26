@@ -5,7 +5,9 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { FadeInView } from "@/components/motion/FadeInView";
-import { APP_STORE_URL, BASE_PATH, BRAND, SALES } from "@/lib/constants";
+import { API_BASE_URL, APP_STORE_URL, BASE_PATH, BRAND, SALES } from "@/lib/constants";
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 import { ShieldCheck, Mail, CheckCircle, Loader2, MessageCircle } from "lucide-react";
 
 const DISCORD_URL = SALES.discordUrl;
@@ -23,7 +25,7 @@ export function CTASection() {
     e.preventDefault();
 
     const trimmed = email.trim();
-    if (!trimmed || !trimmed.includes("@") || !trimmed.includes(".")) {
+    if (!EMAIL_RE.test(trimmed)) {
       setErrorMessage(t("invalidEmail"));
       setFormState("error");
       return;
@@ -34,7 +36,7 @@ export function CTASection() {
 
     try {
       const res = await fetch(
-        "https://api.burstpick.app/api/mailing-list/subscribe",
+        `${API_BASE_URL}/api/mailing-list/subscribe`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -42,13 +44,28 @@ export function CTASection() {
         }
       );
 
+      const data = await res.json().catch(() => null);
+
       if (!res.ok) {
-        const data = await res.json().catch(() => null);
         if (data?.error?.toLowerCase().includes("invalid email")) {
           setErrorMessage(t("invalidEmail"));
         } else {
           setErrorMessage(t("errorMessage"));
         }
+        setFormState("error");
+        return;
+      }
+
+      // Treat as success only when the server confirms it. Tolerate
+      // common shapes (success: true, subscribed: true, or the
+      // submitted email echoed back).
+      const ok =
+        data === null ||
+        data?.success === true ||
+        data?.subscribed === true ||
+        typeof data?.email === "string";
+      if (!ok) {
+        setErrorMessage(t("errorMessage"));
         setFormState("error");
         return;
       }
@@ -147,6 +164,7 @@ export function CTASection() {
         </FadeInView>
 
         <FadeInView delay={0.3}>
+          <div aria-live="polite" aria-atomic="true">
           {formState === "success" ? (
             <div className="inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-8 py-4 text-lg font-semibold text-green-400">
               <CheckCircle size={20} />
@@ -195,8 +213,9 @@ export function CTASection() {
             </form>
           )}
           {formState === "error" && errorMessage && (
-            <p className="mt-3 text-sm text-red-400">{errorMessage}</p>
+            <p className="mt-3 text-sm text-red-400" role="alert">{errorMessage}</p>
           )}
+          </div>
         </FadeInView>
 
         <FadeInView delay={0.4}>

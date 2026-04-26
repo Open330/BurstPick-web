@@ -28,6 +28,10 @@ export function localizedPath(locale: string, path = ""): string {
 
 export const APP_STORE_URL = "https://apps.apple.com/us/app/burstpick/id6760616886";
 
+export const API_BASE_URL = (
+  process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.burstpick.app"
+).replace(/\/$/, "");
+
 export const BRAND = {
   name: "BurstPick",
   website: "https://burstpick.app",

@@ -1,6 +1,9 @@
 # Plan 004 — Make mailing-list endpoint env-driven
 
-**Severity:** High · **Status:** not-started · **Source:** AGG-2 (code-reviewer CR-5, debugger DB-7, document-specialist DS-3, tracer TR-1)
+**Severity:** High · **Status:** done · **Source:** AGG-2 (code-reviewer CR-5, debugger DB-7, document-specialist DS-3, tracer TR-1)
+
+## Progress
+- 2026-04-26: added `API_BASE_URL` constant honoring `NEXT_PUBLIC_API_BASE_URL`. CTASection consumes it. Email regex tightened. Success path now requires server confirmation. Form result wrapped in `aria-live="polite"` plus an `role="alert"` on the error. `.env.example` updated. Lint+tsc+build green.
 
 ## Files
 - `src/components/sections/CTASection.tsx`
