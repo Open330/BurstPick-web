@@ -11,3 +11,4 @@ UI_STRUCTURE_ANALYSIS.md
 
 # Lighthouse reports
 .lighthouse-*.json
+.omc/
