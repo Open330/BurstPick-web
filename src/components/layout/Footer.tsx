@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -16,7 +17,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="mb-3 flex items-center gap-2.5">
-              <img src={`${BASE_PATH}/logo.avif`} alt={BRAND.name} width={645} height={618} className="h-8 w-8 object-contain" />
+              <Image src={`${BASE_PATH}/logo.avif`} alt="" width={32} height={32} className="h-8 w-8 object-contain" />
               <span className="text-lg font-bold">{BRAND.name}</span>
             </div>
             <p className="mb-2 text-sm text-text-secondary">{t("tagline")}</p>

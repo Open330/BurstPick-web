@@ -1,6 +1,9 @@
 # Plan 006 — Resolve 10 `no-img-element` lint warnings
 
-**Severity:** High · **Status:** not-started · **Source:** AGG-4 (perf-reviewer P-1, verifier V-1)
+**Severity:** High · **Status:** done · **Source:** AGG-4 (perf-reviewer P-1, verifier V-1)
+
+## Progress
+- 2026-04-26: Header, Footer, Hero (logo + 5 mockup tile sites), CTA, download — all `<img>` now `next/image`. Logos use real intrinsic dimensions (32, 80, 112) so the rendered box matches the aspect ratio (also closes AGG-14). Decorative mockup images use `alt=""`. `pnpm lint` exits 0 with 0 warnings.
 
 ## Files
 - `src/components/layout/Header.tsx:35`

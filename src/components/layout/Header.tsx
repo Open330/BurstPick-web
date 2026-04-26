@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -32,7 +33,7 @@ export function Header() {
       <Container className="flex h-16 items-center justify-between">
         {/* Logo */}
         <a href={`/${locale}`} className="flex items-center gap-2.5">
-          <img src={`${BASE_PATH}/logo.avif`} alt={BRAND.name} width={645} height={618} className="h-8 w-8 object-contain" />
+          <Image src={`${BASE_PATH}/logo.avif`} alt="" width={32} height={32} className="h-8 w-8 object-contain" priority />
           <span className="text-lg font-bold tracking-tight">{BRAND.name}</span>
         </a>
 

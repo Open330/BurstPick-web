@@ -102,11 +102,11 @@ export function CTASection() {
 
       <Container className="text-center">
         <FadeInView>
-          <img
+          <Image
             src={`${BASE_PATH}/logo.avif`}
             alt={BRAND.name}
-            width={645}
-            height={618}
+            width={80}
+            height={80}
             className="mx-auto mb-8 h-20 w-20 object-contain drop-shadow-2xl"
           />
         </FadeInView>

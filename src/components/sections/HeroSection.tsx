@@ -32,12 +32,13 @@ export function HeroSection() {
 
       <Container className="flex flex-col items-center py-20 text-center">
         <FadeInView>
-          <img
+          <Image
             src={`${BASE_PATH}/logo.avif`}
             alt={BRAND.name}
-            width={645}
-            height={618}
+            width={112}
+            height={112}
             className="mb-8 h-24 w-24 object-contain drop-shadow-2xl sm:h-28 sm:w-28"
+            priority
           />
         </FadeInView>
 
@@ -175,9 +176,11 @@ export function HeroSection() {
                           : "hover:bg-white/[0.04]"
                       }`}
                     >
-                      <img
+                      <Image
                         src={cluster.img}
-                        alt={cluster.name}
+                        alt=""
+                        width={48}
+                        height={36}
                         className={`h-9 w-12 flex-shrink-0 rounded object-cover ${
                           cluster.active ? "ring-1 ring-blue-400/40" : "opacity-60"
                         }`}
@@ -231,10 +234,12 @@ export function HeroSection() {
 
                 {/* Main preview area */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-black md:aspect-auto md:flex-1">
-                  <img
+                  <Image
                     src={`${BASE_PATH}/mockup/main-preview.avif`}
-                    alt="Selected photo preview"
-                    className="absolute inset-0 h-full w-full object-contain"
+                    alt=""
+                    fill
+                    sizes="(min-width: 1024px) 60vw, 100vw"
+                    className="object-contain"
                   />
                   {/* Filename overlay */}
                   <div className="absolute right-2 bottom-1.5 rounded-md border border-white/10 bg-black/40 px-1.5 py-0.5 text-[8px] text-white/40 backdrop-blur-sm sm:right-3 sm:bottom-2 sm:px-2 sm:text-[9px]">
@@ -266,7 +271,7 @@ export function HeroSection() {
                           isSelected ? "ring-2 ring-blue-400/80" : isRejected ? "opacity-35" : ""
                         }`}
                       >
-                        <img src={imgSrc} alt={`Frame ${i + 1}`} className="h-full w-full object-cover" />
+                        <Image src={imgSrc} alt="" fill sizes="48px" className="object-cover" />
                         {/* Pick/Reject badge — top left */}
                         {isPicked && (
                           <div className="absolute left-0.5 top-0.5 flex h-3 w-3 items-center justify-center rounded-full bg-green-500 text-[6px] text-white">✓</div>
@@ -300,7 +305,7 @@ export function HeroSection() {
                           isSelected ? "ring-2 ring-blue-400/80" : isRejected ? "opacity-40" : ""
                         }`}
                       >
-                        <img src={imgSrc} alt={`Burst frame ${i + 1}`} className="h-full w-full object-cover" />
+                        <Image src={imgSrc} alt="" fill sizes="56px" className="object-cover" />
                         {isPicked && (
                           <div className="absolute bottom-0.5 left-0.5 h-1.5 w-1.5 rounded-full bg-green-400" />
                         )}
@@ -401,7 +406,7 @@ export function HeroSection() {
                     <div className="mb-1 text-[9px] font-medium text-white/40">Faces</div>
                     <div className="flex gap-1.5">
                       {["face-01", "face-02"].map((face) => (
-                        <img key={face} src={`${BASE_PATH}/mockup/${face}.avif`} alt="Detected face" className="h-9 w-9 rounded-lg object-cover" />
+                        <Image key={face} src={`${BASE_PATH}/mockup/${face}.avif`} alt="" width={36} height={36} className="h-9 w-9 rounded-lg object-cover" />
                       ))}
                     </div>
                   </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
@@ -21,12 +22,13 @@ function DownloadContent() {
   return (
     <main className="px-0 pt-28 pb-20 sm:pt-32 sm:pb-24">
       <Container className="max-w-3xl text-center">
-        <img
+        <Image
           src={`${BASE_PATH}/logo.avif`}
           alt="BurstPick"
-          width={645}
-          height={618}
+          width={112}
+          height={112}
           className="mx-auto mb-8 h-24 w-24 drop-shadow-2xl sm:h-28 sm:w-28"
+          priority
         />
 
         <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
