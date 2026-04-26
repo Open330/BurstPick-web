@@ -1,21 +1,15 @@
-# Critic — Cycle 1 (2026-04-26)
+# Critic — Cycle 2 (2026-04-26)
 
-Cross-perspective skepticism applied to the whole change surface.
+Cycle 1 produced 35 findings; 8 are now fixed (plans 001..008 archived). 10 remain deferred with exit criteria. Cycle 2 surfaced 4 small additions.
 
-## CR-A (M, H) — Static export is decided but not enforced
-- `next.config.ts: output: "export"`. The codebase still uses `next/font` (Google Fonts) which is OK with export, and `next/script`, also OK. But `redirect()` from `next/navigation` is used in `src/app/page.tsx`. Static export *does* support redirects via prerender, but only at build time — `redirect("/en")` in a server component generates a meta-refresh in the static HTML. Verify the produced `out/index.html` has the redirect.
-- Risk: low; flag for verification.
+## Cross-cutting observations
+- The plan directory naming and README index are healthy. Done plans archived to `_archive/`.
+- `_aggregate.md` should mark AGG-1..AGG-10 as DONE so the next reviewer doesn't re-discover them.
+- Repo is a static-export marketing site. Deferred items match the project's pre-launch posture.
 
-## CR-B (M, H) — Sitemap is hand-written
-- `public/sitemap.xml` is a static XML with only 4 routes per locale. Misses `/download`, `/models`, `/support`. Generating from the route table would prevent drift.
-- Fix: add `next-sitemap` or a small `scripts/generate-sitemap.mjs` that scans `src/app/[locale]/*` directories.
+## Recommendations for cycle 2
+1. Land CR2-1 (drop `BRAND.downloadUrl`) and CR2-2 (locale `includes` cast cleanup) — both are <10 LOC, zero risk.
+2. Continue deferring large items (CSP hardening, tests bootstrap, mobile-menu trap).
 
-## CR-C (M, H) — Manifest `start_url` does not honor browser language
-- `manifest.json` always points at `/en`. Korean users installing the PWA will be sent to English. With static export there is no easy fix without two manifests.
-- Fix: serve two manifests via `<link rel="manifest" href="/manifest-en.json">` per locale.
-
-## CR-D (M, H) — Brand footer says "Built with [next?]" but no actual built_with text in en.json
-- `Footer.tsx:23` renders `t("built_with")`. Look up: in messages/en.json, the value is "Built with care · Made for photographers". Fine. But its sibling `tagline` is "AI-powered burst photo culling for photographers" — overlapping with the page H1/metadata. Brand voice diverges across pages. Brand-voice consistency review (out of scope of code review) was already done by personas; flag here for completeness.
-
-## CR-E (L, H) — Build output `/out` and `/.next` likely not in `.gitignore`
-- `.gitignore` is small (153 bytes). Verify `/out` and `/.next` are listed; otherwise CI artifacts can leak.
+## AGENT FAILURES
+None.
