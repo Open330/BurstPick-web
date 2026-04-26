@@ -2,6 +2,7 @@
 
 Plans derived from `.context/reviews/_aggregate.md`.
 Cycle 1 (2026-04-26) produced plans 001..018; cycle 2 (2026-04-26) produced plans 019..021.
+Cycle 3 (2026-04-26) produced no new plans; plan 014 was implemented and archived (its prerequisite plan 006 had landed in cycle 1).
 
 Conventions:
 - Each plan is one file. File name: `NNN-slug.md`.
@@ -27,7 +28,7 @@ Conventions:
 | 011-models-data-extraction.md | deferred | M | Extract models data from page TSX into `lib/models.ts` |
 | 012-sitemap-completeness.md | deferred | M | Generate sitemap from route table; include all pages |
 | 013-focus-visible-and-mobile-menu-a11y.md | deferred | M | Add focus-visible rings + mobile-menu Escape/focus-trap |
-| 014-logo-aspect-and-alt.md | deferred | M | Fix logo intrinsic dimensions + dedupe alt text |
+| _archive/014-logo-aspect-and-alt.md | done | M | Fix logo intrinsic dimensions + dedupe alt text |
 | 015-font-weights-trim.md | deferred | M | Drop unused Plus-Jakarta weight 500 |
 | 016-csp-hardening.md | deferred | H | Move inline scripts out → drop `unsafe-inline`; add report-uri |
 | 017-tests-bootstrap.md | deferred | M | Either add Playwright smoke or remove `@playwright/test` |
