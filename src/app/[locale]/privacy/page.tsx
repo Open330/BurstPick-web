@@ -1,7 +1,6 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
-import { BRAND } from "@/lib/constants";
 
 export default async function PrivacyPage({
   params,
