@@ -30,8 +30,8 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-`NEXT_PUBLIC_CHECKOUT_URL` is optional. When set, the localized `/purchase` page routes visitors to your hosted checkout. When absent, the purchase page falls back to the launch-list CTA.
 `NEXT_PUBLIC_BASE_PATH` is optional and should only be set when the site is served from a subpath rather than the root domain.
+`NEXT_PUBLIC_API_BASE_URL` is optional. When set, the mailing-list signup form posts to that origin instead of `https://api.burstpick.app` — useful for staging.
 
 ## Build
 
@@ -47,29 +47,35 @@ Static output is generated in `out/` for GitHub Pages deployment.
 src/
 ├── app/
 │   ├── globals.css            # Design tokens & theme
+│   ├── layout.tsx             # Root metadata
+│   ├── not-found.tsx          # 404 page
+│   ├── page.tsx               # Locale-redirect entry
 │   └── [locale]/
-│       ├── layout.tsx         # Root layout with metadata
+│       ├── layout.tsx         # Locale layout with metadata + JSON-LD
 │       ├── page.tsx           # Landing page
 │       ├── download/          # Download page
-│       ├── purchase/          # Purchase / checkout handoff page
 │       ├── license/           # EULA / license terms
+│       ├── models/            # AI model catalog
 │       ├── privacy/           # Privacy policy
+│       ├── support/           # Support / contact page
 │       └── terms/             # Terms of service
 ├── components/
 │   ├── layout/                # Header, Footer
-│   ├── sections/              # Hero, Pricing, Features, Gallery, Showcase, Story, FAQ, CTA
+│   ├── sections/              # Hero, Pricing, Features, Gallery, Showcase, Story, About, NotDo, FAQ, CTA
 │   ├── ui/                    # Button, Container, GradientText
 │   └── motion/                # FadeInView (scroll animations)
 ├── i18n/                      # Locale config
-├── lib/                       # Constants, features, gallery data
-└── messages/                  # en.json, ko.json
+└── lib/                       # Constants, feature/gallery data
+messages/                      # en.json, ko.json
 scripts/
 └── generate-og.mjs            # OG image generator (satori)
 public/
 ├── assets/                    # Section background images
+├── mockup/                    # Hero app-mockup tiles
 ├── screenshots/               # App screenshots
 ├── logo.png                   # App icon
 ├── og-image.png               # Open Graph image
+├── _headers                   # Cloudflare Pages security headers
 └── CNAME                      # Custom domain config
 ```
 

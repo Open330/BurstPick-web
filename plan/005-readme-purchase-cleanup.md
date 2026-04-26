@@ -1,6 +1,9 @@
 # Plan 005 — Remove `/purchase` and `NEXT_PUBLIC_CHECKOUT_URL` references
 
-**Severity:** High · **Status:** not-started · **Source:** AGG-3 (document-specialist DS-1, DS-2)
+**Severity:** High · **Status:** done · **Source:** AGG-3 (document-specialist DS-1, DS-2)
+
+## Progress
+- 2026-04-26: README's Project Structure tree updated to match actual filesystem (no purchase, adds models + support). `NEXT_PUBLIC_CHECKOUT_URL` paragraph dropped. `.env.example` rewritten with `NEXT_PUBLIC_API_BASE_URL`. README documents the new env var.
 
 ## Files
 - `README.md`
