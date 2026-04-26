@@ -35,7 +35,6 @@ export const API_BASE_URL = (
 export const BRAND = {
   name: "BurstPick",
   website: "https://burstpick.app",
-  downloadUrl: APP_STORE_URL,
 } as const;
 
 export const SALES = {
