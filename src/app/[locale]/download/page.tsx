@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
-import { BASE_PATH } from "@/lib/constants";
+import { APP_STORE_URL, BASE_PATH } from "@/lib/constants";
 import { ShieldCheck, Cpu, HardDrive, Monitor, AppWindow } from "lucide-react";
 
 export default async function DownloadPage({
@@ -40,7 +40,7 @@ function DownloadContent() {
         {/* Mac App Store download badge */}
         <div className="mb-6 flex flex-col items-center gap-4">
           <a
-            href="https://apps.apple.com/us/app/burstpick/id6760616886"
+            href={APP_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-white/5 px-6 py-3 text-text-secondary transition-colors hover:border-white/40 hover:bg-white/10"

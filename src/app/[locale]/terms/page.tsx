@@ -1,7 +1,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
-import { BRAND } from "@/lib/constants";
+import { SALES } from "@/lib/constants";
 
 export default async function TermsPage({
   params,
@@ -57,7 +57,7 @@ function TermsContent() {
                   {t("licenseLink")}
                 </a>
                 <a
-                  href="mailto:support@burstpick.app"
+                  href={`mailto:${SALES.supportEmail}`}
                   className="text-brand-start transition-colors hover:text-brand-end"
                 >
                   {t("projectLink")}

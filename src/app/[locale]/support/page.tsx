@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
+import { SALES } from "@/lib/constants";
 
 export default async function SupportPage({
   params,
@@ -38,10 +39,10 @@ function SupportContent() {
                 {t("emailBody")}
               </p>
               <a
-                href="mailto:support@burstpick.app"
+                href={`mailto:${SALES.supportEmail}`}
                 className="mt-4 inline-flex text-sm font-medium text-brand-start transition-colors hover:text-brand-end"
               >
-                support@burstpick.app
+                {SALES.supportEmail}
               </a>
             </section>
 
@@ -53,7 +54,7 @@ function SupportContent() {
                 {t("discordBody")}
               </p>
               <a
-                href="https://discord.gg/8dMD56Mv"
+                href={SALES.discordUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex text-sm font-medium text-brand-start transition-colors hover:text-brand-end"

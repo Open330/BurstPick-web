@@ -1,6 +1,9 @@
 # Plan 002 — Centralize shared URLs
 
-**Severity:** High · **Status:** not-started · **Source:** AGG-5 (code-reviewer CR-3, CR-10, CR-11; architect A-7; verifier V-7)
+**Severity:** High · **Status:** done · **Source:** AGG-5 (code-reviewer CR-3, CR-10, CR-11; architect A-7; verifier V-7)
+
+## Progress
+- 2026-04-26: Header, Footer, HeroSection, CTASection, support, terms, download/page now consume `APP_STORE_URL`, `SALES.discordUrl`, `SALES.supportEmail`. Verified zero remaining literals via grep. Lint+tsc green.
 
 ## Files
 - `src/lib/constants.ts`

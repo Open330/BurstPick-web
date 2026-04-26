@@ -1,9 +1,9 @@
 import { useTranslations, useLocale } from "next-intl";
 import { MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { BASE_PATH, BRAND } from "@/lib/constants";
+import { APP_STORE_URL, BASE_PATH, BRAND, SALES } from "@/lib/constants";
 
-const DISCORD_URL = "https://discord.gg/8dMD56Mv";
+const DISCORD_URL = SALES.discordUrl;
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -41,7 +41,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://apps.apple.com/us/app/burstpick/id6760616886"
+                  href={APP_STORE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-text-secondary hover:text-text-primary transition-colors"
@@ -65,7 +65,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="mailto:support@burstpick.app"
+                  href={`mailto:${SALES.supportEmail}`}
                   className="text-text-secondary hover:text-text-primary transition-colors"
                 >
                   {t("support")}

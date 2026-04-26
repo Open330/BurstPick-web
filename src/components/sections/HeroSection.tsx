@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { GradientText } from "@/components/ui/GradientText";
 import { FadeInView } from "@/components/motion/FadeInView";
-import { BASE_PATH, BRAND } from "@/lib/constants";
+import { APP_STORE_URL, BASE_PATH, BRAND } from "@/lib/constants";
 
 
 export function HeroSection() {
@@ -63,7 +63,7 @@ export function HeroSection() {
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             {/* macOS — App Store link */}
             <a
-              href="https://apps.apple.com/us/app/burstpick/id6760616886"
+              href={APP_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-white/5 px-6 py-3 text-text-secondary transition-colors hover:border-white/40 hover:bg-white/10"

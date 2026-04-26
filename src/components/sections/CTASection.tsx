@@ -5,10 +5,10 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { FadeInView } from "@/components/motion/FadeInView";
-import { BASE_PATH, BRAND } from "@/lib/constants";
+import { APP_STORE_URL, BASE_PATH, BRAND, SALES } from "@/lib/constants";
 import { ShieldCheck, Mail, CheckCircle, Loader2, MessageCircle } from "lucide-react";
 
-const DISCORD_URL = "https://discord.gg/8dMD56Mv";
+const DISCORD_URL = SALES.discordUrl;
 
 type FormState = "idle" | "loading" | "success" | "error";
 
@@ -114,7 +114,7 @@ export function CTASection() {
           <div className="mb-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             {/* macOS — App Store link */}
             <a
-              href="https://apps.apple.com/us/app/burstpick/id6760616886"
+              href={APP_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-white/5 px-6 py-3 text-text-secondary transition-colors hover:border-white/40 hover:bg-white/10"

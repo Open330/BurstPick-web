@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { BASE_PATH, BRAND } from "@/lib/constants";
+import { APP_STORE_URL, BASE_PATH, BRAND, SALES } from "@/lib/constants";
 
 const NAV_ITEMS = ["features", "screenshots", "about", "faq"] as const;
-const DISCORD_URL = "https://discord.gg/8dMD56Mv";
+const DISCORD_URL = SALES.discordUrl;
 
 export function Header() {
   const t = useTranslations("nav");
@@ -57,7 +57,7 @@ export function Header() {
             {t("discord")}
           </a>
           <a
-            href="https://apps.apple.com/us/app/burstpick/id6760616886"
+            href={APP_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-brand-start to-brand-end px-4 py-1.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
@@ -101,7 +101,7 @@ export function Header() {
               {t("discord")}
             </a>
             <a
-              href="https://apps.apple.com/us/app/burstpick/id6760616886"
+              href={APP_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex min-h-[44px] items-center gap-1.5 rounded-full bg-gradient-to-r from-brand-start to-brand-end px-4 py-1.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
