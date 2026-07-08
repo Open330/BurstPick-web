@@ -25,7 +25,7 @@ export function FeaturesSection() {
             <div className="hidden overflow-hidden rounded-xl border border-white/10 shadow-lg lg:block">
               <Image
                 src="/assets/feature-ai.avif"
-                alt="AI scoring pipeline visualization"
+                alt="BurstPick on-device AI scoring pipeline for photo culling"
                 width={360}
                 height={200}
                 className="w-[360px]"

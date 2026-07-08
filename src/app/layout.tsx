@@ -1,28 +1,5 @@
 import type { ReactNode } from "react";
-import type { Metadata } from "next";
 import "./globals.css";
-
-export const metadata: Metadata = {
-  metadataBase: new URL("https://burstpick.app"),
-  title: "BurstPick — On-Device Burst Photo Culling for Mac",
-  description:
-    "Drop a folder of burst photos. BurstPick clusters similar shots, scores them on-device, and surfaces the strongest picks on your Mac.",
-  openGraph: {
-    title: "BurstPick — On-Device Burst Photo Culling for Mac",
-    description:
-      "Drop a folder of burst photos. BurstPick clusters similar shots, scores them on-device, and surfaces the strongest picks on your Mac.",
-    type: "website",
-    siteName: "BurstPick",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "BurstPick — On-Device Burst Photo Culling for Mac",
-    description:
-      "Drop a folder of burst photos. BurstPick clusters similar shots, scores them on-device, and surfaces the strongest picks on your Mac.",
-    images: ["/og-image.png"],
-  },
-};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return children;

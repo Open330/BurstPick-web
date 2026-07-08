@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "BurstPick — AI Burst Photo Culling, Built by Photographers",
-    "description": "We shoot 10,000+ frames per session and got tired of the cull. BurstPick uses on-device AI to group burst sequences, score them for sharpness and composition, and pull up the keepers in seconds."
+    "title": "BurstPick for Mac - AI Burst Photo Culling for Lightroom Workflows",
+    "description": "Cull thousands of burst photos on your Mac with on-device AI. Group sequences, rank keepers, export XMP ratings and color labels, and hand off to Lightroom Classic with experimental Pro catalog export."
   },
   "nav": {
     "features": "Features",
@@ -14,8 +14,8 @@
     "coming_soon": "Roadmap"
   },
   "hero": {
-    "tagline": "Stop spending 8+ hours culling. Start shooting.",
-    "description": "Every burst shoot means thousands of near-identical frames and hours of sorting. BurstPick groups sequences, scores each shot for sharpness, exposure, noise, face quality, and aesthetics, then puts the strongest candidates at the top. You make the final call.",
+    "tagline": "AI burst photo culling for Mac photographers.",
+    "description": "Cull sports, wildlife, and event bursts locally on your Mac. BurstPick groups near-identical sequences, scores sharpness, exposure, noise, faces, and aesthetics, then exports XMP ratings and color labels for Lightroom workflows. Free starts with up to 50,000 photos per catalog.",
     "cta_download_mac": "Download on the",
     "cta_windows_coming_soon": "Roadmap"
   },
@@ -41,11 +41,11 @@
     "after_desc": "Your top picks ranked by sharpness, exposure, face quality, and aesthetics, ready for review"
   },
   "features": {
-    "heading": "Why BurstPick?",
+    "heading": "Cull Burst Photos Faster on Mac",
     "subheading": "Go from thousands of burst shots to your best picks. Photo analysis stays on your device.",
-    "clustering_title": "Burst Sequences, Grouped Automatically",
+    "clustering_title": "Automatic Burst Photo Grouping",
     "clustering_desc": "No more scrolling through 200 near-identical frames. BurstPick recognizes each burst sequence and groups it for you, so you start with organized sets instead of a wall of thumbnails.",
-    "scoring_title": "Your Best Shots, Ranked",
+    "scoring_title": "AI Photo Culling Scores You Can Override",
     "scoring_desc": "Every photo is scored on sharpness, exposure, noise, composition, and face quality. The strongest candidates rise to the top. You just confirm or override.",
     "raw_title": "Every RAW Format You Shoot",
     "raw_desc": "33 RAW formats, 11 standard image formats, and video files for shoot context. ARW, CR2, CR3, NEF, DNG, HEIC, AVIF, WebP, JPEG XL, and more.",
@@ -55,10 +55,26 @@
     "compare_desc": "Put up to 4 finalists next to each other with synced zoom and color-accurate previews. See the difference down to the pixel.",
     "workflow_title": "Non-Destructive, Always",
     "workflow_desc": "Keep, reject, star-rate, color-label. Every decision autosaves. Your originals are never touched.",
-    "lightroom_title": "Fits Right Into Your Pipeline",
+    "lightroom_title": "Lightroom and XMP Workflow Export",
     "lightroom_desc": "Export ratings and color labels as XMP sidecars, with an experimental Pro Lightroom Classic catalog handoff when you need it. Photo Mechanic, BurstPick, Lightroom.",
-    "c2pa_title": "Private by Default",
+    "c2pa_title": "Private, On-Device Photo Culling",
     "c2pa_desc": "Culling and scoring run locally. Purchases, optional model downloads, updates, and opt-in telemetry can use network services, but your photos are not uploaded for analysis."
+  },
+  "useCases": {
+    "heading": "Built for High-Volume Shoots",
+    "subheading": "BurstPick is tuned for sessions where the hard part is choosing between hundreds of near-identical keepers.",
+    "sports": {
+      "title": "Sports Photography",
+      "body": "Review 30fps sequences, compare near-misses, and keep the sharpest frame from each play."
+    },
+    "wildlife": {
+      "title": "Wildlife Photography",
+      "body": "Group long action bursts and surface frames with clean focus, pose, and composition."
+    },
+    "events": {
+      "title": "Event Photography",
+      "body": "Find faces across a session, rate selects, and export XMP metadata for editing."
+    }
   },
   "gallery": {
     "heading": "See BurstPick in Action",
@@ -97,9 +113,17 @@
     "q8": "Who built BurstPick?",
     "a8": "A team of photographers and macOS engineers who shoot 10,000+ frames per session. We built it because we needed it. Existing tools didn't get burst workflows.",
     "q9": "How does BurstPick fit into my workflow?",
-    "a9": "It's a companion, not a replacement. Ingest with Photo Mechanic, cull with BurstPick, edit in Lightroom. Full XMP compatibility, no extra steps.",
+    "a9": "It's a companion, not a replacement. Ingest with Photo Mechanic, cull with BurstPick, then edit in Lightroom or your existing editor. Export ratings and color labels as XMP sidecars; experimental Lightroom Classic catalog handoff is available in Pro.",
     "q10": "Is BurstPick available yet?",
-    "a10": "Use the Mac App Store link on this site to open the current listing. The Mac version is the launch platform; Windows remains on the roadmap."
+    "a10": "Use the Mac App Store link on this site to open the current listing. The Mac version is the launch platform; Windows remains on the roadmap.",
+    "q11": "Is BurstPick a Mac App Store app?",
+    "a11": "Yes. BurstPick launches on macOS through the Mac App Store. The current supported platform is Mac; Windows remains on the roadmap.",
+    "q12": "Can I use BurstPick before buying Pro?",
+    "a12": "Yes. Free supports up to 50,000 photos per catalog, basic no-download scoring, burst grouping, non-destructive review, and unlimited XMP sidecar export.",
+    "q13": "Does BurstPick upload my RAW files?",
+    "a13": "No. Culling and scoring run locally on your Mac. Network access is used only for StoreKit purchases, optional model downloads, update checks, and opt-in telemetry.",
+    "q14": "Can BurstPick replace Lightroom?",
+    "a14": "No. BurstPick is for culling before editing. Export XMP ratings and color labels, then edit in Lightroom or your existing workflow."
   },
   "cta": {
     "heading": "Ready to find your best shots?",
@@ -236,7 +260,7 @@
   },
   "downloadPage": {
     "title": "Download BurstPick for Mac",
-    "description": "Burst photo culling with on-device AI, built by photographers. Native macOS app. Photo analysis happens on your machine.",
+    "description": "Download BurstPick from the Mac App Store. Cull burst photos locally on macOS, export XMP ratings and color labels, and start free with up to 50,000 photos per catalog.",
     "button_mac": "Download on the",
     "version": "Available through the Mac App Store",
     "notify_prompt": "Subscribe for release notes, model updates, and workflow notes.",

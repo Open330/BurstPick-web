@@ -23,7 +23,11 @@ export function sitePath(path: string): string {
 }
 
 export function localizedPath(locale: string, path = ""): string {
-  return sitePath(`/${locale}${path}`);
+  if (path.startsWith("#")) {
+    return sitePath(`/${locale}/${path}`);
+  }
+
+  return sitePath(path ? `/${locale}${path}/` : `/${locale}/`);
 }
 
 export const APP_STORE_URL = "https://apps.apple.com/us/app/burstpick/id6760616886";
@@ -79,4 +83,19 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   { titleKey: "scoring_whiskey", descKey: "scoring_whiskey_desc", screenshot: "/screenshots/scoring-whiskey.avif" },
 ];
 
-export const FAQ_KEYS = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10"] as const;
+export const FAQ_KEYS = [
+  "q1",
+  "q2",
+  "q3",
+  "q4",
+  "q5",
+  "q6",
+  "q7",
+  "q8",
+  "q9",
+  "q10",
+  "q11",
+  "q12",
+  "q13",
+  "q14",
+] as const;

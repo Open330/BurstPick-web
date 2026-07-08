@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "BurstPick — 사진가가 만든 AI 연사 선별 도구",
-    "description": "한 번 촬영에 수천 장을 찍는 사진가들이 직접 만들었습니다. BurstPick은 온디바이스 AI로 연사를 그룹화하고 선명도, 노출, 구도를 분석해 베스트 컷을 추천합니다. 사진 고르는 시간, 확 줄여보세요."
+    "title": "BurstPick - Mac용 AI 연사 사진 셀렉/선별 앱",
+    "description": "Mac에서 수천 장의 연사 사진을 온디바이스 AI로 셀렉하세요. BurstPick은 연사를 묶고 베스트 컷 후보를 순위화하며, XMP 별점과 컬러 라벨을 내보내 Lightroom 워크플로로 이어줍니다."
   },
   "nav": {
     "features": "주요 기능",
@@ -14,8 +14,8 @@
     "coming_soon": "로드맵"
   },
   "hero": {
-    "tagline": "8시간 넘는 선별 작업, 이제 그만하세요.",
-    "description": "연사 촬영마다 수천 장의 비슷한 사진, 그리고 끝없는 수작업. BurstPick은 연사를 묶고 선명도, 노출, 노이즈, 얼굴 품질, 심미성을 분석해 좋은 후보를 위로 올립니다. 최종 결정은 당신의 몫입니다.",
+    "tagline": "Mac용 AI 연사 사진 셀렉/선별 앱.",
+    "description": "스포츠, 야생 동물, 행사 연사를 Mac에서 로컬로 선별하세요. BurstPick은 비슷한 연사를 묶고 선명도, 노출, 노이즈, 얼굴 품질, 심미성을 분석한 뒤 XMP 별점과 컬러 라벨로 Lightroom 워크플로에 이어줍니다. Free는 카탈로그당 최대 50,000장까지 시작할 수 있습니다.",
     "cta_download_mac": "다운로드",
     "cta_windows_coming_soon": "로드맵"
   },
@@ -41,11 +41,11 @@
     "after_desc": "선명도, 노출, 얼굴 품질, 심미성으로 정렬된 A컷 후보들. 확인하고 고르기만 하면 됩니다."
   },
   "features": {
-    "heading": "왜 BurstPick인가요?",
+    "heading": "Mac에서 연사 사진을 더 빠르게 셀렉하세요",
     "subheading": "수천 장의 연사에서 베스트 컷까지. 사진 분석은 기기에서 처리합니다.",
-    "clustering_title": "스마트 연사 그룹화",
+    "clustering_title": "자동 연사 사진 그룹화",
     "clustering_desc": "비슷한 사진 수백 장을 일일이 넘길 필요 없습니다. BurstPick이 연사를 인식해 그룹으로 묶어줍니다. 세트 단위로 리뷰하세요.",
-    "scoring_title": "AI 베스트 컷 추천",
+    "scoring_title": "직접 조정할 수 있는 AI 선별 점수",
     "scoring_desc": "선명도, 노출, 노이즈, 구도, 인물 표정을 종합 분석해서 점수를 매깁니다. 잘 나온 사진이 위로 올라옵니다.",
     "raw_title": "다양한 RAW 포맷 지원",
     "raw_desc": "RAW 33종, 일반 이미지 11종, 촬영 맥락 확인용 비디오 15종을 불러옵니다. ARW, CR2, CR3, NEF, DNG, HEIC, AVIF, WebP, JPEG XL 등을 지원합니다.",
@@ -55,10 +55,26 @@
     "compare_desc": "최대 4장을 나란히 띄우고 줌을 동기화해 비교할 수 있습니다. 미세한 초점 차이도 잡아냅니다.",
     "workflow_title": "원본 보존 워크플로",
     "workflow_desc": "Pick, Reject, 별점, 컬러 라벨. 모든 결정은 메타데이터로 저장됩니다. 원본 파일은 건드리지 않습니다.",
-    "lightroom_title": "Lightroom 연동",
+    "lightroom_title": "Lightroom과 XMP 워크플로 내보내기",
     "lightroom_desc": "별점과 컬러 라벨은 표준 XMP 사이드카로 내보내고, 필요하면 Pro의 실험적 Lightroom Classic 카탈로그 연동을 사용할 수 있습니다.",
-    "c2pa_title": "기본값은 로컬",
+    "c2pa_title": "온디바이스 사진 선별",
     "c2pa_desc": "선별과 스코어링은 기기에서 실행됩니다. 구매, 선택적 모델 다운로드, 업데이트, 옵트인 텔레메트리는 네트워크를 사용할 수 있지만 사진 분석을 위해 원본을 업로드하지 않습니다."
+  },
+  "useCases": {
+    "heading": "대량 촬영 셀렉을 위해 만들었습니다",
+    "subheading": "BurstPick은 비슷한 후보가 수백 장씩 쌓이는 촬영에서 좋은 컷을 빠르게 좁히도록 설계했습니다.",
+    "sports": {
+      "title": "스포츠 사진",
+      "body": "30fps 연사를 장면별로 검토하고, 아슬아슬한 후보를 비교해 가장 선명한 컷을 남기세요."
+    },
+    "wildlife": {
+      "title": "야생 동물 사진",
+      "body": "긴 액션 연사를 그룹화하고 초점, 자세, 구도가 좋은 프레임을 먼저 확인하세요."
+    },
+    "events": {
+      "title": "행사 사진",
+      "body": "세션 전체에서 인물을 찾고, 셀렉에 별점과 라벨을 적용한 뒤 XMP 메타데이터로 내보내세요."
+    }
   },
   "gallery": {
     "heading": "인터페이스 미리보기",
@@ -97,9 +113,17 @@
     "q8": "누가 만들었나요?",
     "a8": "만 장 넘게 찍고 셀렉하느라 지친 사진가들과 macOS 엔지니어들이 만들었습니다. 기존 도구가 연사 워크플로를 제대로 지원하지 않아서 직접 만들었습니다.",
     "q9": "기존 워크플로에 어떻게 적용하나요?",
-    "a9": "기존 도구를 대체하지 않습니다. Photo Mechanic으로 인제스트, BurstPick으로 선별, Lightroom에서 보정. XMP 호환됩니다.",
+    "a9": "기존 도구를 대체하지 않습니다. Photo Mechanic으로 인제스트하고 BurstPick으로 선별한 뒤 Lightroom이나 기존 편집 도구에서 보정하세요. 별점과 컬러 라벨은 XMP 사이드카로 내보낼 수 있고, Pro에서는 실험적 Lightroom Classic 카탈로그 연동을 사용할 수 있습니다.",
     "q10": "지금 당장 써볼 수 있나요?",
-    "a10": "이 사이트의 Mac App Store 링크에서 현재 등록 페이지를 열 수 있습니다. 현재 출시 플랫폼은 Mac이며, Windows는 로드맵에 있습니다."
+    "a10": "이 사이트의 Mac App Store 링크에서 현재 등록 페이지를 열 수 있습니다. 현재 출시 플랫폼은 Mac이며, Windows는 로드맵에 있습니다.",
+    "q11": "BurstPick은 Mac App Store 앱인가요?",
+    "a11": "네. BurstPick은 macOS용 앱으로 Mac App Store를 통해 제공됩니다. 현재 지원 플랫폼은 Mac이며 Windows는 로드맵에 있습니다.",
+    "q12": "Pro를 구매하기 전에 사용할 수 있나요?",
+    "a12": "네. Free는 카탈로그당 최대 50,000장, 다운로드 없는 기본 스코어링, 연사 그룹화, 비파괴 리뷰, XMP 사이드카 무제한 내보내기를 지원합니다.",
+    "q13": "RAW 파일을 업로드하나요?",
+    "a13": "아니요. 선별과 스코어링은 Mac에서 로컬로 실행됩니다. 네트워크는 StoreKit 구매, 선택적 모델 다운로드, 업데이트 확인, 옵트인 텔레메트리에만 사용됩니다.",
+    "q14": "Lightroom을 대체하나요?",
+    "a14": "아니요. BurstPick은 보정 전 선별을 위한 앱입니다. XMP 별점과 컬러 라벨을 내보낸 뒤 Lightroom이나 기존 워크플로에서 편집하세요."
   },
   "cta": {
     "heading": "이제 정리는 AI에게, 당신은 촬영에 집중하세요",
@@ -236,7 +260,7 @@
   },
   "downloadPage": {
     "title": "Mac용 BurstPick 다운로드",
-    "description": "사진가를 위한 AI 연사 선별 앱. macOS 네이티브. 사진 분석은 기기에서 실행됩니다.",
+    "description": "Mac App Store에서 BurstPick을 다운로드하세요. macOS에서 연사 사진을 로컬로 선별하고 XMP 별점과 컬러 라벨을 내보낼 수 있으며, Free는 카탈로그당 최대 50,000장까지 시작할 수 있습니다.",
     "button_mac": "다운로드",
     "version": "Mac App Store에서 제공",
     "notify_prompt": "릴리스 노트, 모델 업데이트, 워크플로 소식을 받아보세요.",

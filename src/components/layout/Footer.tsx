@@ -31,12 +31,12 @@ export function Footer() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href={`/${locale}#features`} className="text-text-secondary hover:text-text-primary transition-colors">
+                <a href={`/${locale}/#features`} className="text-text-secondary hover:text-text-primary transition-colors">
                   {t("features")}
                 </a>
               </li>
               <li>
-                <a href={`/${locale}/models`} className="text-text-secondary hover:text-text-primary transition-colors">
+                <a href={`/${locale}/models/`} className="text-text-secondary hover:text-text-primary transition-colors">
                   {t("models")}
                 </a>
               </li>
@@ -93,18 +93,18 @@ export function Footer() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href={`/${locale}/privacy`} className="text-text-secondary hover:text-text-primary transition-colors">
+                <a href={`/${locale}/privacy/`} className="text-text-secondary hover:text-text-primary transition-colors">
                   {t("privacy")}
                 </a>
               </li>
               <li>
-                <a href={`/${locale}/terms`} className="text-text-secondary hover:text-text-primary transition-colors">
+                <a href={`/${locale}/terms/`} className="text-text-secondary hover:text-text-primary transition-colors">
                   {t("terms")}
                 </a>
               </li>
               <li>
                 <a
-                  href={`/${locale}/license`}
+                  href={`/${locale}/license/`}
                   className="text-text-secondary hover:text-text-primary transition-colors"
                 >
                   {t("license")}

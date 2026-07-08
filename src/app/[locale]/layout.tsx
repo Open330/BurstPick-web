@@ -7,20 +7,7 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { routing } from "@/i18n/routing";
-import { FAQ_KEYS } from "@/lib/constants";
-
-// JSON-LD payloads are inlined into <script> tags. JSON.stringify
-// can produce raw `<` / `>` / `&` characters that, if a translator
-// ever inserts e.g. `</script>`, would break out of the surrounding
-// element. Escape them per the OWASP "JSON in HTML" guidance.
-function safeJsonLd(obj: unknown): string {
-  return JSON.stringify(obj)
-    .replace(/</g, "\\u003c")
-    .replace(/>/g, "\\u003e")
-    .replace(/&/g, "\\u0026")
-    .replace(/\u2028/g, "\\u2028")
-    .replace(/\u2029/g, "\\u2029");
-}
+import { organizationJsonLd, safeJsonLd } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const plusJakarta = Plus_Jakarta_Sans({
@@ -66,10 +53,6 @@ export async function generateMetadata({
       description: t("description"),
       images: ["/og-image.png"],
     },
-    alternates: {
-      canonical: "/",
-      languages: { en: "/en", ko: "/ko" },
-    },
   };
 }
 
@@ -83,45 +66,7 @@ export default async function LocaleLayout({
   const { locale } = await params;
   setRequestLocale(locale);
   const messages = await getMessages();
-  const faqT = await getTranslations({ locale, namespace: "faq" });
-  const metaT = await getTranslations({ locale, namespace: "metadata" });
-  const offerPrice = locale === "ko" ? "129000" : "89.99";
-  const offerCurrency = locale === "ko" ? "KRW" : "USD";
-
-  const orgJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "BurstPick",
-    url: "https://burstpick.app",
-    logo: "https://burstpick.app/logo.png",
-  };
-
-  const productJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "BurstPick",
-    operatingSystem: "macOS",
-    applicationCategory: "PhotographyApplication",
-    description: metaT("description"),
-    offers: {
-      "@type": "Offer",
-      price: offerPrice,
-      priceCurrency: offerCurrency,
-    },
-  };
-
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: FAQ_KEYS.map((key) => ({
-      "@type": "Question",
-      name: faqT(key),
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faqT(key.replace("q", "a") as `a${string}`),
-      },
-    })),
-  };
+  const orgJsonLd = organizationJsonLd();
 
   return (
     <html lang={locale} className={`${inter.variable} ${plusJakarta.variable}`}>
@@ -133,14 +78,6 @@ export default async function LocaleLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: safeJsonLd(orgJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: safeJsonLd(productJsonLd) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }}
         />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-LDHFL2CQSZ"

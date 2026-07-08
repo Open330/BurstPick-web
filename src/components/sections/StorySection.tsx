@@ -32,7 +32,7 @@ export function StorySection() {
           <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/30">
             <Image
               src="/assets/promo-before-after.avif"
-              alt="From hundreds of burst shots to the perfect pick"
+              alt="BurstPick turns hundreds of similar burst photos into ranked keeper candidates"
               width={1920}
               height={1080}
               className="w-full"

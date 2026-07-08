@@ -1,9 +1,30 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
 import { APP_STORE_URL, BASE_PATH } from "@/lib/constants";
+import { buildPageMetadata, safeJsonLd, softwareApplicationJsonLd } from "@/lib/seo";
 import { ShieldCheck, Cpu, HardDrive, Monitor, AppWindow } from "lucide-react";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "downloadPage" });
+
+  return buildPageMetadata({
+    locale,
+    path: "/download",
+    title:
+      locale === "ko"
+        ? "Mac용 BurstPick 다운로드 - AI 연사 사진 셀렉/선별"
+        : "Download BurstPick for Mac - AI Burst Photo Culling",
+    description: t("description"),
+  });
+}
 
 export default async function DownloadPage({
   params,
@@ -12,8 +33,21 @@ export default async function DownloadPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "downloadPage" });
+  const softwareJsonLd = softwareApplicationJsonLd({
+    locale,
+    description: t("description"),
+  });
 
-  return <DownloadContent />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(softwareJsonLd) }}
+      />
+      <DownloadContent />
+    </>
+  );
 }
 
 function DownloadContent() {

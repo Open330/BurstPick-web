@@ -32,7 +32,7 @@ export function GallerySection() {
               <div className="mb-3 overflow-hidden rounded-lg border border-white/10 bg-surface-primary shadow-xl shadow-black/20 sm:mb-4 sm:rounded-xl">
                 <Image
                   src={item.screenshot}
-                  alt={t(item.titleKey)}
+                  alt={`${t(item.titleKey)}: ${t(item.descKey)}`}
                   width={960}
                   height={540}
                   className="w-full"

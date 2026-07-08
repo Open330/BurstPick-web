@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
+import { buildPageMetadata } from "@/lib/seo";
 
 type Model = {
   name: string;
@@ -297,6 +299,25 @@ const CATEGORIES: {
     ],
   },
 ];
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "modelsPage" });
+
+  return buildPageMetadata({
+    locale,
+    path: "/models",
+    title:
+      locale === "ko"
+        ? "BurstPick ML 모델 - 온디바이스 AI 사진 선별"
+        : "BurstPick ML Models - On-Device AI Photo Culling",
+    description: t("intro"),
+  });
+}
 
 export default async function ModelsPage({
   params,

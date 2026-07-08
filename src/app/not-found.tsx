@@ -40,7 +40,7 @@ export default function NotFound() {
             Page not found
           </p>
           <Link
-            href="/en"
+            href="/en/"
             style={{
               display: "inline-block",
               padding: "0.75rem 1.5rem",

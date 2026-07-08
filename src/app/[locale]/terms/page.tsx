@@ -1,7 +1,25 @@
+import type { Metadata } from "next";
 import { useTranslations, useLocale } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
 import { SALES } from "@/lib/constants";
+import { buildPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "termsPage" });
+
+  return buildPageMetadata({
+    locale,
+    path: "/terms",
+    title: locale === "ko" ? "BurstPick 이용약관" : "BurstPick Terms of Service",
+    description: t("intro"),
+  });
+}
 
 export default async function TermsPage({
   params,
@@ -51,7 +69,7 @@ function TermsContent() {
               <p className="mt-3 text-sm leading-relaxed text-text-secondary sm:text-base">{t("contactBody")}</p>
               <div className="mt-4 flex flex-wrap gap-4 text-sm font-medium">
                 <a
-                  href={`/${locale}/license`}
+                  href={`/${locale}/license/`}
                   className="text-brand-start transition-colors hover:text-brand-end"
                 >
                   {t("licenseLink")}

@@ -1,7 +1,25 @@
+import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
 import { SALES } from "@/lib/constants";
+import { buildPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "privacyPage" });
+
+  return buildPageMetadata({
+    locale,
+    path: "/privacy",
+    title: locale === "ko" ? "BurstPick 개인정보처리방침" : "BurstPick Privacy Policy",
+    description: t("intro"),
+  });
+}
 
 export default async function PrivacyPage({
   params,

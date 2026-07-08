@@ -64,7 +64,7 @@ export function ShowcaseSection() {
             <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/30">
               <Image
                 src="/assets/marketing-banner.avif"
-                alt="BurstPick AI analysis in action"
+                alt="BurstPick Mac app ranking burst photos with on-device AI scores"
                 width={960}
                 height={640}
                 className="w-full"

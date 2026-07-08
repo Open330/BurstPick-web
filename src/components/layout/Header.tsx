@@ -32,7 +32,7 @@ export function Header() {
     >
       <Container className="flex h-16 items-center justify-between">
         {/* Logo */}
-        <a href={`/${locale}`} className="flex items-center gap-2.5">
+        <a href={`/${locale}/`} className="flex items-center gap-2.5">
           <Image src={`${BASE_PATH}/logo.avif`} alt="" width={645} height={618} className="h-8 w-8 object-contain" priority />
           <span className="text-lg font-bold tracking-tight">{BRAND.name}</span>
         </a>
@@ -42,7 +42,7 @@ export function Header() {
           {NAV_ITEMS.map((item) => (
             <a
               key={item}
-              href={`/${locale}#${item}`}
+              href={`/${locale}/#${item}`}
               className="text-sm text-text-secondary transition-colors hover:text-text-primary"
             >
               {t(item)}
@@ -84,7 +84,7 @@ export function Header() {
             {NAV_ITEMS.map((item) => (
               <a
                 key={item}
-                href={`/${locale}#${item}`}
+                href={`/${locale}/#${item}`}
                 className="flex min-h-[44px] items-center text-sm text-text-secondary transition-colors hover:text-text-primary"
                 onClick={() => setMobileOpen(false)}
               >
