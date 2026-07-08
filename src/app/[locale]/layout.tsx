@@ -85,7 +85,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const faqT = await getTranslations({ locale, namespace: "faq" });
   const metaT = await getTranslations({ locale, namespace: "metadata" });
-  const offerPrice = locale === "ko" ? "119000" : "89";
+  const offerPrice = locale === "ko" ? "129000" : "89.99";
   const offerCurrency = locale === "ko" ? "KRW" : "USD";
 
   const orgJsonLd = {
@@ -100,7 +100,7 @@ export default async function LocaleLayout({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "BurstPick",
-    operatingSystem: "macOS, Windows",
+    operatingSystem: "macOS",
     applicationCategory: "PhotographyApplication",
     description: metaT("description"),
     offers: {

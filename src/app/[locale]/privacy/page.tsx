@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
+import { SALES } from "@/lib/constants";
 
 export default async function PrivacyPage({
   params,
@@ -48,7 +49,7 @@ function PrivacyPolicyContent() {
               <h2 className="text-lg font-semibold text-text-primary sm:text-xl">{t("contactTitle")}</h2>
               <p className="mt-3 text-sm leading-relaxed text-text-secondary sm:text-base">{t("contactBody")}</p>
               <a
-                href="mailto:open330.dev@gmail.com"
+                href={`mailto:${SALES.supportEmail}`}
                 className="mt-4 inline-flex text-sm font-medium text-brand-start transition-colors hover:text-brand-end"
               >
                 {t("contactLink")}

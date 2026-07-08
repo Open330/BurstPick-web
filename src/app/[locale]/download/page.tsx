@@ -89,7 +89,7 @@ function DownloadContent() {
           </div>
         </div>
 
-        {/* Windows Coming Soon */}
+        {/* Windows roadmap note */}
         <div className="mx-auto mt-10 max-w-lg rounded-xl border border-white/[0.08] bg-surface-secondary p-6 text-left sm:p-8">
           <div className="flex items-center gap-3 mb-4">
             <AppWindow size={22} className="text-[#0078D4]" />
