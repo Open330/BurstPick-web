@@ -49,7 +49,7 @@ export function HeroSection() {
           </FadeInView>
         </div>
 
-        <FadeInView delay={0.15} className="mt-12 sm:mt-16">
+        <FadeInView delay={0.15} className="mt-16 sm:mt-20 lg:mt-24">
           <Image
             src={SCREENSHOTS.workspace}
             alt="BurstPick macOS app showing a real photo catalog, review controls, and scoring results"
