@@ -1,8 +1,6 @@
 import {
   Layers,
-  Brain,
-  FileImage,
-  ScanFace,
+  SlidersHorizontal,
   Columns2,
   ShieldCheck,
   ArrowRightLeft,
@@ -54,9 +52,7 @@ export interface Feature {
 
 export const FEATURES: Feature[] = [
   { titleKey: "clustering_title", descKey: "clustering_desc", icon: Layers },
-  { titleKey: "scoring_title", descKey: "scoring_desc", icon: Brain },
-  { titleKey: "raw_title", descKey: "raw_desc", icon: FileImage },
-  { titleKey: "face_title", descKey: "face_desc", icon: ScanFace },
+  { titleKey: "scoring_title", descKey: "scoring_desc", icon: SlidersHorizontal },
   { titleKey: "compare_title", descKey: "compare_desc", icon: Columns2 },
   { titleKey: "workflow_title", descKey: "workflow_desc", icon: ShieldCheck },
   {
@@ -92,14 +88,8 @@ export const FAQ_KEYS = [
   "q2",
   "q3",
   "q4",
-  "q5",
   "q6",
   "q7",
-  "q8",
-  "q9",
-  "q10",
-  "q11",
   "q12",
   "q13",
-  "q14",
 ] as const;

@@ -1,123 +1,44 @@
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
-import { MessageCircle } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { APP_STORE_URL, BASE_PATH, BRAND, SALES } from "@/lib/constants";
-
-const DISCORD_URL = SALES.discordUrl;
+import { BASE_PATH, BRAND, SALES } from "@/lib/constants";
 
 export function Footer() {
   const t = useTranslations("footer");
   const locale = useLocale();
 
   return (
-    <footer className="border-t border-white/[0.08] bg-surface-secondary">
-      <Container className="py-12">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Brand */}
-          <div className="lg:col-span-1">
-            <div className="mb-3 flex items-center gap-2.5">
-              <Image src={`${BASE_PATH}/logo.avif`} alt="" width={645} height={618} className="h-8 w-8 object-contain" />
-              <span className="text-lg font-bold">{BRAND.name}</span>
+    <footer className="border-t border-white/10 bg-[#0a0b0c]">
+      <Container className="py-10">
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
+          <div>
+            <div className="flex items-center gap-2">
+              <Image
+                src={`${BASE_PATH}/logo.avif`}
+                alt=""
+                width={645}
+                height={618}
+                className="h-7 w-7 object-contain"
+              />
+              <span className="text-sm font-semibold">{BRAND.name}</span>
             </div>
-            <p className="mb-2 text-sm text-text-secondary">{t("tagline")}</p>
-            <p className="mb-3 text-xs text-text-muted">{t("built_with")}</p>
+            <p className="mt-3 text-sm text-text-muted">{t("tagline")}</p>
           </div>
 
-          {/* Product */}
-          <div>
-            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-text-muted">
-              {t("product")}
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href={`/${locale}/#features`} className="text-text-secondary hover:text-text-primary transition-colors">
-                  {t("features")}
-                </a>
-              </li>
-              <li>
-                <a href={`/${locale}/models/`} className="text-text-secondary hover:text-text-primary transition-colors">
-                  {t("models")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={APP_STORE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-text-secondary hover:text-text-primary transition-colors"
-                >
-                  {t("app_store")}
-                </a>
-              </li>
-              <li>
-                <span className="text-text-muted cursor-default">
-                  {t("changelog")}
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-text-muted">
-              {t("resources")}
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  href={`mailto:${SALES.supportEmail}`}
-                  className="text-text-secondary hover:text-text-primary transition-colors"
-                >
-                  {t("support")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={DISCORD_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-text-secondary hover:text-text-primary transition-colors"
-                >
-                  <MessageCircle size={14} />
-                  {t("discord")}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-text-muted">
-              {t("legal")}
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href={`/${locale}/privacy/`} className="text-text-secondary hover:text-text-primary transition-colors">
-                  {t("privacy")}
-                </a>
-              </li>
-              <li>
-                <a href={`/${locale}/terms/`} className="text-text-secondary hover:text-text-primary transition-colors">
-                  {t("terms")}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`/${locale}/license/`}
-                  className="text-text-secondary hover:text-text-primary transition-colors"
-                >
-                  {t("license")}
-                </a>
-              </li>
-            </ul>
-          </div>
+          <nav className="flex max-w-2xl flex-wrap gap-x-6 gap-y-3 text-sm text-text-secondary">
+            <a href={`/${locale}/#features`} className="hover:text-text-primary">{t("features")}</a>
+            <a href={`/${locale}/#screenshots`} className="hover:text-text-primary">{t("screenshots")}</a>
+            <a href={`/${locale}/models/`} className="hover:text-text-primary">{t("models")}</a>
+            <a href={`mailto:${SALES.supportEmail}`} className="hover:text-text-primary">{t("support")}</a>
+            <a href={`/${locale}/privacy/`} className="hover:text-text-primary">{t("privacy")}</a>
+            <a href={`/${locale}/terms/`} className="hover:text-text-primary">{t("terms")}</a>
+            <a href={`/${locale}/license/`} className="hover:text-text-primary">{t("license")}</a>
+          </nav>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-10 border-t border-white/[0.08] pt-6">
-          <p className="text-center text-xs text-text-muted">{t("copyright")}</p>
-        </div>
+        <p className="mt-10 border-t border-white/10 pt-6 text-xs text-text-muted">
+          {t("copyright")}
+        </p>
       </Container>
     </footer>
   );

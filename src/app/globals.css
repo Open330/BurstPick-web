@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-start: #4F7DF2;
-  --color-brand-end: #8B5CF6;
-  --color-gold-start: #FFD54F;
-  --color-gold-end: #F5A623;
-  --color-surface-primary: #0a0a0f;
-  --color-surface-secondary: #12121a;
-  --color-surface-tertiary: #1a1a26;
-  --color-surface-border: rgba(255, 255, 255, 0.08);
-  --color-text-primary: #f0f0f5;
-  --color-text-secondary: #b0b0c0;
-  --color-text-muted: #8888a0;
+  --color-brand-start: #9b87f5;
+  --color-brand-end: #7763d8;
+  --color-gold-start: #d6ad5c;
+  --color-gold-end: #b88b38;
+  --color-surface-primary: #0d0e10;
+  --color-surface-secondary: #141517;
+  --color-surface-tertiary: #1b1c1f;
+  --color-surface-border: #2a2b2f;
+  --color-text-primary: #f3f3ef;
+  --color-text-secondary: #b6b6af;
+  --color-text-muted: #85867f;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-display: var(--font-plus-jakarta), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
 }
 
 html {
@@ -29,6 +29,7 @@ html[lang="ko"] {
 body {
   background-color: var(--color-surface-primary);
   color: var(--color-text-primary);
+  letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -38,5 +39,10 @@ h1, h2, h3, h4 {
 }
 
 ::selection {
-  background-color: rgba(79, 125, 242, 0.3);
+  background-color: rgba(155, 135, 245, 0.35);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-start);
+  outline-offset: 3px;
 }

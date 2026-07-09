@@ -38,9 +38,9 @@ function SupportContent() {
   return (
     <main className="px-0 pt-28 pb-20 sm:pt-32 sm:pb-24">
       <Container className="max-w-4xl">
-        <article className="rounded-2xl border border-white/10 bg-surface-secondary/80 p-6 shadow-2xl shadow-black/30 sm:p-10">
-          <header className="mb-10 border-b border-white/[0.08] pb-6">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+        <article>
+          <header className="mb-6 border-b border-white/15 pb-8">
+            <h1 className="text-3xl font-semibold sm:text-4xl">
               {t("title")}
             </h1>
             <p className="mt-5 text-base leading-relaxed text-text-secondary">
@@ -48,8 +48,8 @@ function SupportContent() {
             </p>
           </header>
 
-          <div className="space-y-8">
-            <section>
+          <div>
+            <section className="border-b border-white/10 py-7">
               <h2 className="text-lg font-semibold text-text-primary sm:text-xl">
                 {t("emailTitle")}
               </h2>
@@ -64,7 +64,7 @@ function SupportContent() {
               </a>
             </section>
 
-            <section>
+            <section className="border-b border-white/10 py-7">
               <h2 className="text-lg font-semibold text-text-primary sm:text-xl">
                 {t("discordTitle")}
               </h2>
@@ -81,7 +81,7 @@ function SupportContent() {
               </a>
             </section>
 
-            <section>
+            <section className="border-b border-white/10 py-7">
               <h2 className="text-lg font-semibold text-text-primary sm:text-xl">
                 {t("faqTitle")}
               </h2>
@@ -90,7 +90,7 @@ function SupportContent() {
               </p>
             </section>
 
-            <section>
+            <section className="border-b border-white/10 py-7">
               <h2 className="text-lg font-semibold text-text-primary sm:text-xl">
                 {t("requirementsTitle")}
               </h2>
@@ -101,7 +101,7 @@ function SupportContent() {
               </ul>
             </section>
 
-            <section>
+            <section className="py-7">
               <h2 className="text-lg font-semibold text-text-primary sm:text-xl">
                 {t("responseTitle")}
               </h2>

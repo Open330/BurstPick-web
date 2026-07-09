@@ -11,63 +11,52 @@ export function PricingSection() {
   const t = useTranslations("pricing");
 
   return (
-    <section id="pricing" className="relative py-24 sm:py-32">
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          background:
-            "radial-gradient(ellipse 80% 50% at 50% 50%, rgba(79,125,242,0.06), transparent)",
-        }}
-      />
-
+    <section id="pricing" className="border-b border-white/10 py-20 sm:py-28">
       <Container>
-        <FadeInView className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+        <FadeInView className="mb-10 max-w-2xl">
+          <h2 className="text-3xl font-semibold sm:text-4xl">
             {t("heading")}
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-text-secondary">
+          <p className="mt-4 text-base leading-7 text-text-secondary">
             {t("subheading")}
           </p>
         </FadeInView>
 
-        <div className="mx-auto grid max-w-4xl gap-8 lg:grid-cols-2">
-          {/* Free Tier */}
-          <FadeInView delay={0.1}>
-            <div className="flex h-full flex-col rounded-xl border border-white/[0.08] bg-surface-secondary p-8">
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold">{t("free_name")}</h3>
-                <div className="mt-2 flex items-baseline gap-1">
-                  <span className="text-4xl font-bold">{t("free_price")}</span>
-                  <span className="text-sm text-text-muted">/ {t("free_period")}</span>
+        <FadeInView delay={0.05}>
+          <div className="grid overflow-hidden rounded-lg border border-white/15 lg:grid-cols-2">
+            <section className="flex flex-col p-6 sm:p-8">
+              <header className="border-b border-white/15 pb-6">
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="text-lg font-semibold">{t("free_name")}</h3>
+                  <span className="text-3xl font-semibold">{t("free_price")}</span>
                 </div>
                 <p className="mt-3 text-sm text-text-secondary">{t("free_desc")}</p>
-              </div>
-              <ul className="flex-1 space-y-3">
+              </header>
+              <ul className="flex-1 space-y-3 pt-6">
                 {FREE_FEATURES.map((key) => (
-                  <li key={key} className="flex items-start gap-2.5 text-sm text-text-secondary">
-                    <Check size={16} className="mt-0.5 shrink-0 text-text-muted" />
+                  <li key={key} className="flex items-start gap-3 text-sm leading-6 text-text-secondary">
+                    <Check size={16} className="mt-1 shrink-0 text-text-muted" />
                     {t(key)}
                   </li>
                 ))}
               </ul>
-            </div>
-          </FadeInView>
+            </section>
 
-          {/* Pro Tier */}
-          <FadeInView delay={0.2}>
-            <div className="relative flex h-full flex-col rounded-xl border border-brand-start/30 bg-surface-secondary p-8 shadow-lg shadow-brand-start/5">
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold">{t("pro_name")}</h3>
-                <div className="mt-2 flex items-baseline gap-1">
-                  <span className="text-4xl font-bold">{t("pro_price")}</span>
-                  <span className="text-sm text-text-muted">/ {t("pro_period")}</span>
+            <section className="flex flex-col border-t border-white/15 bg-[#17181b] p-6 sm:p-8 lg:border-l lg:border-t-0">
+              <header className="border-b border-white/15 pb-6">
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="text-lg font-semibold">{t("pro_name")}</h3>
+                  <div className="text-right">
+                    <div className="text-3xl font-semibold">{t("pro_price")}</div>
+                    <div className="mt-1 text-xs text-text-muted">{t("pro_period")}</div>
+                  </div>
                 </div>
                 <p className="mt-3 text-sm text-text-secondary">{t("pro_desc")}</p>
-              </div>
-              <ul className="flex-1 space-y-3">
+              </header>
+              <ul className="flex-1 space-y-3 pt-6">
                 {PRO_FEATURES.map((key) => (
-                  <li key={key} className="flex items-start gap-2.5 text-sm text-text-secondary">
-                    <Check size={16} className="mt-0.5 shrink-0 text-brand-start" />
+                  <li key={key} className="flex items-start gap-3 text-sm leading-6 text-text-secondary">
+                    <Check size={16} className="mt-1 shrink-0 text-brand-start" />
                     {t(key)}
                   </li>
                 ))}
@@ -76,16 +65,16 @@ export function PricingSection() {
                 href={APP_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-base font-semibold text-text-secondary transition-colors hover:border-white/40 hover:bg-white/10"
+                className="mt-8 inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-[#f3f3ef] px-5 text-sm font-semibold text-[#111214] transition-colors hover:bg-white"
               >
                 <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" fill="currentColor" aria-hidden="true">
-                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
                 </svg>
                 {t("pro_cta")}
               </a>
-            </div>
-          </FadeInView>
-        </div>
+            </section>
+          </div>
+        </FadeInView>
       </Container>
     </section>
   );

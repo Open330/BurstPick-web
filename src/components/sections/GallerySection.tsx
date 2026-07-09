@@ -10,31 +10,37 @@ export function GallerySection() {
   return (
     <section
       id="screenshots"
-      className="border-t border-white/[0.08] bg-surface-secondary py-24 sm:py-32"
+      className="bg-[#ecebe6] py-20 text-[#171719] sm:py-28"
     >
       <Container>
-        <FadeInView className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">{t("heading")}</h2>
-          <p className="mx-auto max-w-2xl text-lg text-text-secondary">{t("subheading")}</p>
+        <FadeInView className="mb-12 grid gap-4 sm:grid-cols-[0.8fr_1.2fr] sm:items-end">
+          <h2 className="text-3xl font-semibold sm:text-4xl">{t("heading")}</h2>
+          <p className="max-w-xl text-sm leading-6 text-[#5e5f5a] sm:justify-self-end sm:text-right">
+            {t("subheading")}
+          </p>
         </FadeInView>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-x-6 gap-y-12 md:grid-cols-2">
           {GALLERY_ITEMS.map((item, i) => (
-            <FadeInView key={item.titleKey} delay={i * 0.1}>
-              <div>
-                <div className="relative mb-4 aspect-[16/10] overflow-hidden rounded-lg border border-white/10 bg-surface-primary shadow-xl shadow-black/20">
+            <FadeInView
+              key={item.titleKey}
+              delay={i * 0.05}
+              className={i === 0 ? "md:col-span-2" : undefined}
+            >
+              <article>
                 <Image
                   src={item.screenshot}
                   alt={`${t(item.titleKey)}: ${t(item.descKey)}`}
-                  fill
-                  sizes="(min-width: 1024px) 400px, (min-width: 768px) 33vw, calc(100vw - 2rem)"
-                  className="object-cover"
+                  width={1600}
+                  height={1000}
+                  sizes={i === 0 ? "(min-width: 1280px) 1216px, calc(100vw - 2rem)" : "(min-width: 768px) 50vw, calc(100vw - 2rem)"}
+                  className="block h-auto w-full rounded-lg border border-black/15 bg-[#111214]"
                 />
-                <div className="pointer-events-none absolute inset-0 rounded-lg ring-1 ring-inset ring-white/10" />
-              </div>
-              <h3 className="mb-1 text-sm font-semibold">{t(item.titleKey)}</h3>
-              <p className="text-xs text-text-secondary sm:text-sm">{t(item.descKey)}</p>
-            </div>
+                <div className="mt-4 grid gap-1 sm:grid-cols-[auto_1fr] sm:gap-6">
+                  <h3 className="text-sm font-semibold">{t(item.titleKey)}</h3>
+                  <p className="text-sm leading-6 text-[#5e5f5a] sm:text-right">{t(item.descKey)}</p>
+                </div>
+              </article>
             </FadeInView>
           ))}
         </div>

@@ -21,6 +21,16 @@ test("homepage keeps its product, commerce, and support sections", async () => {
   ]) {
     assert.match(page, new RegExp(`<${section}\\s*/>`));
   }
+
+  for (const removedSection of [
+    "ShowcaseSection",
+    "UseCasesSection",
+    "NotDoSection",
+    "StorySection",
+    "AboutSection",
+  ]) {
+    assert.doesNotMatch(page, new RegExp(removedSection));
+  }
 });
 
 test("both locales provide the homepage copy used by retained sections", async () => {
@@ -54,4 +64,41 @@ test("homepage uses the current real-catalog screenshots and App Store listing",
 test("structured data keeps the requested July 9 update date", async () => {
   const seo = await read("src/lib/seo.ts");
   assert.match(seo, /LAST_MODIFIED = "2026-07-09"/);
+});
+
+test("active site surfaces avoid promotional visual effects", async () => {
+  const paths = [
+    "src/components/layout/Header.tsx",
+    "src/components/layout/Footer.tsx",
+    "src/components/sections/HeroSection.tsx",
+    "src/components/sections/FeaturesSection.tsx",
+    "src/components/sections/GallerySection.tsx",
+    "src/components/sections/PricingSection.tsx",
+    "src/components/sections/FAQSection.tsx",
+    "src/components/sections/CTASection.tsx",
+    "src/app/[locale]/download/page.tsx",
+    "src/app/[locale]/support/page.tsx",
+    "src/app/[locale]/models/page.tsx",
+    "src/app/[locale]/privacy/page.tsx",
+    "src/app/[locale]/terms/page.tsx",
+    "src/app/[locale]/license/page.tsx",
+  ];
+  const source = (await Promise.all(paths.map(read))).join("\n");
+
+  assert.doesNotMatch(
+    source,
+    /gradient|radial|rounded-(?:xl|2xl|full)|tracking-(?:tight|wide|wider)|shadow-(?:xl|2xl)|drop-shadow/,
+  );
+});
+
+test("website screenshots render at their natural 16:10 ratio", async () => {
+  for (const path of [
+    "src/components/sections/HeroSection.tsx",
+    "src/components/sections/GallerySection.tsx",
+  ]) {
+    const source = await read(path);
+    assert.match(source, /width=\{1600\}/);
+    assert.match(source, /height=\{1000\}/);
+    assert.doesNotMatch(source, /\n\s+fill\s*\n|object-cover|aspect-\[16\/10\]/);
+  }
 });

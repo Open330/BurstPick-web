@@ -23,10 +23,10 @@ export function FadeInView({
   }
 
   const offsets: Record<Direction, { x: number; y: number }> = {
-    up: { x: 0, y: 24 },
-    down: { x: 0, y: -24 },
-    left: { x: 24, y: 0 },
-    right: { x: -24, y: 0 },
+    up: { x: 0, y: 8 },
+    down: { x: 0, y: -8 },
+    left: { x: 8, y: 0 },
+    right: { x: -8, y: 0 },
   };
 
   const { x, y } = offsets[direction];
@@ -35,8 +35,8 @@ export function FadeInView({
     <motion.div
       initial={{ opacity: 0, x, y }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.5, delay, ease: "easeOut" }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.3, delay, ease: "easeOut" }}
       className={className}
     >
       {children}

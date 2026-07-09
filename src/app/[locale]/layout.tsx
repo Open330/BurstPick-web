@@ -3,18 +3,13 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { routing } from "@/i18n/routing";
 import { buildPageMetadata, organizationJsonLd, safeJsonLd } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-plus-jakarta",
-  weight: ["500", "600", "700", "800"],
-});
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -59,11 +54,10 @@ export default async function LocaleLayout({
   const orgJsonLd = organizationJsonLd();
 
   return (
-    <html lang={locale} className={`${inter.variable} ${plusJakarta.variable}`}>
+    <html lang={locale} className={inter.variable}>
       <head>
         <meta name="google-adsense-account" content="ca-pub-9812795931738479" />
-        <meta name="theme-color" content="#0a0a0f" />
-        <link rel="preload" as="image" type="image/avif" href="/assets/hero-bg.avif" />
+        <meta name="theme-color" content="#0d0e10" />
         <link rel="manifest" href="/manifest.json" />
         <script
           type="application/ld+json"

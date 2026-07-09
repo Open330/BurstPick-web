@@ -336,22 +336,22 @@ function ModelsContent() {
   return (
     <main className="px-0 pt-28 pb-20 sm:pt-32 sm:pb-24">
       <Container className="max-w-6xl">
-        <article className="rounded-2xl border border-white/10 bg-surface-secondary/80 p-6 shadow-2xl shadow-black/30 sm:p-10">
-          <header className="mb-10 border-b border-white/[0.08] pb-6">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+        <article>
+          <header className="mb-10 border-b border-white/15 pb-8">
+            <h1 className="text-3xl font-semibold sm:text-4xl">
               {t("title")}
             </h1>
             <p className="mt-5 text-base leading-relaxed text-text-secondary">
               {t("intro")}
             </p>
-            <div className="mt-4 flex flex-wrap gap-3 text-xs">
-              <span className="rounded-full bg-emerald-500/10 px-3 py-1 text-emerald-400 ring-1 ring-emerald-500/20">
+            <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs text-text-muted">
+              <span>
                 {t("badgeLocal")}
               </span>
-              <span className="rounded-full bg-blue-500/10 px-3 py-1 text-blue-400 ring-1 ring-blue-500/20">
+              <span>
                 {t("badgeOpen")}
               </span>
-              <span className="rounded-full bg-purple-500/10 px-3 py-1 text-purple-400 ring-1 ring-purple-500/20">
+              <span>
                 {t("badgeNeural")}
               </span>
             </div>
@@ -367,11 +367,11 @@ function ModelsContent() {
                   {t(`categories.${category.key}.description`)}
                 </p>
 
-                <div className="space-y-4">
+                <div className="border-t border-white/10">
                   {category.models.map((model) => (
                     <div
                       key={model.id}
-                      className="rounded-xl border border-white/[0.06] bg-surface-primary/50 p-5 transition-colors hover:border-white/[0.12]"
+                      className="border-b border-white/10 py-5"
                     >
                       <div className="flex flex-wrap items-start justify-between gap-3">
                         <div className="flex items-center gap-3">
@@ -379,12 +379,12 @@ function ModelsContent() {
                             {model.name}
                           </h3>
                           {model.bundled && (
-                            <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-medium text-emerald-400 ring-1 ring-emerald-500/20">
+                            <span className="text-[10px] font-medium text-emerald-400">
                               {t("bundled")}
                             </span>
                           )}
                         </div>
-                        <span className="rounded-md bg-white/5 px-2 py-0.5 text-[11px] font-mono text-text-muted">
+                        <span className="text-[11px] font-mono text-text-muted">
                           {model.license}
                         </span>
                       </div>
