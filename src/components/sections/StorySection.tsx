@@ -33,7 +33,7 @@ export function StorySection() {
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="relative aspect-[16/10] overflow-hidden rounded-lg border border-white/10 shadow-2xl shadow-black/30">
               <Image
-                src={SCREENSHOTS.allPhotosGrid}
+                src={SCREENSHOTS.workspace}
                 alt="BurstPick full catalog view showing imported photos and filters"
                 fill
                 sizes="(min-width: 640px) 50vw, calc(100vw - 2rem)"
@@ -48,8 +48,8 @@ export function StorySection() {
             </div>
             <div className="relative aspect-[16/10] overflow-hidden rounded-lg border border-gold-start/20 shadow-2xl shadow-black/30">
               <Image
-                src={SCREENSHOTS.scoringPanel}
-                alt="BurstPick scoring panel showing the recommended keeper candidate from a real burst sequence"
+                src={SCREENSHOTS.surveyMode}
+                alt="BurstPick Survey Mode showing similar photos reviewed together"
                 fill
                 sizes="(min-width: 640px) 50vw, calc(100vw - 2rem)"
                 className="object-cover"

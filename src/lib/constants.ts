@@ -74,23 +74,15 @@ export interface GalleryItem {
 }
 
 export const SCREENSHOTS = {
-  catalogLoupe: "/screenshots/real-catalog-loupe.png",
-  allPhotosGrid: "/screenshots/real-all-photos-grid.png",
-  scoringPanel: "/screenshots/real-scoring-panel.png",
-  exifPanel: "/screenshots/real-exif-panel.png",
-  compareMode: "/screenshots/real-compare-mode.png",
-  surveyMode: "/screenshots/real-survey-mode.png",
-  proGate: "/screenshots/real-iap-license-gate.png",
+  workspace: "/screenshots/web-all-photos-grid.png",
+  surveyMode: "/screenshots/web-survey-mode.png",
+  proGate: "/screenshots/web-iap-license-gate.png",
 } as const;
 
 export const SCREENSHOT_PATHS = Object.values(SCREENSHOTS);
 
 export const GALLERY_ITEMS: GalleryItem[] = [
-  { titleKey: "main_ui", descKey: "main_ui_desc", screenshot: SCREENSHOTS.catalogLoupe },
-  { titleKey: "all_photos", descKey: "all_photos_desc", screenshot: SCREENSHOTS.allPhotosGrid },
-  { titleKey: "scoring", descKey: "scoring_desc", screenshot: SCREENSHOTS.scoringPanel },
-  { titleKey: "metadata", descKey: "metadata_desc", screenshot: SCREENSHOTS.exifPanel },
-  { titleKey: "compare", descKey: "compare_desc", screenshot: SCREENSHOTS.compareMode },
+  { titleKey: "all_photos", descKey: "all_photos_desc", screenshot: SCREENSHOTS.workspace },
   { titleKey: "survey", descKey: "survey_desc", screenshot: SCREENSHOTS.surveyMode },
   { titleKey: "pro_iap", descKey: "pro_iap_desc", screenshot: SCREENSHOTS.proGate },
 ];

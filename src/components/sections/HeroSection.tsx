@@ -65,7 +65,7 @@ export function HeroSection() {
         <FadeInView delay={0.5} className="mt-12 w-full max-w-6xl sm:mt-16">
           <div className="relative aspect-[16/10] overflow-hidden rounded-lg border border-white/10 bg-surface-secondary shadow-[0_24px_90px_-24px_rgba(79,125,242,0.35)]">
             <Image
-              src={SCREENSHOTS.catalogLoupe}
+              src={SCREENSHOTS.workspace}
               alt="BurstPick macOS app showing a real photo catalog, burst clusters, scoring, and review controls"
               fill
               sizes="(min-width: 1280px) 1152px, calc(100vw - 2rem)"

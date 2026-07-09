@@ -38,7 +38,7 @@
     "before_label": "Catalog",
     "before_desc": "Filter by date, label, rating, media type, and review state.",
     "after_label": "Review",
-    "after_desc": "Check the selected frame, score signals, EXIF, and decision controls in one workspace."
+    "after_desc": "Open a group, compare similar frames, and apply decisions from the review strip."
   },
   "features": {
     "heading": "Photo culling for burst shoots",

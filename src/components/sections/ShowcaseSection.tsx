@@ -12,7 +12,7 @@ export function ShowcaseSection() {
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src={SCREENSHOTS.compareMode}
+          src={SCREENSHOTS.workspace}
           alt=""
           fill
           className="object-cover opacity-25"
@@ -64,8 +64,8 @@ export function ShowcaseSection() {
           <FadeInView direction="right" delay={0.2}>
             <div className="relative aspect-[16/10] overflow-hidden rounded-lg border border-white/10 shadow-2xl shadow-black/30">
               <Image
-                src={SCREENSHOTS.scoringPanel}
-                alt="BurstPick Mac app showing local scoring details for a real photo"
+                src={SCREENSHOTS.surveyMode}
+                alt="BurstPick Mac app showing Survey Mode for a real burst sequence"
                 fill
                 sizes="(min-width: 1024px) 50vw, calc(100vw - 2rem)"
                 className="object-cover"
