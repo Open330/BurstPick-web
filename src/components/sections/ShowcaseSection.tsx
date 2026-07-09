@@ -62,16 +62,15 @@ export function ShowcaseSection() {
 
           {/* Promo image */}
           <FadeInView direction="right" delay={0.2}>
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/30">
+            <div className="relative aspect-[16/10] overflow-hidden rounded-lg border border-white/10 shadow-2xl shadow-black/30">
               <Image
                 src={SCREENSHOTS.scoringPanel}
                 alt="BurstPick Mac app showing local scoring details for a real photo"
-                width={2560}
-                height={1600}
+                fill
                 sizes="(min-width: 1024px) 50vw, calc(100vw - 2rem)"
-                className="h-auto w-full"
+                className="object-cover"
               />
-              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10" />
+              <div className="pointer-events-none absolute inset-0 rounded-lg ring-1 ring-inset ring-white/10" />
             </div>
           </FadeInView>
         </div>

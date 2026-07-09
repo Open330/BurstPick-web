@@ -15,7 +15,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-surface-primary/60 via-surface-primary/40 to-surface-primary" />
       </div>
 
-      <Container className="flex flex-col items-center py-20 text-center">
+      <Container className="flex w-full flex-col items-center py-20 text-center">
         <FadeInView>
           <Image
             src={`${BASE_PATH}/logo.avif`}
@@ -63,16 +63,16 @@ export function HeroSection() {
         </FadeInView>
 
         <FadeInView delay={0.5} className="mt-12 w-full max-w-6xl sm:mt-16">
-          <div className="overflow-hidden rounded-xl border border-white/10 bg-surface-secondary shadow-[0_24px_90px_-24px_rgba(79,125,242,0.35)] sm:rounded-2xl">
+          <div className="relative aspect-[16/10] overflow-hidden rounded-lg border border-white/10 bg-surface-secondary shadow-[0_24px_90px_-24px_rgba(79,125,242,0.35)]">
             <Image
               src={SCREENSHOTS.catalogLoupe}
               alt="BurstPick macOS app showing a real photo catalog, burst clusters, scoring, and review controls"
-              width={2560}
-              height={1600}
+              fill
               sizes="(min-width: 1280px) 1152px, calc(100vw - 2rem)"
-              className="h-auto w-full"
+              className="object-cover"
               priority
             />
+            <div className="pointer-events-none absolute inset-0 rounded-lg ring-1 ring-inset ring-white/10" />
           </div>
         </FadeInView>
       </Container>

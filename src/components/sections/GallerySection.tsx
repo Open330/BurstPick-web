@@ -29,15 +29,15 @@ export function GallerySection() {
             className="shrink-0 snap-center"
           >
             <div className="w-[calc(100vw-3rem)] sm:w-[480px]">
-              <div className="mb-3 overflow-hidden rounded-lg border border-white/10 bg-surface-primary shadow-xl shadow-black/20 sm:mb-4 sm:rounded-xl">
+              <div className="relative mb-3 aspect-[16/10] overflow-hidden rounded-lg border border-white/10 bg-surface-primary shadow-xl shadow-black/20 sm:mb-4">
                 <Image
                   src={item.screenshot}
                   alt={`${t(item.titleKey)}: ${t(item.descKey)}`}
-                  width={2560}
-                  height={1600}
+                  fill
                   sizes="(min-width: 640px) 480px, calc(100vw - 3rem)"
-                  className="h-auto w-full"
+                  className="object-cover"
                 />
+                <div className="pointer-events-none absolute inset-0 rounded-lg ring-1 ring-inset ring-white/10" />
               </div>
               <h3 className="mb-1 text-sm font-semibold">{t(item.titleKey)}</h3>
               <p className="text-xs text-text-secondary sm:text-sm">{t(item.descKey)}</p>
