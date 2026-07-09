@@ -1,0 +1,2 @@
+public/screenshots/** filter=lfs diff=lfs merge=lfs -text
+public/og-image.png filter=lfs diff=lfs merge=lfs -text

@@ -1,9 +1,21 @@
 import type { Metadata } from "next";
-import { APP_STORE_URL, BRAND, SALES } from "@/lib/constants";
+import { APP_STORE_URL, BRAND, SALES, SCREENSHOT_PATHS } from "@/lib/constants";
 
 export const SITE_URL = BRAND.website;
 export const OG_IMAGE_PATH = "/og-image.png";
-export const LAST_MODIFIED = "2026-07-08";
+export const LAST_MODIFIED = "2026-07-09";
+
+const PUBLISHER_NAME = "Xylolabs Inc.";
+const SEO_KEYWORDS = [
+  "BurstPick",
+  "photo culling app",
+  "Mac photo culling",
+  "burst photo organizer",
+  "RAW photo culling",
+  "Lightroom photo workflow",
+  "on-device AI photo selection",
+  "Mac App Store photography app",
+];
 
 export function absoluteUrl(path: string): string {
   if (path.startsWith("http://") || path.startsWith("https://")) {
@@ -45,16 +57,43 @@ export function buildPageMetadata({
     metadataBase: new URL(SITE_URL),
     title,
     description,
+    applicationName: BRAND.name,
+    authors: [{ name: PUBLISHER_NAME, url: SITE_URL }],
+    creator: PUBLISHER_NAME,
+    publisher: PUBLISHER_NAME,
+    category: "Photography",
+    keywords: SEO_KEYWORDS,
     alternates: localizedAlternates(locale, path),
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
+    other: {
+      "og:updated_time": LAST_MODIFIED,
+    },
     openGraph: {
       title,
       description,
       url,
       type: "website",
       siteName: BRAND.name,
-      images: [{ url: OG_IMAGE_PATH, width: 1200, height: 630 }],
-      locale,
-      alternateLocale: locale === "ko" ? ["en"] : ["ko"],
+      images: [
+        {
+          url: OG_IMAGE_PATH,
+          width: 1200,
+          height: 630,
+          alt: `${BRAND.name} macOS photo culling workspace`,
+        },
+      ],
+      locale: locale === "ko" ? "ko_KR" : "en_US",
+      alternateLocale: locale === "ko" ? ["en_US"] : ["ko_KR"],
     },
     twitter: {
       card: "summary_large_image",
@@ -120,16 +159,14 @@ export function softwareApplicationJsonLd({
     url: absoluteUrl(localizedCanonical(locale)),
     downloadUrl: APP_STORE_URL,
     image: absoluteUrl(OG_IMAGE_PATH),
-    screenshot: [
-      absoluteUrl("/screenshots/main-interface.avif"),
-      absoluteUrl("/screenshots/clusters-view.avif"),
-      absoluteUrl("/screenshots/compare-mode.avif"),
-    ],
+    screenshot: SCREENSHOT_PATHS.map(absoluteUrl),
     operatingSystem: "macOS 14 or later",
     applicationCategory: "PhotographyApplication",
     applicationSubCategory: "Photo culling software",
     description,
     inLanguage: locale,
+    dateModified: LAST_MODIFIED,
+    keywords: SEO_KEYWORDS.join(", "),
     author: organizationReference(),
     publisher: organizationReference(),
     softwareHelp: absoluteUrl(localizedCanonical(locale, "/support")),
@@ -140,6 +177,7 @@ export function softwareApplicationJsonLd({
         price: "0",
         priceCurrency: proOffer.priceCurrency,
         url: APP_STORE_URL,
+        availability: "https://schema.org/InStock",
       },
       {
         "@type": "Offer",
@@ -147,6 +185,7 @@ export function softwareApplicationJsonLd({
         price: proOffer.price,
         priceCurrency: proOffer.priceCurrency,
         url: APP_STORE_URL,
+        availability: "https://schema.org/InStock",
       },
     ],
     featureList: [

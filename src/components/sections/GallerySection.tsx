@@ -33,9 +33,10 @@ export function GallerySection() {
                 <Image
                   src={item.screenshot}
                   alt={`${t(item.titleKey)}: ${t(item.descKey)}`}
-                  width={960}
-                  height={540}
-                  className="w-full"
+                  width={2560}
+                  height={1600}
+                  sizes="(min-width: 640px) 480px, calc(100vw - 3rem)"
+                  className="h-auto w-full"
                 />
               </div>
               <h3 className="mb-1 text-sm font-semibold">{t(item.titleKey)}</h3>

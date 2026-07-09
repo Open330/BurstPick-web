@@ -7,7 +7,7 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { routing } from "@/i18n/routing";
-import { organizationJsonLd, safeJsonLd } from "@/lib/seo";
+import { buildPageMetadata, organizationJsonLd, safeJsonLd } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const plusJakarta = Plus_Jakarta_Sans({
@@ -27,11 +27,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
-
-  return {
-    metadataBase: new URL("https://burstpick.app"),
+  const metadata = buildPageMetadata({
+    locale,
     title: t("title"),
     description: t("description"),
+  });
+
+  return {
+    ...metadata,
     icons: {
       icon: [
         { url: "/favicon.ico", sizes: "any" },
@@ -39,19 +42,6 @@ export async function generateMetadata({
         { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       ],
       apple: "/apple-touch-icon.png",
-    },
-    openGraph: {
-      title: t("title"),
-      description: t("description"),
-      type: "website",
-      siteName: "BurstPick",
-      images: [{ url: "/og-image.png", width: 1200, height: 630 }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: t("title"),
-      description: t("description"),
-      images: ["/og-image.png"],
     },
   };
 }

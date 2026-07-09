@@ -73,14 +73,26 @@ export interface GalleryItem {
   screenshot: string;
 }
 
+export const SCREENSHOTS = {
+  catalogLoupe: "/screenshots/real-catalog-loupe.png",
+  allPhotosGrid: "/screenshots/real-all-photos-grid.png",
+  scoringPanel: "/screenshots/real-scoring-panel.png",
+  exifPanel: "/screenshots/real-exif-panel.png",
+  compareMode: "/screenshots/real-compare-mode.png",
+  surveyMode: "/screenshots/real-survey-mode.png",
+  proGate: "/screenshots/real-iap-license-gate.png",
+} as const;
+
+export const SCREENSHOT_PATHS = Object.values(SCREENSHOTS);
+
 export const GALLERY_ITEMS: GalleryItem[] = [
-  { titleKey: "main_ui", descKey: "main_ui_desc", screenshot: "/screenshots/main-interface.avif" },
-  { titleKey: "clustering", descKey: "clustering_desc", screenshot: "/screenshots/clusters-view.avif" },
-  { titleKey: "scoring", descKey: "scoring_desc", screenshot: "/screenshots/photos-grid.avif" },
-  { titleKey: "compare", descKey: "compare_desc", screenshot: "/screenshots/compare-mode.avif" },
-  { titleKey: "persons", descKey: "persons_desc", screenshot: "/screenshots/tags-view.avif" },
-  { titleKey: "scoring_food", descKey: "scoring_food_desc", screenshot: "/screenshots/scoring-food.avif" },
-  { titleKey: "scoring_whiskey", descKey: "scoring_whiskey_desc", screenshot: "/screenshots/scoring-whiskey.avif" },
+  { titleKey: "main_ui", descKey: "main_ui_desc", screenshot: SCREENSHOTS.catalogLoupe },
+  { titleKey: "all_photos", descKey: "all_photos_desc", screenshot: SCREENSHOTS.allPhotosGrid },
+  { titleKey: "scoring", descKey: "scoring_desc", screenshot: SCREENSHOTS.scoringPanel },
+  { titleKey: "metadata", descKey: "metadata_desc", screenshot: SCREENSHOTS.exifPanel },
+  { titleKey: "compare", descKey: "compare_desc", screenshot: SCREENSHOTS.compareMode },
+  { titleKey: "survey", descKey: "survey_desc", screenshot: SCREENSHOTS.surveyMode },
+  { titleKey: "pro_iap", descKey: "pro_iap_desc", screenshot: SCREENSHOTS.proGate },
 ];
 
 export const FAQ_KEYS = [
