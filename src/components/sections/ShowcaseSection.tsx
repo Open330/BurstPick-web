@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { FadeInView } from "@/components/motion/FadeInView";
+import { SCREENSHOTS } from "@/lib/constants";
 
 export function ShowcaseSection() {
   const t = useTranslations("showcase");
@@ -11,7 +12,7 @@ export function ShowcaseSection() {
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/assets/promo-workspace.avif"
+          src={SCREENSHOTS.compareMode}
           alt=""
           fill
           className="object-cover opacity-25"
@@ -63,11 +64,12 @@ export function ShowcaseSection() {
           <FadeInView direction="right" delay={0.2}>
             <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/30">
               <Image
-                src="/assets/marketing-banner.avif"
-                alt="BurstPick Mac app ranking burst photos with on-device AI scores"
-                width={960}
-                height={640}
-                className="w-full"
+                src={SCREENSHOTS.scoringPanel}
+                alt="BurstPick Mac app showing local scoring details for a real photo"
+                width={2560}
+                height={1600}
+                sizes="(min-width: 1024px) 50vw, calc(100vw - 2rem)"
+                className="h-auto w-full"
               />
               <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10" />
             </div>

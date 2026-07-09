@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { FadeInView } from "@/components/motion/FadeInView";
+import { SCREENSHOTS } from "@/lib/constants";
 
 export function StorySection() {
   const t = useTranslations("story");
@@ -29,26 +30,38 @@ export function StorySection() {
 
         {/* Before / After visual */}
         <FadeInView delay={0.2}>
-          <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/30">
-            <Image
-              src="/assets/promo-before-after.avif"
-              alt="BurstPick turns hundreds of similar burst photos into ranked keeper candidates"
-              width={1920}
-              height={1080}
-              className="w-full"
-            />
-            <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10" />
-
-            {/* Label overlays — aligned to image composition */}
-            <div className="absolute left-6 top-6 sm:left-8 sm:top-8">
-              <span className="rounded-lg bg-white/10 px-4 py-2 text-sm font-semibold text-white/80 backdrop-blur-md sm:text-base">
-                {t("before_label")}
-              </span>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/30">
+              <Image
+                src={SCREENSHOTS.allPhotosGrid}
+                alt="BurstPick full catalog view showing imported photos and filters"
+                width={2560}
+                height={1600}
+                sizes="(min-width: 640px) 50vw, calc(100vw - 2rem)"
+                className="h-auto w-full"
+              />
+              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10" />
+              <div className="absolute left-4 top-4 sm:left-6 sm:top-6">
+                <span className="rounded-lg bg-white/10 px-4 py-2 text-sm font-semibold text-white/80 backdrop-blur-md sm:text-base">
+                  {t("before_label")}
+                </span>
+              </div>
             </div>
-            <div className="absolute right-6 bottom-6 sm:right-8 sm:bottom-8">
-              <span className="rounded-lg bg-gold-start/20 px-4 py-2 text-sm font-semibold text-gold-start backdrop-blur-md sm:text-base">
-                {t("after_label")}
-              </span>
+            <div className="relative overflow-hidden rounded-2xl border border-gold-start/20 shadow-2xl shadow-black/30">
+              <Image
+                src={SCREENSHOTS.scoringPanel}
+                alt="BurstPick scoring panel showing the recommended keeper candidate from a real burst sequence"
+                width={2560}
+                height={1600}
+                sizes="(min-width: 640px) 50vw, calc(100vw - 2rem)"
+                className="h-auto w-full"
+              />
+              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gold-start/20" />
+              <div className="absolute right-4 bottom-4 sm:right-6 sm:bottom-6">
+                <span className="rounded-lg bg-gold-start/20 px-4 py-2 text-sm font-semibold text-gold-start backdrop-blur-md sm:text-base">
+                  {t("after_label")}
+                </span>
+              </div>
             </div>
           </div>
         </FadeInView>
