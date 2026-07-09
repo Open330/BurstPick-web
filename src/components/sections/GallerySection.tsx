@@ -20,21 +20,20 @@ export function GallerySection() {
           </p>
         </FadeInView>
 
-        <div className="grid gap-x-6 gap-y-12 md:grid-cols-2">
+        <div className="grid gap-y-14">
           {GALLERY_ITEMS.map((item, i) => (
             <FadeInView
               key={item.titleKey}
               delay={i * 0.05}
-              className={i === 0 ? "md:col-span-2" : undefined}
             >
               <article>
                 <Image
                   src={item.screenshot}
                   alt={`${t(item.titleKey)}: ${t(item.descKey)}`}
-                  width={1600}
-                  height={1000}
-                  sizes={i === 0 ? "(min-width: 1280px) 1216px, calc(100vw - 2rem)" : "(min-width: 768px) 50vw, calc(100vw - 2rem)"}
-                  className="block h-auto w-full rounded-lg border border-black/15 bg-[#111214]"
+                  width={item.width}
+                  height={item.height}
+                  sizes="(min-width: 1280px) 1216px, calc(100vw - 2rem)"
+                  className="block h-auto w-full bg-[#111214]"
                 />
                 <div className="mt-4 grid gap-1 sm:grid-cols-[auto_1fr] sm:gap-6">
                   <h3 className="text-sm font-semibold">{t(item.titleKey)}</h3>

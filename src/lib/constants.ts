@@ -67,6 +67,8 @@ export interface GalleryItem {
   titleKey: string;
   descKey: string;
   screenshot: string;
+  width: number;
+  height: number;
 }
 
 export const SCREENSHOTS = {
@@ -78,9 +80,27 @@ export const SCREENSHOTS = {
 export const SCREENSHOT_PATHS = Object.values(SCREENSHOTS);
 
 export const GALLERY_ITEMS: GalleryItem[] = [
-  { titleKey: "all_photos", descKey: "all_photos_desc", screenshot: SCREENSHOTS.workspace },
-  { titleKey: "survey", descKey: "survey_desc", screenshot: SCREENSHOTS.surveyMode },
-  { titleKey: "pro_iap", descKey: "pro_iap_desc", screenshot: SCREENSHOTS.proGate },
+  {
+    titleKey: "all_photos",
+    descKey: "all_photos_desc",
+    screenshot: SCREENSHOTS.workspace,
+    width: 1600,
+    height: 990,
+  },
+  {
+    titleKey: "survey",
+    descKey: "survey_desc",
+    screenshot: SCREENSHOTS.surveyMode,
+    width: 1600,
+    height: 990,
+  },
+  {
+    titleKey: "pro_iap",
+    descKey: "pro_iap_desc",
+    screenshot: SCREENSHOTS.proGate,
+    width: 1522,
+    height: 1000,
+  },
 ];
 
 export const FAQ_KEYS = [

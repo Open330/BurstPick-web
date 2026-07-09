@@ -8,6 +8,14 @@ async function read(path) {
   return readFile(new URL(path, root), "utf8");
 }
 
+async function readPngDimensions(path) {
+  const png = await readFile(new URL(path, root));
+  return {
+    width: png.readUInt32BE(16),
+    height: png.readUInt32BE(20),
+  };
+}
+
 test("homepage keeps its product, commerce, and support sections", async () => {
   const page = await read("src/app/[locale]/page.tsx");
 
@@ -91,14 +99,29 @@ test("active site surfaces avoid promotional visual effects", async () => {
   );
 });
 
-test("website screenshots render at their natural 16:10 ratio", async () => {
+test("website screenshots preserve their complete natural bounds", async () => {
+  const expectedDimensions = [
+    ["public/screenshots/web-all-photos-grid.png", 1600, 990],
+    ["public/screenshots/web-survey-mode.png", 1600, 990],
+    ["public/screenshots/web-iap-license-gate.png", 1522, 1000],
+  ];
+
+  for (const [path, width, height] of expectedDimensions) {
+    assert.deepEqual(await readPngDimensions(path), { width, height });
+  }
+
   for (const path of [
     "src/components/sections/HeroSection.tsx",
     "src/components/sections/GallerySection.tsx",
   ]) {
     const source = await read(path);
-    assert.match(source, /width=\{1600\}/);
-    assert.match(source, /height=\{1000\}/);
     assert.doesNotMatch(source, /\n\s+fill\s*\n|object-cover|aspect-\[16\/10\]/);
   }
+
+  const hero = await read("src/components/sections/HeroSection.tsx");
+  const gallery = await read("src/components/sections/GallerySection.tsx");
+  assert.match(hero, /width=\{1600\}[\s\S]*height=\{990\}/);
+  assert.match(hero, /className="block h-auto w-full"/);
+  assert.match(gallery, /width=\{item\.width\}[\s\S]*height=\{item\.height\}/);
+  assert.match(gallery, /className="block h-auto w-full bg-\[#111214\]"/);
 });

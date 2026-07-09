@@ -54,9 +54,9 @@ export function HeroSection() {
             src={SCREENSHOTS.workspace}
             alt="BurstPick macOS app showing a real photo catalog, review controls, and scoring results"
             width={1600}
-            height={1000}
+            height={990}
             sizes="(min-width: 1280px) 1216px, calc(100vw - 2rem)"
-            className="block h-auto w-full rounded-lg border border-white/15"
+            className="block h-auto w-full"
             priority
           />
         </FadeInView>
