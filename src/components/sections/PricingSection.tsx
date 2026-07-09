@@ -56,10 +56,6 @@ export function PricingSection() {
           {/* Pro Tier */}
           <FadeInView delay={0.2}>
             <div className="relative flex h-full flex-col rounded-xl border border-brand-start/30 bg-surface-secondary p-8 shadow-lg shadow-brand-start/5">
-              {/* Popular badge */}
-              <div className="absolute -top-3 right-6 rounded-full bg-gradient-to-r from-brand-start to-brand-end px-4 py-1 text-xs font-semibold text-white">
-                {t("pro_highlight")}
-              </div>
               <div className="mb-6">
                 <h3 className="text-lg font-semibold">{t("pro_name")}</h3>
                 <div className="mt-2 flex items-baseline gap-1">
@@ -90,12 +86,6 @@ export function PricingSection() {
             </div>
           </FadeInView>
         </div>
-
-        <FadeInView delay={0.3}>
-          <p className="mt-10 text-center text-sm text-text-muted">
-            {t("guarantee")}
-          </p>
-        </FadeInView>
       </Container>
     </section>
   );

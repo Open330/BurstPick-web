@@ -10,7 +10,7 @@ export function FeaturesSection() {
   return (
     <section id="features" className="relative bg-surface-secondary/50 py-24 sm:py-32">
       <Container>
-        {/* Header with AI illustration */}
+        {/* Header illustration */}
         <div className="mb-16 grid items-center gap-10 lg:grid-cols-[1fr_auto]">
           <FadeInView>
             <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
@@ -25,7 +25,7 @@ export function FeaturesSection() {
             <div className="hidden overflow-hidden rounded-xl border border-white/10 shadow-lg lg:block">
               <Image
                 src="/assets/feature-ai.avif"
-                alt="BurstPick on-device AI scoring pipeline for photo culling"
+                alt="BurstPick local scoring pipeline for photo culling"
                 width={360}
                 height={200}
                 className="w-[360px]"

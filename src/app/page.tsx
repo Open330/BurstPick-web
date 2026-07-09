@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-const title = "BurstPick for Mac - AI Burst Photo Culling";
+const title = "BurstPick for Mac - Burst Photo Culling";
 const description =
-  "Cull burst photos on your Mac with on-device AI, XMP export, and Lightroom workflow handoff.";
+  "Cull burst photos on your Mac with local scoring, XMP export, and Lightroom workflow handoff.";
 
 export default function RootPage() {
   return (

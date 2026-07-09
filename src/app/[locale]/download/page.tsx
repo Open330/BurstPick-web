@@ -18,10 +18,10 @@ export async function generateMetadata({
   return buildPageMetadata({
     locale,
     path: "/download",
-    title:
-      locale === "ko"
-        ? "Mac용 BurstPick 다운로드 - AI 연사 사진 셀렉/선별"
-        : "Download BurstPick for Mac - AI Burst Photo Culling",
+      title:
+        locale === "ko"
+        ? "Mac용 BurstPick 다운로드 - 연사 사진 선별"
+        : "Download BurstPick for Mac - Burst Photo Culling",
     description: t("description"),
   });
 }

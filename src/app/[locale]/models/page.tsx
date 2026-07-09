@@ -44,7 +44,7 @@ const CATEGORIES: {
         download: "83 MB",
         memory: "100 MB",
         description:
-          "No-reference IQA using ResNet50 backbone. Good general-purpose technical quality scores. Good balanced option for quality assessment.",
+          "No-reference IQA using ResNet50 backbone. General-purpose technical quality scoring.",
       },
       {
         name: "MUSIQ (KonIQ)",
@@ -55,7 +55,7 @@ const CATEGORIES: {
         download: "50 MB",
         memory: "110 MB",
         description:
-          "Multi-scale transformer trained on KonIQ-10k real-world distortions. Strong on natural photos with better perceptual alignment than TOPIQ.",
+          "Multi-scale transformer trained on KonIQ-10k real-world distortions. Used for natural-photo quality assessment.",
       },
       {
         name: "MANIQA",
@@ -66,7 +66,7 @@ const CATEGORIES: {
         download: "248 MB",
         memory: "140 MB",
         description:
-          "NTIRE 2022 IQA Challenge winner. Multi-dimension attention captures fine perceptual differences. Most accurate but largest in category.",
+          "NTIRE 2022 IQA Challenge winner. Multi-dimension attention captures fine perceptual differences. Larger than the other bundled IQA options.",
       },
       {
         name: "NIMA (MobileNet)",
@@ -77,7 +77,7 @@ const CATEGORIES: {
         download: "14 MB",
         memory: "20 MB",
         description:
-          "Neural Image Assessment trained on AVA (250K aesthetic ratings). Outputs 10-class probability distribution. Compact MobileNet backbone \u2014 fastest aesthetic quality model.",
+          "Neural Image Assessment trained on AVA (250K aesthetic ratings). Outputs a 10-class probability distribution with a compact MobileNet backbone.",
       },
     ],
   },
@@ -93,7 +93,7 @@ const CATEGORIES: {
         download: "Bundled",
         memory: "340 MB",
         description:
-          "Lightweight linear probe on CLIP embeddings \u2014 near-zero overhead if CLIP is loaded. Trained on LAION aesthetic ratings. Good default aesthetic scorer.",
+          "Lightweight linear probe on CLIP embeddings. Trained on LAION aesthetic ratings.",
         bundled: true,
       },
       {
@@ -105,7 +105,7 @@ const CATEGORIES: {
         download: "156 MB",
         memory: "350 MB",
         description:
-          "Standalone ViT-B/16 fine-tuned on AVA dataset (250K human aesthetic ratings). More nuanced aesthetic judgment than LAION probe. Independent of CLIP.",
+          "Standalone ViT-B/16 fine-tuned on AVA dataset (250K human aesthetic ratings). Runs independently of CLIP.",
       },
     ],
   },
@@ -121,7 +121,7 @@ const CATEGORIES: {
         download: "None",
         memory: "System",
         description:
-          "Built into macOS \u2014 zero download, instant availability. Good general-purpose scene similarity. Best for speed-first workflows.",
+          "Built into macOS. No download required. Used for general-purpose scene similarity.",
         bundled: true,
       },
       {
@@ -133,7 +133,7 @@ const CATEGORIES: {
         download: "40 MB",
         memory: "88 MB",
         description:
-          "State-of-the-art self-supervised features (Meta, LVD-142M). Excellent visual similarity and scene structure. Recommended balanced choice.",
+          "Self-supervised features from Meta's LVD-142M training. Used for visual similarity and scene structure.",
       },
       {
         name: "CLIP ViT-B/32",
@@ -144,7 +144,7 @@ const CATEGORIES: {
         download: "161 MB",
         memory: "340 MB",
         description:
-          "Rich semantic understanding from multimodal training. Groups photos by content meaning. Required by LAION Aesthetic scorer. Best for diverse libraries.",
+          "Multimodal embeddings for grouping photos by content. Required by the LAION Aesthetic scorer.",
       },
     ],
   },
@@ -255,7 +255,7 @@ const CATEGORIES: {
         download: "3.9 GB",
         memory: "2.2 GB",
         description:
-          "Full-size SmolVLM with strong scene understanding and quality reasoning. More capable but slower than 256M variant.",
+          "Full-size SmolVLM for scene description and quality reasoning. Slower than the 256M variant.",
       },
       {
         name: "FastVLM 0.5B",
@@ -266,7 +266,7 @@ const CATEGORIES: {
         download: "1.4 GB",
         memory: "600 MB",
         description:
-          "Apple FastVLM with FastViTHD hybrid encoder. Optimized for on-device speed with solid scene recognition. Recommended balanced VLM choice.",
+          "Apple FastVLM with FastViTHD hybrid encoder. Tuned for on-device scene recognition.",
       },
       {
         name: "FastVLM 1.5B",
@@ -277,7 +277,7 @@ const CATEGORIES: {
         download: "3.5 GB",
         memory: "1.5 GB",
         description:
-          "Largest and most capable VLM. Deep scene understanding, nuanced quality reasoning, and detailed descriptions. Best when VLM quality is the top priority.",
+          "Largest VLM option in the list. Used for detailed scene descriptions and quality reasoning.",
       },
     ],
   },
@@ -313,8 +313,8 @@ export async function generateMetadata({
     path: "/models",
     title:
       locale === "ko"
-        ? "BurstPick ML 모델 - 온디바이스 AI 사진 선별"
-        : "BurstPick ML Models - On-Device AI Photo Culling",
+        ? "BurstPick ML 모델 - 온디바이스 사진 스코어링"
+        : "BurstPick ML Models - On-Device Photo Scoring",
     description: t("intro"),
   });
 }

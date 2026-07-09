@@ -1,7 +1,7 @@
 {
   "name": "BurstPick",
   "short_name": "BurstPick",
-  "description": "AI burst photo culling for Mac photographers with on-device scoring and XMP export",
+  "description": "Burst photo culling for macOS with local scoring and XMP export",
   "start_url": "/en",
   "display": "browser",
   "background_color": "#0a0a0f",

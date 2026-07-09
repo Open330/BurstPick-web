@@ -13,7 +13,7 @@ const SEO_KEYWORDS = [
   "burst photo organizer",
   "RAW photo culling",
   "Lightroom photo workflow",
-  "on-device AI photo selection",
+  "on-device photo scoring",
   "Mac App Store photography app",
 ];
 
@@ -181,7 +181,7 @@ export function softwareApplicationJsonLd({
       },
       {
         "@type": "Offer",
-        name: "Pro lifetime in-app purchase",
+        name: "Pro one-time in-app purchase",
         price: proOffer.price,
         priceCurrency: proOffer.priceCurrency,
         url: APP_STORE_URL,
@@ -190,7 +190,7 @@ export function softwareApplicationJsonLd({
     ],
     featureList: [
       "Automatic burst photo grouping",
-      "On-device AI photo culling scores",
+      "On-device photo scoring signals",
       "XMP ratings and color label export",
       "Lightroom Classic catalog handoff for Pro",
       "Face grouping and side-by-side compare",
