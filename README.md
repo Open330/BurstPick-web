@@ -18,7 +18,7 @@ sections, improve animations, extend localization, or optimize the build.
 - **Animation**: Framer Motion
 - **i18n**: next-intl (English, Korean)
 - **Icons**: Lucide React
-- **Deployment**: GitHub Pages with custom domain
+- **Deployment**: Cloudflare Workers static assets with custom domain
 
 ## Getting Started
 
@@ -39,7 +39,24 @@ Open [http://localhost:3000](http://localhost:3000).
 pnpm build
 ```
 
-Static output is generated in `out/` for GitHub Pages deployment.
+Static output is generated in `out/` for Cloudflare Workers static assets.
+
+## Deploy
+
+Cloudflare should run from the repository root, not from `out/`.
+
+Recommended Cloudflare Workers build settings:
+
+```text
+Root directory: /
+Build command: pnpm run build
+Deploy command: npx wrangler deploy
+Version command: true
+```
+
+`wrangler.jsonc` owns the Worker name, compatibility date, and static asset
+directory. Do not pass a second `--assets` path from a dashboard command unless
+the command is also run from the repository root.
 
 ## Project Structure
 
