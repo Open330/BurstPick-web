@@ -12,3 +12,6 @@ UI_STRUCTURE_ANALYSIS.md
 # Lighthouse reports
 .lighthouse-*.json
 .omc/
+
+# internal agent state must never deploy
+public/.omc/
