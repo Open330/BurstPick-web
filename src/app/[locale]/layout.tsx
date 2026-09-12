@@ -73,6 +73,7 @@ export default async function LocaleLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-LDHFL2CQSZ');
+            gtag('config', 'G-5X5MMTELJS');
             document.addEventListener('click', function(e) {
               var t = e.target.closest('a[href*="/download"]');
               if (t) {
